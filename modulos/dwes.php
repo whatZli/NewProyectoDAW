@@ -72,7 +72,7 @@
         </div>
         <button type="button" class="collapsible tema dwes">Tema 6</button>
         <div class="lista">
-            <a class="ejercicio" href="proyectoDWES/proyectoTema5/codigoPHP/ejercicio0.php" target="_blank">Proyecto Symfony</a>
+            <a class="ejercicio" href="proyectoDWES/proyectoTema6/LoginLogoutMulticapaPoo/index.php" target="_blank">LoginLogoutMulticapaPoo</a>
         </div>
         <script type="text/javascript" src="core/js/collapsible.js"></script>
     </div>
