@@ -6,9 +6,9 @@
 -- ProyectoTema5 || LoginLogoffTema5 || MtoDepartamentosPDOTema5 --
 
 -- Crear base de datos --
-    CREATE DATABASE if NOT EXISTS DAW205DBAplicacionMulticapaPOO;
+    CREATE DATABASE if NOT EXISTS DAW205DBAplicacionPOO;
 -- Uso de la base de datos. --
-    USE DAW205DBAplicacionMulticapaPOO;
+    USE DAW205DBAplicacionPOO;
 
 -- Crear tablas. --
     CREATE TABLE IF NOT EXISTS Departamento(
@@ -28,10 +28,10 @@
     );
 
 -- Crear del usuario --
-    CREATE USER IF NOT EXISTS 'DAW205DBAplicacionMulticapaPOO'@'%' identified BY 'paso'; 
+    CREATE USER IF NOT EXISTS 'DAW205DBAplicacionPOO'@'%' identified BY 'paso'; 
 
 -- Dar permisos al usuario --
-    GRANT ALL PRIVILEGES ON DAW205DBAplicacionMulticapaPOO.* TO 'DAW205DBAplicacionMulticapaPOO'@'%'; 
+    GRANT ALL PRIVILEGES ON DAW205DBAplicacionPOO.* TO 'DAW205DBAplicacionPOO'@'%'; 
 
 -- Hacer el flush privileges, por si acaso --
     FLUSH PRIVILEGES;
