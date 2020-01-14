@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alex Dominguez</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+        *{
+          box-sizing: border-box;
+          margin:0 auto;
+        }
+        body{
+
+        }
+        header{
+          padding:10px;
+          width:100%;
+          text-align:center;
+        }
+        nav a:link,nav a:visited{
+          color: white; text-decoration: none;
+        }
+        nav ul li{
+          position:relative;
+          right:3%;
+        }
+        nav ul li:hover{
+          position:relative;
+          left:3%;
+          background: #b5b;
+        }
+        nav ul li:active{
+          background: #F0F;
+        }
+        nav ul li{
+          list-style-type: none;
+          text-decoration: none;
+          width:200px;
+          padding: 25px;
+          background: #D9D;
+          margin-bottom:20px;
+          text-align: center;
+          color:white;
+        }
+        nav,aside{
+          width:18%;
+          float:left;
+          margin-left:0.5%;
+          margin-right:0.5%;
+          padding-top:1.5%;
+          padding-bottom:1.5%;
+          padding-left:5px;
+        }
+        aside{
+          background: #DDD;
+          color:orange;
+          padding:0;
+        }
+        main{
+          width:60%;
+          float:left;
+          margin-top:0.2%;
+          margin-bottom:0.2%;
+        }
+        a:link{
+          color:green;
+        }
+        a:hover{
+          color:red;
+        }
+        a:active{
+          color:orange;
+        }
+        a:visited{
+          color:#888;
+        }
+        article:nth-child(2) h2,h3{
+          text-align:center;
+        }
+        article:nth-child(2) section:nth-child(3){
+          float:right;
+        }
+        article:nth-child(2) section:nth-child(2){
+          float:left;
+        }
+        article p:nth-child(3){
+          color:red;
+        }
+        article:nth-of-type(2) h2,article:nth-of-type(2) h2+h3 {
+          background-color:#DDD;
+          margin:0;
+        }
+        article:nth-child(2) h2{
+          padding:15px;
+          color:green;
+          font-size:14px;
+        }
+        article:nth-child(2) h2+h3{
+          color:blue;
+          font-size:22px;
+        }
+        article:nth-child(2){
+          font-style: italic;
+        }
+        h2,h3,p{
+          margin-top:15px;
+          margin-bottom:15px;
+        }
+        h2,h3,p{
+          text-decoration:underline black;
+        }
+        article:nth-child(2) p{
+          text-decoration:none;
+        }
+        h2+h3{
+          text-align: center;
+        }
+        h3{
+          text-align:left;
+        }
+        article:nth-child(3) {
+          background: #DDD;
+          margin-top:20px;
+          margin-bottom:20px;
+        }
+        article:nth-child(3) p{
+          font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; 
+        }
+        article:nth-child(3) p{
+          margin-top:20px;
+        }
+        details{
+          margin-top:20px;
+        }
+        footer{
+          clear:both;
+          text-align:center;
+        }
+        aside + footer{
+          clear:both;
+          width:100%;
+          color:white;
+          background-color:black;
+        }
+        aside + footer p{
+          text-decoration: none;
+          font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono;
+        }
+        section footer h3{
+          text-align: center;
+          text-decoration: none;
+          color:green;
+        }
+      </style>
+    </head>
+  <body>
+  <header>
+    <h1>Aquí va nuestra cabecera con su logo bonito</h1>      
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Opciones</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+  <main>
+    <article>
+      <h2>Mi primer articulo</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, possimus!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, possimus!</p>
+    </article>
+    <article>
+      <h2>Titulo article dos</h2>
+      <h3>Subtitulo del header en article dos</h3>
+      <section>
+        <p>Links</p>
+        <a href="#">Link</a>
+      </section>      
+      <section>
+        <p>Contenido del article</p>
+        <p>Contenido del article2</p>
+      </section>
+      <section>
+        <footer>
+          <h3>Pie</h3>
+          <p>Comentarios</p>  
+        </footer>
+      </section>
+    </article>
+    <article>
+      <h2>Mi tercer articulo</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, id!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, id!</p>
+    </article>
+  </main>
+    <aside>
+      <p>Aquí tenemos nuestra sección de Links interesantes</p>
+      <a href="#">Link</a>
+    </aside>
+   <footer>
+     <h1>Pie</h1>
+     <p>Diseño de Interfaces Web IES Los Sauces</p>
+    <p></p>
+   </footer>
+  </body>
+</html>

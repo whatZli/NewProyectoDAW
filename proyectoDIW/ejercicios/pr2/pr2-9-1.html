@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        daw2 {
+            display: flex;
+            width: 100%;
+            background: purple;
+            height: 99vh;
+            flex-flow: column;
+        }
+        header,nav,article,aside,footer{
+            margin: 3px;
+            border-radius: 6px;
+        }
+        header {
+            flex: 0 1 7rem;
+            background: #FA2;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        input{
+            flex: 0 1 3rem;
+            height: 30px;
+            width: 80px;
+            transition: width 2s ease-in-out, height 0.5s ease-in-out;
+        }
+        input:focus{
+            width: 500px;
+            height: 50px;
+        }
+        main{
+            display: flex;
+            flex-flow: row;
+        }
+        nav{
+            
+            height: 75vh;
+            background: rgb(66, 236, 143);
+            flex: 0 1 200px;
+        }
+        article{
+            background: rgb(122, 201, 253);
+            flex: 0 1 60%;
+        }
+        aside{
+            background: rgb(209, 221, 39);
+            flex: 0 1 20%;
+        }
+        footer{
+            height: 10vh;
+            background: #FBB;
+        }
+    </style>
+    <title>pr-2-9-0</title>
+</head>
+
+<body>
+    <daw2>
+        <header>
+            <img src="http://picsum.photos/id/159/100/100" alt="foto 1">
+            <input type="text" name="lupa" id="lp" placeholder="Buscar ...">
+            <img src="https://picsum.photos/id/200/100/100" alt="">
+        </header>
+        <main>
+            <nav>Nav Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda illum architecto perferendis minima quia saepe explicabo! Fugiat, repellat nisi ullam reiciendis, unde voluptatibus, beatae tenetur voluptates suscipit natus ducimus rem.</nav>
+            <article>Article Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempore explicabo corrupti eos sint fugit et, assumenda architecto amet nobis deserunt similique autem aspernatur consequuntur eum obcaecati porro, distinctio exercitationem?</article>
+            <aside>Aside Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores facere iusto nam dolore magnam vel temporibus! Culpa ipsam a suscipit libero. Soluta earum dolor eius quam officia fugit quod quis!</aside>
+        </main>
+        <footer>
+
+        </footer>
+    </daw2>
+</body>
+
+</html>

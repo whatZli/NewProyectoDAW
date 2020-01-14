@@ -1,0 +1,79 @@
+<head>
+  <style>
+    header{
+      font-size: 21px;
+    }
+    a{
+      text-decoration: none;
+    }
+    ul li{
+      display:inline-block;
+      margin-right:30px;
+      padding:10px;
+      border-radius: 15px;
+      transition:0.4s;
+    }
+    li:hover{
+      transform: scale(1.4);
+      filter: brightness(1.4);
+    }
+    li:nth-child(1){
+      background: #7CB342;
+    }
+    li:nth-child(2){
+      background: #039BE5;
+      color: #1A237E;
+    }
+    li:nth-child(3){
+      background: #FF8A65;
+      color: purple;
+    }
+    section{
+      width:90%;
+      height:200px;
+      margin-bottom:13vh;
+    }
+    section:nth-child(1){
+      background: #7CB342;
+    }
+    section:nth-child(2){
+      background: #039BE5;
+    }
+    section:nth-child(3){
+      background: #FF8A65;
+    }
+    #primera:target,#segunda:target,#tercera:target{
+      font-family: Montserrat, sans-serif;
+      color: gold;
+      background: #004D40;
+      filter: brightness(1.2);
+      transition:2s;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <ul>
+      <li><a href="#primera">Primera</a></li>
+      <li><a href="#segunda">Segunda</a></li>
+      <li><a href="#tercera">Tercera</a></li>
+    </ul>
+  </header>
+  <main>
+    <section id="primera">
+      <h2>Este es el contenido de la primera pestaña</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem cumque ratione ullam reprehenderit autem aliquid eveniet.</p>
+    </section>
+
+    <section id="segunda">
+      <h2>Este es el contenido de la segunda pestaña</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem cumque ratione ullam reprehenderit autem aliquid eveniet.</p>
+    </section>
+
+    <section id="tercera">
+      <h2>Este es el contenido de la tercera pestaña</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem cumque ratione ullam reprehenderit autem aliquid eveniet.</p>
+    </section>
+  </main>
+  
+</body>

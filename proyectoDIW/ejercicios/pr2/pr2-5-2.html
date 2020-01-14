@@ -1,0 +1,66 @@
+<head>
+  <style>
+    form{
+      width:500px;
+      margin:auto;
+    }
+    fieldset{
+      color:#B71C1C;
+      border-radius: 8px;
+    }
+    fieldset:nth-child(1){
+      background: #EDE7F6;
+      border:4px solid #B3E5FC;
+    }
+    input[type="text"],input[type="email"]{
+      margin-bottom:10px;
+    }
+    input[value="h"]:checked + label{
+      color:#1565C0;
+    }
+    input[value="m"]:checked + label{
+      color:#EC407A;
+    }
+    fieldset:nth-child(2){
+      background: #F3E5F5;
+      border:4px solid #64B5F6;  
+    }
+    fieldset:nth-child(2) input,button{
+      vertical-align: middle;
+      margin-right: 20px;
+      margin-left: 20px;
+      position:relative;
+      left:80px;
+    }
+    input[type="image"]{
+      border:4px solid #BA68C8;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <form action="falso.php" method="get">
+      <fieldset>
+        <legend>Datos de contacto</legend>
+        <input type="text" placeholder="Nombre" id="nombre" name="nombre" value="" autofocus maxlength="30" size="30" required><br>
+        <input type="text" placeholder="Apellidos" id="apellidos" name="apellidos" value="" maxlength="45" size="45" required><br>
+        <input type="email" placeholder="Correo Electronico" id="email" name="email" value="" maxlength="69" size="60" required>
+        <p>Sexo:
+          <input type="radio" name="sexo" value="h" id="hombre">
+          <label for="hombre">Hombre</label>
+          <input type="radio" name="sexo" value="m" id="mujer">
+          <label for="mujer">Mujer</label>
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Botones de acción</legend>
+        <input type="submit" name="enviar" value="Enviar">
+        <button>
+          <img src="https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?ixlib=rb-1.2.1&w=1000&q=80" width="40" style="padding-left:10px; padding-right:10px;" alt=""><br>Enviar
+        </button>
+        <input type="image" src="https://cwsmgmt.corsair.com/newscripts/landing-pages/wallpaper/v4/Wallpaper-v4-2560x1440.jpg" width="60" alt="">
+      </fieldset>
+      
+    </form>
+  </main>
+</body>

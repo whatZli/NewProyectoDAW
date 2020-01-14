@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+        *{
+          box-sizing: border-box;
+          margin:0 auto;
+        }
+        body{
+          background-color:#ff9999;
+        }
+        header{
+          padding:10px;
+          width:100%;
+          background:#ff3333;
+          text-align:center;
+        }
+        nav,aside{
+          width:18%;
+          float:left;
+          background-color:#ff8080;
+          margin-left:0.5%;
+          margin-right:0.5%;
+          padding-top:1.5%;
+          padding-bottom:1.5%;
+          padding-left:5px;
+        }
+        main{
+          width:60%;
+          float:left;
+          margin-top:0.2%;
+          margin-bottom:0.2%;
+          background-color:#ffcccc;
+        }
+        article:nth-child(2) h2,h3{
+          text-align:center;
+        }
+        article:nth-child(2) section:nth-child(3){
+          float:right;
+        }
+        article:nth-child(2) section:nth-child(2){
+          float:left;
+        }
+        h2,h3,p{
+          margin-top:10px;
+        }
+        h2{
+          text-align:center;
+        }
+        h3{
+          text-align:left;
+        }
+        details{
+          margin-top:20px;
+        }
+        footer{
+          clear:both;
+          text-align:center;
+        }
+        aside + footer{
+          clear:both;
+          text-align:left;
+          width:100%;
+          height:120px;
+          background-color:#330000;
+          color:white;
+        }
+        #cuadrado{
+          background-color:blue;
+          width:20px;
+          height:20px;
+          margin-top:10px;
+          float:left;
+        }
+        #cuadrado:hover dialog{
+          display:block;
+        }
+        dialog{
+          display:none;
+          text-align:center;
+          background-color:#66ffff;
+          border:solid black 2px;
+          width:90px;
+          height:70px;
+        }
+        
+
+      </style>
+    </head>
+  <body>
+  <header>
+    <h1>Aquí va nuestra cabecera con su logo bonito</h1>      
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Opciones</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+  <main>
+    <article>
+      <h2>Mi primer articulo</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, possimus!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, possimus!</p>
+    </article>
+    <article>
+      <h2>Titulo article dos</h2>
+      <h3>Subtitulo del header en article dos</h3>
+      <section>
+        <p>Links</p>
+        <a href="#">Link</a>
+      </section>      
+      <section>
+        <p>Contenido del article</p>
+        <p>Contenido del article2</p>
+      </section>
+      <section>
+        <footer>
+          <p>Comentarios</p>  
+        </footer>
+      </section>
+    </article>
+    <article>
+      <h2>Mi tercer articulo</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, id!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, id!</p>
+      <footer>
+          <p>Diseño de Interfaces Web IES Los Sauces</p>  
+        </footer>
+    </article>
+  </main>
+    <aside>
+      <p>Aquí tenemos nuestra sección de Links interesantes</p>
+      <a href="#">Link</a>
+      <details>
+        <summary>Lista invertida</summary>
+        <ol reversed>
+          <li>y menos</li>
+          <li>uno menos</li>
+          <li>Restando</li>  
+        </ol>
+      </details>
+    </aside>
+   <footer>
+    <p>&copyTodos los derechos reservados. Progress:
+     <progress value="22" max="100"></progress>
+     </p>
+     <div id="cuadrado">
+       <dialog>
+        <p>Enviar</p>
+       </dialog>
+     </div>
+   </footer>
+  </body>
+</html>

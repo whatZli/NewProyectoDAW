@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Css02-08-2</title>
+  <style>
+    body{
+      box-sizing: border-box;
+    }
+    input{
+      display:none;
+    }
+    label{
+      display:inline-block;
+      width:100px; 
+      text-align: center;
+      background: #5599dd;
+      padding: 15px 20px;
+      color:white;
+      border-radius: 7px;
+      font-family: Montserrat, sans-serif;
+      position: relative;
+    }
+    article{
+      width: 720px;
+      height: 300px;
+      background: dimgray;
+      position:absolute;
+      color:white;
+      z-index: 1;
+    }
+    input#rb1:checked ~ #a1,input#rb2:checked ~ #a2,input#rb3:checked ~ #a3, input#rb4:checked ~ #a4,input#rb5:checked ~ #a5{
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+    <nav>
+      <input type="radio" name="tab" id="rb1" checked>
+      <label for="rb1">Radio 1</label>
+      <input type="radio" name="tab" id="rb2">
+      <label for="rb2">Radio 2</label>
+      <input type="radio" name="tab" id="rb3">
+      <label for="rb3">Radio 3</label>
+      <input type="radio" name="tab" id="rb4">
+      <label for="rb4">Radio 4</label>
+      <input type="radio" name="tab" id="rb5">
+      <label for="rb5">Radio 5</label>
+      
+      <article id="a1">Este es el contenido del articulo1</article>
+      <article id="a2">Este es el contenido del articulo2</article>
+      <article id="a3">Este es el contenido del articulo3</article>
+      <article id="a4">Este es el contenido del articulo4</article>
+      <article id="a5">Este es el contenido del articulo5</article>
+  </nav>
+ 
+  <article id=""></article>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="author" content="Alex Dominguez Dominguez"/>
+        <meta name="generator" content="notepad++"/>
+        <meta name="robots" content="index, follow">
+        <link rel="shortcut icon" type="image/png" href="../../../../core/images/favicon.png"/>
+        <title>Alex Dominguez</title>
+        <link href="../webroot/css/style.css"  rel="stylesheet" type="text/css" title="Default style">
+        <script type="text/javascript" src="js/libreriaValidacion.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <style>
+            form{
+                width: 290px;
+                margin: auto;
+            }
+            input{
+                margin: 10px;
+            }
+            #atras img{
+                position: fixed;
+                right: 10px;
+                bottom: 100px;
+                width: 100px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        
+
+        <div class="content" >
+            <form action="ejercicio.html" method="get" accept-charset="UTF-8" name="form" id="form" enctype="application/x-www-form-urlencoded" onsubmit="return validar()">
+                <fieldset>
+                    <legend>Datos personales: </legend>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nompre" id="nombre" placeholder="Introduce nombre">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" name="apellidos" id="apellidos" placeholder="Introduce apellidos">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email" placeholder="Introduce Email">                    
+                    <br>
+                    <label>Género</label>
+                    <input type="radio" name="genero" id="hombre" value="Hombre">
+                    <label for="hombre">Hombre</label>
+                    <input type="radio" name="genero" id="mujer" value="Mujer">
+                    <label for="mujer">Mujer</label>
+                    <input type="radio" name="genero" id="otro" value="Otro">
+                    <label for="otro">Otro</label>
+                    <br>
+                    <label>Aficiones:</label>
+                    <br>
+                    <input type="checkbox" name="aficion[viajes]" id="viajes" value="viajes">
+                    <label for="viajes">Viajes</label>
+                    <input type="checkbox" name="aficion[deportes]" id="deportes" value="deportes">
+                    <label for="deportes">Deportes</label>
+                    <br>
+                    <input type="checkbox" name="aficion[cine]" id="cine" value="cine">
+                    <label for="cine">Cine</label>
+                    <input type="checkbox" name="aficion[libros]" id="libros" value="libros">
+                    <label for="libros">Libros</label>
+                    <br>
+                    <input type="checkbox" name="aficion[musica]" id="musica" value="musica">
+                    <label for="musica">Música</label>
+                    <input type="checkbox" name="aficion[automoviles]" id="automoviles" value="automoviles">
+                    <label for="automoviles">Automóviles</label>
+                    <br>
+                    <input type="checkbox" name="aficion[videojuegos]" id="videojuegos" value="videojuegos">
+                    <label for="videojuegos">Videojuegos</label>
+                    <input type="checkbox" name="aficion[gastronomia]" id="gastronomia" value="gastronomia">
+                    <label for="gastronomia">Gastronomía</label>
+                    <br>
+                    <input type="checkbox" name="aficion[belleza]" id="belleza" value="belleza">
+                    <label for="belleza">Belleza</label>
+                    <input type="checkbox" name="aficion[tecnologia]" id="tecnologia" value="tecnologia">
+                    <label for="tecnologia">Tecnología</label>
+                    <br>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar">
+                </fieldset>
+            </form>
+        </div>
+        
+    </body>
+</html>
