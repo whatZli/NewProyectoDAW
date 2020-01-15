@@ -30,10 +30,10 @@
     );
 
 -- Crear del usuario --
-    CREATE USER IF NOT EXISTS 'DAW205DBAplicacionPOO'@'%' identified BY 'paso'; 
+    CREATE USER IF NOT EXISTS 'userDAW205DBAplicacionPOO'@'%' identified BY 'paso'; 
 
 -- Dar permisos al usuario --
-    GRANT ALL PRIVILEGES ON DAW205DBAplicacionPOO.* TO 'DAW205DBAplicacionPOO'@'%'; 
+    GRANT ALL PRIVILEGES ON DAW205DBAplicacionPOO.* TO 'userDAW205DBAplicacionPOO'@'%'; 
 
 -- Hacer el flush privileges, por si acaso --
     FLUSH PRIVILEGES;

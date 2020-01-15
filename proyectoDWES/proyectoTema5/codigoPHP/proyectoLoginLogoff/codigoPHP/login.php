@@ -191,10 +191,10 @@ if (!isset($_COOKIE['idioma'])) {
                         <div class="form-group form-check">
                         </div>
                         <?php
-                        if(isset($_POST['iniciarSesion']) && isset($aErrores['errorLogin'])){
-                        echo '<div class="alert alert-danger" role="alert">';
-                        echo $aErrores['errorLogin'];
-                        echo '</div>';
+                        if (isset($_POST['iniciarSesion']) && isset($aErrores['errorLogin'])) {
+                            echo '<div class="alert alert-danger" role="alert">';
+                            echo $aErrores['errorLogin'];
+                            echo '</div>';
                         }
                         ?>
                         <button type="submit" name="iniciarSesion" class="btn btn-primary">Iniciar Sesión</button>

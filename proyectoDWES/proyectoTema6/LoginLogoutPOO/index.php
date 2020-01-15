@@ -10,6 +10,7 @@ if(isset($_SESSION["DAW205POOusuario"])){
         include_once $controladores[$_GET['inicio']];
     }
 }else{
+    echo 'Carga index.php';
     include_once $controladores["login"];
 }
 ?>

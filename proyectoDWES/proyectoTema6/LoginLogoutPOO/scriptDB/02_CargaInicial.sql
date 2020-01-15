@@ -4,7 +4,7 @@
  */
 -- La contraseña de los usuarios, es el codUsuario concatenado con el password, en este caso paso. [$usuario . $pass]
 -- Base de datos a usar
-USE DAW205DBAplicacionMulticapaPOO;
+USE DAW205DBAplicacionPOO;
 
 
 

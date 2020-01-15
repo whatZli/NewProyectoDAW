@@ -1,8 +1,15 @@
 <?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+echo '<br>Carga cLogin';
+if (isset($_SESSION['usuarioDAW205AppLogInLogOutPOO'])) {
+    $vista = $vistas["inicio"];
+    require_once $vistas["layout"];
+}
+if (isset($_POST['volver'])) {
+    header('Location: ../../../index.php?pag=dwes');
+}
+if (isset($_POST['iniciarSesion'])) {
+    header("Location: index.php");
+}else{
+    $vista = $vistas["login"];
+    require_once $vistas["layout"];
+}
