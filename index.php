@@ -28,3 +28,4 @@ require 'modulos/cabecera.php';
 require 'modulos/menu.php';
 require "modulos/" . $pagina;
 require 'modulos/pie.php';
+require 'modulos/cookies.php';

@@ -10,6 +10,10 @@ and open the template in the editor.
         <title>Alex Domínguez</title>
         <link rel="stylesheet" type="text/css" href="core/css/style.css"/>
         <link rel="icon" type="image/png" href="core/images/favicon.png">
+        <script type="text/javascript" src="core/js/jquery-3.4.1.js"></script>
+        <script type="text/javascript" src="core/js/jqcookie.js"></script>
+        <script type="text/javascript" src="core/js/cookie.js"></script>
+        <script type="text/javascript" src="core/js/script.js"></script>
 <!--        <script type="text/javascript" src="core/js/collapsible.js"></script>-->
         <script type="text/javascript" src="core/js/reloj.js"></script>
         <script type="text/javascript" src="core/js/overlayNavMenu.js"></script>

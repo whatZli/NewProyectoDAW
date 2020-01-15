@@ -1,16 +1,15 @@
 <?php
-// Conectar con la base de datos y seleccionarla
-$conexion = mysql_connect('localhost', 'miusuario', 'micontrasena');
-mysql_select_db('blog_db', $conexion);
-// Ejecutar la consulta SQL
-$resultado = mysql_query('SELECT fecha, titulo FROM articulo',$conexion);
-// Crear el array de elementos para la capa de la vista
-$articulos = array();
-while ($fila = mysql_fetch_array($resultado, MYSQL_ASSOC)){
-$articulos[] = $fila;
+include_once 'config/configuracion.php';
+include_once 'config/configuracionBD.php';
+
+session_start();
+if(isset($_SESSION["DAW205POOusuario"])){
+    if(isset($_GET['pagina'])){
+        include_once $controladores[$_GET['pagina']];
+    }else{
+        include_once $controladores[$_GET['inicio']];
+    }
+}else{
+    include_once $controladores["login"];
 }
-// Cerrar la conexión
-mysql_close($conexion);
-// Incluir la lógica de la vista
-require('vista.php');
 ?>
