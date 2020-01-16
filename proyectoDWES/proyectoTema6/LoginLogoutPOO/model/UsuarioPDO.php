@@ -22,13 +22,12 @@ class UsuarioPDO {
         $resConsulta = DBPDO::ejecutaConsulta($consulta, [$codUsuario, $password]); //Ejecutamos la consulta.
         if ($resConsulta->rowCount() == 1) { //Comprobamos si se han obtenido resultados en la consulta.
             $resFetch = $resConsulta->fetchObject();
-            $arrayUsuarios['CodUsuario'] = $resFetch->T01_CodUsuario;
-            $arrayUsuarios['Password'] = $resFetch->T01_Password;
-            $arrayUsuarios['DescUsuario'] = $resFetch->T01_DescUsuario;
-            $arrayUsuarios['NumConexiones'] = $resFetch->T01_NumConexiones;
-            $arrayUsuarios['FechaHoraUltimaConexion'] = $resFetch->T01_FechaHoraUltimaConexion;
-            $arrayUsuarios['Perfil'] = $resFetch->T01_Perfil;
-            $arrayUsuarios['ImagenUsuario'] = $resFetch->T01_ImagenUsuario;
+            $arrayUsuarios['codUsuario'] = $resFetch->T01_CodUsuario;
+            $arrayUsuarios['password'] = $resFetch->T01_Password;
+            $arrayUsuarios['descUsuario'] = $resFetch->T01_DescUsuario;
+            $arrayUsuarios['contadorAccesos'] = $resFetch->T01_NumConexiones;
+            $arrayUsuarios['ultimaConexion'] = $resFetch->T01_FechaHoraUltimaConexion;
+            $arrayUsuarios['perfil'] = $resFetch->T01_Perfil;
         }
         return $arrayUsuarios;
     }
