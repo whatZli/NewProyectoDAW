@@ -113,9 +113,6 @@ function actualizarHora() {
         segundos.innerHTML = d.getSeconds();
     }
 
-    agujaSegundosA.style.transform = "rotate(" + Math.round(6 * d.getSeconds()+1) + "deg)";
-    agujaMinutosA.style.transform = "rotate(" + Math.round(6 * d.getMinutes()) + "deg)";
-    agujaHorasA.style.transform = "rotate(" + Math.round((30 * d.getHours()) + 0.5 * d.getMinutes()) + "deg)";
 }
 function cargar() {
     /*Reloj Digital*/
@@ -135,7 +132,7 @@ function cargar() {
     empezar = document.getElementById("start");
     parar = document.getElementById("stop");
     /*Cronómetro ----- Controles*/
-    empezar.addEventListener('click', empezarCronometro, false);
+    
     /*Cronómetro ----- grados*/
     gradosH = document.getElementById("gradosH");
     gradosM = document.getElementById("gradosM");
@@ -147,9 +144,6 @@ function cargar() {
     agujaMinutosC = document.getElementById("agujaMinutosC");
     agujaHorasC = document.getElementById("agujaHorasC");
 
-    /*Mover agujas al principio*/
-    agujaSegundosC.style.transform = "rotate(1080deg)";
-    agujaMinutosC.style.transform = "rotate(720deg)";
-    agujaHorasC.style.transform = "rotate(360deg)";
+  
 }
 window.addEventListener('load', cargar, false);

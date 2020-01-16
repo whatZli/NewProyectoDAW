@@ -49,6 +49,10 @@
         <div class="lista">
             <a class="ejercicio" href="proyectoDWEC/tema6/ej1/index.html" target="_blank">Ejercicio 1</a>
         </div>
+        <button type="button" class="collapsible tema dwec">Tema 7. Almacenamiento</button>
+        <div class="lista">
+            <a class="ejercicio" href="proyectoDWEC/tema7/proyectoLoginLogoff/index.php" target="_blank">Almacenar usuario en SessionStorage</a>
+        </div>
         <script type="text/javascript" src="core/js/collapsible.js"></script>
     </div>
 </div> 

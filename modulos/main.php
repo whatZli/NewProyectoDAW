@@ -27,22 +27,22 @@
         </div>
     </div>
     <div class="container-asignaturas">
-        <a class="asignatura dwes" href="<?php echo $_SERVER['PHP_SELF'] . "?pag=dwes"; ?>">
+        <a id="DWES" class="asignatura dwes" href="<?php echo $_SERVER['PHP_SELF'] . "?pag=dwes"; ?>">
             <div>
                 <span>DWES</span>
             </div>
         </a>
-        <a class="asignatura dwec" href="<?php echo $_SERVER['PHP_SELF'] . "?pag=dwec"; ?>">
+        <a id="DWEC" class="asignatura dwec" href="<?php echo $_SERVER['PHP_SELF'] . "?pag=dwec"; ?>">
             <div>
                 <span>DWEC</span>
             </div>
         </a>
-        <a class="asignatura diw" href="<?php echo $_SERVER['PHP_SELF'] . "?pag=diw"; ?>">
+        <a id="DIW" class="asignatura diw" href="<?php echo $_SERVER['PHP_SELF'] . "?pag=diw"; ?>">
             <div>
                 <span>DIW</span>
             </div>
         </a>
-        <a class="asignatura daw" href="<?php echo $_SERVER['PHP_SELF'] . "?pag=daw"; ?>">
+        <a id="DAW" class="asignatura daw" href="<?php echo $_SERVER['PHP_SELF'] . "?pag=daw"; ?>">
             <div>
                 <span>DAW</span>
             </div>
