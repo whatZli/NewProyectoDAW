@@ -70,7 +70,7 @@
             <a class="ejercicio" href="proyectoDWES/proyectoTema5/codigoPHP/ejercicio2/login.php" target="_blank">CA con header() + BD</a>
             <a class="ejercicio" href="proyectoDWES/proyectoTema5/codigoPHP/proyectoLoginLogoff" target="_blank">Proyecto LogIn-LogOut</a>
         </div>
-        <button type="button" class="collapsible tema dwes">Tema 6</button>
+        <button type="button" class="collapsible tema dwes">Multicapa y POO</button> 
         <div class="lista">
             <a class="ejercicio" href="proyectoDWES/proyectoTema6/LoginLogoutPOO" target="_blank">LoginLogoutMulticapaPoo</a>
         </div>

@@ -6,12 +6,11 @@
         <meta name="generator" content="notepad++"/>
         <meta name="robots" content="index, follow">
         <link rel="shortcut icon" type="image/png" href="../../core/images/favicon.png"/>
-        <link href="css/reset.css"   rel="stylesheet"         type="text/css" >
         <title>Alex Dominguez</title>
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="../webroot/css/style.css"  rel="stylesheet"         type="text/css" title="Default style">
+        <link href="core/css/style.css"  rel="stylesheet"         type="text/css" title="Default style">
         <style>
             body{
                 box-sizing: border-box;
@@ -78,24 +77,22 @@
         </style>
     </head>
     <body >
-        <div id="topBar">Proyecto LogIn-LogOut</div>
-        <nav class="idioma">
-            <a href="<?php echo $_SERVER['PHP_SELF'] ?>?idioma=cas">Castellano</a>
-            <a href="<?php echo $_SERVER['PHP_SELF'] ?>?idioma=eng">English</a>
-        </nav>
+        <div id="topBar">Proyecto LogIn-LogOutPOO</div>
         <div id="content">
             <nav >
-                <article id="a1">
-                    <?php require_once $vista; ?>
-                </article>
+                
+                <?php 
+                    //Se carga la vista que esté seleccionada en la variable de Session
+                    require_once $_SESSION['vista']; 
+                ?>
             </nav>
 
         </div>
-        <!--<footer>
+        <footer>
             <address>
                 <a href="../../../indexProyectoTema5.html	">&copy2019 Alex Dominguez</a>
-                <a href="http://daw-usgit.sauces.local/Alex/proyectoLogInLogOff/tree/master" target="_blank"><img src="../images/gitlab.png" alt="asd" width="40" style="float:right;"/></a>
+                <a href="#" target="_blank"><img src="core/images/gitlab.png" alt="asd" width="40" style="float:right;"/></a>
             </address>
-        </footer>-->
+        </footer>
     </body>
 </html>

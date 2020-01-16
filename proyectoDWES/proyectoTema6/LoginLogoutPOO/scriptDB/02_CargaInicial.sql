@@ -9,7 +9,7 @@ USE DAW205DBAplicacionPOO;
 
 
 -- El tipo de usuario es "usuario" como predeterminado, despues añado un admin --
-INSERT INTO T01_Usuario(CodUsuario, DescUsuario, Password) VALUES
+INSERT INTO T01_Usuario(T01_CodUsuario, T01_DescUsuario, T01_Password) VALUES
     ('daniel','daniel',SHA2('danielpaso',256)),
     ('nereaA','nereaA',SHA2('nereaApaso',256)),
     ('miguel','miguel',SHA2('miguelpaso',256)),
@@ -28,7 +28,7 @@ INSERT INTO T01_Usuario(CodUsuario, DescUsuario, Password) VALUES
     ('antonio','antonio',SHA2('antoniopaso',256));
 
 -- Introduccion de datos dentro de la tabla creada
-INSERT INTO `T02_Departamento` (`CodDepartamento`, `DescDepartamento`, `FechaBaja`, `VolumenNegocio`) VALUES
+INSERT INTO `T02_Departamento` (`T02_CodDepartamento`, `T02_DescDepartamento`, `T02_FechaBaja`, `T02_VolumenNegocio`) VALUES
 ('AAA', 'DescripciÃ³n AAAA', NULL, 3),
 ('ABC', 'DescripciÃ³n qweqweq', NULL, 123),
 ('ASD', 'DescripciÃ³n ASD', '2019-11-26', 1),
@@ -49,4 +49,4 @@ INSERT INTO `T02_Departamento` (`CodDepartamento`, `DescDepartamento`, `FechaBaj
 ('ZZZ', 'DescripciÃ³n ZZZ', '2019-11-24', 1);
 
 -- Usuario con el rol admin --
-INSERT INTO T01_Usuario(CodUsuario, DescUsuario, Password, Perfil) VALUES ('admin','admin',SHA2('adminpaso',256), 'administrador');
+INSERT INTO T01_Usuario(T01_CodUsuario, T01_DescUsuario, T01_Password, T01_Perfil) VALUES ('admin','admin',SHA2('adminpaso',256), 'administrador');
