@@ -91,7 +91,8 @@
         <footer>
             <address>
                 <a href="../../../indexProyectoTema5.html	">&copy2019 Alex Dominguez</a>
-                <a href="#" target="_blank"><img src="core/images/gitlab.png" alt="asd" width="40" style="float:right;"/></a>
+                <a style="position:relative;left:100px;" href="doc/">Documentación</a>
+                <a href="http://daw-usgit.sauces.local/Alexander/proyectoLoginLogoffPoo/tree/master" target="_blank"><img src="core/images/gitlab.png" alt="asd" width="40" style="float:right;"/></a>
             </address>
         </footer>
     </body>

@@ -39,6 +39,27 @@ $(function () {
         console.log(cookie);
         $.cookie("DWES", suma);
     });
+    
+    $("#DWEC").click(function () {
+        cookie = $.cookie("DWEC");//
+        suma= parseInt(cookie)+1;
+        console.log(cookie);
+        $.cookie("DWEC", suma);
+    });
+    
+    $("#DAW").click(function () {
+        cookie = $.cookie("DAW");//
+        suma= parseInt(cookie)+1;
+        console.log(cookie);
+        $.cookie("DAW", suma);
+    });
+    
+    $("#DIW").click(function () {
+        cookie = $.cookie("DIW");//
+        suma= parseInt(cookie)+1;
+        console.log(cookie);
+        $.cookie("DIW", suma);
+    });
 
 
     function mostrarVentanaEmergente() {

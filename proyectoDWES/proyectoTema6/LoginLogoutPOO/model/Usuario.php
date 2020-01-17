@@ -7,7 +7,7 @@
  * @version 1.0   
  */
 //Requiere el fichero UsuarioPDO Donde se almacenan las consultas a la BD
-require_once 'UsuarioPDO.php';
+//require_once 'UsuarioPDO.php';
 
 //Creación de la clase Usuario
 
@@ -138,22 +138,6 @@ class Usuario {
 
     function setContadorAccesos($contadorAccesos) {
         $this->contadorAccesos = $contadorAccesos;
-    }
-
-    /* Función validarUsuario()
-     * Si la validación es correcta devuelve un objeto Usuario
-     * @param $codUsuario
-     * @param $password
-     * @return Usuario
-     */
-
-    public static function validarUsuario($codUsuario, $password) {
-        $usuario = null;
-        $aUsuario = UsuarioPDO::validarUsuario($codUsuario, $password);
-        if (!empty($aUsuario)) {
-            $usuario = new Usuario($codUsuario, $aUsuario["descUsuario"], $aUsuario["password"], $aUsuario["perfil"], $aUsuario["ultimaConexion"], $aUsuario["contadorAccesos"]);
-        }
-        return $usuario;
     }
 
 }

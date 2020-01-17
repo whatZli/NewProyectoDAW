@@ -30,7 +30,7 @@ if (isset($_POST['iniciarSesion'])) {
         $password = hash("SHA256", $codUsuario . $_POST["loginPassword"]);
 
         // @param Usuario $objetoUsuario Objeto que almacena el usuario después de validarlo
-        $objetoUsuario = Usuario::validarUsuario($codUsuario, $password);
+        $objetoUsuario = UsuarioPDO::validarUsuario($codUsuario, $password);
 
         // Si $objetoUsuario tiene un Usuario
         if (!is_null($objetoUsuario)) {
