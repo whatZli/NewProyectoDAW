@@ -4,14 +4,15 @@
     padding:0px;
 
 }
-
 body{
-    background-image: radial-gradient( circle farthest-corner at -8.9% 51.2%,  rgba(255,124,0,1) 0%, rgba(255,124,0,1) 15.9%, rgba(255,163,77,1) 15.9%, rgba(255,163,77,1) 24.4%, rgba(19,30,37,1) 24.5%, rgba(19,30,37,1) 66% );
+    background: linear-gradient(to bottom, #000000 9%, #336699 99%);
     font-family: 'Varela Round', sans-serif;
     width:90%;
+    height: 100vh;
     margin:auto;
     text-align:center;
     padding-top:3%;
+    color: white;
 }
 #logo{
     color:white;
@@ -26,7 +27,7 @@ body{
 
 #topBar{
     position:fixed;
-    top:0%;
+    top:5%;
     left:0%;
     right:0%;
     height:60px;

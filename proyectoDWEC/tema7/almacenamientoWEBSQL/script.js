@@ -32,37 +32,37 @@ function insertarBD() {
 }
 
 function leerBD(){
+    console.log("leer");
+    //Se vuelve a eecutar el comando de creación de la BD
     mibbdd = openDatabase("colchones", "1.0", "Base de datos de colchones", 1024 * 1024);
     var p=document.getElementById("parrafo");
-    
+    p.innerHTML+="sd";
     mibbdd.transaction(function (sql) {
         //Ejecutamos un select
-        sql.executeSql("select * from colchon"),[],
-        
-        function(sql,resultSet){
+        sql.executeSql("select * from colchon", [], function(sql,resultSet){
             //El select devuelve un resultSet
-            console.log(resultSet);
+            
             for(var i=0;i<resultSet.rows.length;i++){
-                p.innerHTML+=resultSet.rows.item(i).id + ","
-                + resultSet.rows.item(i).marca + ","
-                + resultSet.rows.item(i).dimension + ","
-                + resultSet.rows.item(i).material + ",";
+                
+                p.innerHTML+="ID-><strong>"+resultSet.rows.item(i).id + "</strong>   "
+                + "Marca-><strong>"+resultSet.rows.item(i).marca + "</strong>   "
+                + "Dimensión-><strong>"+resultSet.rows.item(i).dimension + "</strong>   "
+                + "Material-><strong>"+resultSet.rows.item(i).material+"</strong><br>";
             }
-        },
-        function errorCallback(tx,error){
-            alert(error.message);
-        }
+            
+        });
     });
 }
 
 function cargar() {
     console.log("Carga función");
-    var crear = document.getElementById("crear")
+    var crear = document.getElementById("crear");
     crear.addEventListener('click', crearBD, false);
-    var insertar = document.getElementById("insertar")
+    
+    var insertar = document.getElementById("insertar");
     insertar.addEventListener('click', insertarBD, false);
     
-    var leer = document.getElementById("leer")
+    var leer = document.getElementById("leer");
     leer.addEventListener('click', leerBD, false);
 }
 window.addEventListener('load', cargar, false);

@@ -106,12 +106,15 @@ a.menu-active{
 .container{
     font-family: 'Montserrat', sans-serif;
     background: #D0D0D0;
+    transition: 1s ease-out;  
 }
 .container-top{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    padding-top: 30px;
+    margin-bottom: 50px;
 }
 .container .container-top .contenido{
     text-align: center;
@@ -161,13 +164,16 @@ a.menu-active{
 /*-------Ultimos contenidos--------*/
 .ultimos-contenidos, #digital{
     width: 15%;
-    color:black;
     font-weight: 900;
 }
+#digital{
+    border-left: 1px solid #ccd6c2;
+}
 .ultimos-contenidos{
-    background-color: rgb(201, 201, 201,100%);
     font-size: 20px;
     text-transform: uppercase;
+    text-align: center;
+    border-right: 1px solid #ccd6c2;
 }
 .ultimos-contenidos > div > a{
     display: flex;
@@ -183,7 +189,15 @@ a.menu-active{
 }
 .ultimos-contenidos > div > a:hover{
     text-decoration: underline;
-    background: rgb(191, 191, 191,100%);;
+    background: rgba(191, 191, 191,0.4);;
+}
+.ultimos-contenidos div span{
+    font-size: 14px;
+}
+#cambiarFondo,#cambiarLetra{
+    font-size: 14px;
+    margin: 2px;
+    padding: 2px;
 }
 /*--------Contenedor central para los títulos--------*/
 .contenido{
@@ -211,7 +225,6 @@ a.menu-active{
     justify-content: space-between;
     align-content: center;
     font-size: 55px;
-    background-color: rgb(201, 201, 201,100%);
     text-align: center;
 }
 #hora div{
@@ -222,14 +235,18 @@ a.menu-active{
     display: flex;
     flex-flow: row wrap;
     align-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    
 }
 .container .container-asignaturas .asignatura{
-    transition: 0.35s ease;
+    transition: 0.6s ease;
     width: 25%;
     height: 40vh;
 }
 .container-asignaturas a{
-    border-bottom: 1px white solid;
+    margin-bottom: 2px;
 }
 .asignatura{
     width: 100%;
@@ -238,32 +255,47 @@ a.menu-active{
     justify-content: center;
     align-items: center;
     color:white;
-    filter: grayscale(95%);
+    filter: grayscale(30%);
+}
+.asignatura:hover{
+    cursor: pointer;
+    filter: grayscale(0%);
 }
 
 .asignatura span{
     font-size: 55px;
 }
+
 .dwes{
-    background: #2d89ef;
+    background: rgba(45, 137, 239, 0.4);
+}
+.dwes:hover,dwes:selected{
+    background: rgba(45, 137, 239, 0.75);
 }
 .dwec{
-    background: #e3a21a;
+    background: rgba(227, 162, 26, 0.4);
+}
+.dwec:hover{
+    background: rgba(227, 162, 26, 0.75);
 }
 .diw{
-    background: #00aba9;
+    background: rgba(0, 171, 169, 0.4);
+}
+.diw:hover{
+    background: rgba(0, 171, 169, 0.75);
 }
 .daw{
-    background: #ee1111;
+    background: rgba(238, 17, 17, 0.4);
 }
-.asignatura:hover{
-    filter: none;
-    cursor: pointer;
+.daw:hover{
+    background: rgba(238, 17, 17, 0.75);
 }
+
 .tema{
     font-family: 'Montserrat', sans-serif;
     width: 100%;
     padding: 25px;
+    margin-bottom: 2px;
     font-size: 25px;
     display: flex;
     flex-flow: row wrap;
@@ -416,6 +448,7 @@ a.menu-active{
     width: 60%;
     background-color: rgba(0,0,0,.7);
     z-index: 20;
+    visibility: hidden;
 }
 .cookies-content h1{
     display: flex;
@@ -463,4 +496,5 @@ a.menu-active{
     height: 100vh;
     z-index: 10;
     background-color: rgba(0,0,0,0.7);
+    visibility: hidden;
 }

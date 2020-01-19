@@ -13,6 +13,7 @@ $usuario = $_SESSION['usuarioDAW205POO'];
 
 //@param variable $nombre String Variable que almacenará el código del usuario
 $nombre = $usuario->getCodUsuario();
+
 $aDatosUsuarioVista=array(
     "codigo" => $usuario->getCodUsuario(),
     "descUsuario" => $usuario->getDescUsuario(),
@@ -21,8 +22,8 @@ $aDatosUsuarioVista=array(
     "ultimaConexion" => $usuario->getUltimaConexion(),
     "contadorAccesos" => $usuario->getContadorAccesos()
 );
+var_dump($aDatosUsuarioVista);
 
-var_dump($_SESSION["usuarioDAW205POO"]);
 $_SESSION['vista'] = $vistas['inicio']; //Se carga en la sesión de vistas, la que queremos
 require_once $vistas['layout']; //se incluye la vista que contiene la $_SESSION['vista']
     

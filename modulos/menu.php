@@ -2,7 +2,7 @@
 <div class="menu">
     <ul>
         <li><a href="<?php echo $_SERVER['PHP_SELF']."?pag=main";?>" <?php if(!isset($_GET['pag']) || $_GET['pag']==='main'){echo 'class="menu-active"';}?>>Home</a></li>
-        <li><a href="<?php echo $_SERVER['PHP_SELF'] . "?pag=dwes"; ?>" <?php if(isset($_GET['pag']) && $_GET['pag']==='dwes'){echo 'class="menu-active"';}?>>DWES</a>
+        <li id="mdwes"><a  href="<?php echo $_SERVER['PHP_SELF'] . "?pag=dwes"; ?>" <?php if(isset($_GET['pag']) && $_GET['pag']==='dwes'){echo 'class="menu-active"';}?>>DWES</a>
             <ul class="dropdown-1">
                 <li><a href="#">Tema 1 (PDF)</a></li>
                 <li><a href="#">Tema 2 (PDF)</a></li>
@@ -18,7 +18,7 @@
                 </li>
             </ul>
         </li>
-        <li><a href="<?php echo $_SERVER['PHP_SELF'] . "?pag=dwec"; ?>" <?php if(isset($_GET['pag']) && $_GET['pag']==='dwec'){echo 'class="menu-active"';}?>>DWEC</a>
+        <li id="mdwec"><a  href="<?php echo $_SERVER['PHP_SELF'] . "?pag=dwec"; ?>" <?php if(isset($_GET['pag']) && $_GET['pag']==='dwec'){echo 'class="menu-active"';}?>>DWEC</a>
             <ul class="dropdown-1"> 
                 <li><a href="#">Tema 1. Navegadores y repaso HTML/CSS</a></li>
                 <li><a href="#">Tema 2. Tipos de datos y bucles</a></li>
@@ -27,7 +27,7 @@
                 <li><a href="#">Tema 5. DOM</a></li>
             </ul>
         </li>
-        <li><a href="<?php echo $_SERVER['PHP_SELF'] . "?pag=diw"; ?>" <?php if(isset($_GET['pag']) && $_GET['pag']==='diw'){echo 'class="menu-active"';}?>>DIW</a>
+        <li id="mdiw"><a  href="<?php echo $_SERVER['PHP_SELF'] . "?pag=diw"; ?>" <?php if(isset($_GET['pag']) && $_GET['pag']==='diw'){echo 'class="menu-active"';}?>>DIW</a>
             <ul class="dropdown-1">
                 <li><a href="#">Tema 1</a>
                     <ul class="dropdown-2">
@@ -57,7 +57,7 @@
                 </li>
             </ul>
         </li>
-        <li><a href="<?php echo $_SERVER['PHP_SELF']."?pag=daw";?>" <?php if(isset($_GET['pag']) && $_GET['pag']==='daw'){echo 'class="menu-active"';}?>>DAW</a>
+        <li id="mdaw"><a  href="<?php echo $_SERVER['PHP_SELF']."?pag=daw";?>" <?php if(isset($_GET['pag']) && $_GET['pag']==='daw'){echo 'class="menu-active"';}?>>DAW</a>
             <ul class="dropdown-1">
                 <li><a href="proyectoDaw/doc/tema1.pdf" target="_blank">Conceptos (PDF)</a></li>
                 <li><a href="proyectoDaw/doc/tema2.pdf" target="_blank">Documentación (PDF)</a></li>

@@ -1,5 +1,7 @@
 <?php
 
+require_once 'model/Usuario.php';
+
 // Si se pulsa el botón para volver
 if (isset($_POST['volver'])) {
 

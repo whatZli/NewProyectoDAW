@@ -2,11 +2,29 @@
 <div class="container">
     <div class="container-top">
         <div class="ultimos-contenidos">
+            <h4>Contador de visitas</h4> 
+            <div>
+                <span>DWES:&nbsp;</span>
+                <span id="contDwes"></span>
+            </div>
+            <div>
+                <span>DWEC:&nbsp;</span>
+                <span id="contDwec"></span>
+            </div>
+            <div>
+                <span>DIW:&nbsp;</span>
+                <span id="contDiw"></span>
+            </div>
+            <div>
+                <span>DAW:&nbsp;</span>
+                <span id="contDaw"></span>
+            </div>
             <br>
-            <br>
-            <div>Últimos contenidos</div>
-            <br>
-            <br>
+            <div>
+                <h4>Plantilla</h4>
+                <a href="#" id="cambiarFondo">Cambiar Fondo</a>
+                <a href="#" id="cambiarLetra">Cambiar Letra</a>
+            </div>
         </div>
         <div class="contenido">
             <h1>DAW</h1>

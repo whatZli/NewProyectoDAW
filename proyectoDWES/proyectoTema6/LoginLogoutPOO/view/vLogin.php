@@ -1,5 +1,6 @@
 <article id="a1">
     <form name="logIn" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+        <h1>Formulario de acceso</h1>
         <div class="form-group">
             <label for="loginUsuario">Usuario</label>
             <input type="text" name="loginUsuario" class="form-control" id="loginUsuario" aria-describedby="loginUsuario" placeholder="Introduce usuario">

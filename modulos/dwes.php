@@ -5,18 +5,16 @@
         <h2>Desarrollo Web Entorno Servidor</h2>
     </div>
     <div class="contenido-asignaturas">
-        <div class="container-asignaturas">
-            <a class="tema dwes" href="proyectoDaw/doc/tema1.pdf" target="_blank">
-                <div>
-                    <span>Tema 1. Conceptos básicos (PDF)</span>
-                </div>
-            </a>
-            <a class="tema dwes" href="proyectoDaw/doc/tema1.pdf" target="_blank">
-                <div>
-                    <span>Tema 2. Instalación y configuración de servicios (PDF)</span>
-                </div>
-            </a>
-        </div>
+        <a class="tema dwes" href="proyectoDaw/doc/tema1.pdf" target="_blank">
+            <div>
+                <span>Tema 1. Conceptos básicos (PDF)</span>
+            </div>
+        </a>
+        <a class="tema dwes" href="proyectoDaw/doc/tema1.pdf" target="_blank">
+            <div>
+                <span>Tema 2. Instalación y configuración de servicios (PDF)</span>
+            </div>
+        </a>
         <button type="button" class="collapsible tema dwes">Tema 3. Proyecto Tema 3</button>
         <div class="lista">
             <a class="ejercicio" href="proyectoDWES/proyectoTema3/codigoPHP/ejercicio0.php" target="_blank">00. Hola mundo y phpinfo().</a>

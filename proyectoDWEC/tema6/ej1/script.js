@@ -77,7 +77,29 @@ $(function () {
         }
     });
 
-
+    $("#profer").click(function (){
+        $("#alumno").css("display","none");
+        $("#alumnor").removeClass("btn-primary");
+        $("#alumnor").addClass("btn-light");
+        
+        $("#profesor").css("display","block");
+        $("#profer").removeClass("btn-light");
+        $("#profer").addClass("btn-primary");
+        
+    console.log("cargado profesor");
+    });
+    
+    $("#alumnor").click(function (){
+        $("#profesor").css("display","none");
+        $("#profer").removeClass("btn-primary");
+        $("#profer").addClass("btn-light");
+        
+        $("#alumno").css("display","block");
+        $("#alumnor").removeClass("btn-light");
+        $("#alumnor").addClass("btn-primary");
+        
+    console.log("cargado alumno");
+    });
     console.log("Final");
 });
 

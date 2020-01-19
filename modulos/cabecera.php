@@ -19,4 +19,4 @@ and open the template in the editor.
         <script type="text/javascript" src="core/js/overlayNavMenu.js"></script>
         
     </head>
-    <body>
+    <body id="body">
