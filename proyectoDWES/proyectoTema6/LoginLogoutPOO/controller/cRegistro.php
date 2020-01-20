@@ -4,16 +4,20 @@ require_once 'model/Usuario.php';
 
 // Si se pulsa el botón para volver
 if (isset($_POST['volver'])) {
+    
     session_destroy();
     // Se reenvía al index
     header('Location: ../../../index.php?pag=dwes');
 }
-if (isset($_POST['registro'])) {
-    $_SESSION["pagina"] = "registro"; //Se guarda en la variable de sesión la ventana de registro
+
+if (isset($_POST['iniciarSesion'])) {
+    $_SESSION["pagina"] = "login"; //Se guarda en la variable de sesión la ventana de registro
     header('Location: index.php'); //Se le redirige al index
     require_once $vistas["layout"]; //Se carga la vista correspondiente
     exit;
 }
+
+
 //Si se pulsa el botón de iniciar sesion
 if (isset($_POST['iniciarSesion'])) {
     $entradaOK = true; //Variable que controla el formularo
@@ -48,14 +52,14 @@ if (isset($_POST['iniciarSesion'])) {
             exit;
             
         } else { // Si $objetoUsuario no tiene un Usuario
-            $_SESSION['vista'] = $vistas['login']; //Se carga en la sesión de vistas, la que queremos
+            $_SESSION['vista'] = $vistas['registro']; //Se carga en la sesión de vistas, la que queremos
             require_once $vistas["layout"];
         }
     } else {//Si la entradaOK no es correcta
-        $_SESSION['vista'] = $vistas['login']; //Se carga en la sesión de vistas, la que queremos
+        $_SESSION['vista'] = $vistas['registro']; //Se carga en la sesión de vistas, la que queremos
         require_once $vistas["layout"];
     }
 } else { //Si no se ha pulsado el botón de iniciar sesion
-    $_SESSION['vista'] = $vistas['login']; //Se carga en la sesión de vistas, la que queremos
+    $_SESSION['vista'] = $vistas['registro']; //Se carga en la sesión de vistas, la que queremos
     require_once $vistas["layout"];
 }

@@ -1,10 +1,10 @@
 <article id="a1">
 
     <form name="logIn" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
-        <button type="submit" name="iniciarSesion" class="seleccionado btn btn-secondary">Iniciar Sesión</button>
-        <button type="submit" name="registro" class="menu btn btn-primary" style="float:right;">Registro</button>
+        <button type="submit" name="iniciarSesion" class="menu btn btn-primary">Iniciar Sesión</button>
+        <button type="submit" name="registro" class="seleccionado btn btn-secondary" style="float:right;">Registro</button>
 
-        <h1>Formulario de acceso</h1>
+        <h1>Formulario de LogIn</h1>
         <div class="form-group">
             <label for="loginUsuario">Usuario</label>
             <input type="text" name="loginUsuario" class="form-control" id="loginUsuario" aria-describedby="loginUsuario" placeholder="Introduce usuario">
@@ -23,6 +23,6 @@
         }
         ?>
         <button type="submit" name="iniciarSesion" class="btn btn-primary">Iniciar Sesión</button>
-        <button type="submit" name="volver" class="btn btn-secondary" style="float:right;">Volver atrás</button>
+        <button type="submit" name="volver" class="btn btn-secondary" onclick="self.close()" style="float:right;">Salir de la aplicación</button>
     </form>
 </article>

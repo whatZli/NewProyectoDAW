@@ -16,6 +16,9 @@ include_once 'model/DBPDO.php';
 $controladores = [
     'login' => 'controller/cLogin.php',
     'inicio' => 'controller/cInicio.php',
+    'registro' => 'controller/cRegistro.php',
+    'perfil' => 'controller/cPerfil.php',
+    'error' => 'controller/cError.php',
 ];
 
 /* Array $vistas
@@ -27,6 +30,9 @@ $controladores = [
 $vistas = [
     'login' => 'view/vLogin.php',
     'inicio' => 'view/vInicio.php',
+    'registro' => 'view/vRegistro.php',
+    'perfil' => 'view/vPerfil.php',
+    'error' => 'view/vError.php',
     'layout' => 'view/layout.php',
 ];
 

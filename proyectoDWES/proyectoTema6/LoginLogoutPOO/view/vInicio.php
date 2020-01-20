@@ -5,7 +5,7 @@
     <?php if($aDatosUsuarioVista['contadorAccesos']!=null){
         echo '<h2>El número de accesos es de '.$aDatosUsuarioVista['contadorAccesos'].'</h2>';
     }?>
-    
+    <input type="submit" name="perfil" class="btn btn-secondary" value="Perfil">
     <input type="submit" name="salir" class="btn btn-warning" value="Cerrar Sesión">
 </form>
 <br><br>
