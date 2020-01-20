@@ -100,7 +100,7 @@ $(function () {
     var cuerpo;
 
     function cambiarFondo() {
-        ventanaColores = open('core/js/colores.html', '_blank', 'width=350px,height=500px');
+        ventanaColores = open('core/js/colores.html', '_blank', 'width=350px,height=550px'); 
         setTimeout(function () {
             ventanaColores.postMessage('cambiarFondo', '*');
         }, 300);

@@ -269,7 +269,7 @@ a.menu-active{
 .dwes{
     background: rgba(45, 137, 239, 0.4);
 }
-.dwes:hover,dwes:selected{
+.dwes:hover{
     background: rgba(45, 137, 239, 0.75);
 }
 .dwec{
