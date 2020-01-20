@@ -8,7 +8,11 @@ if (isset($_POST['volver'])) {
     // Se reenvía al index
     header('Location: ../../../index.php?pag=dwes');
 }
+if (isset($_POST['registro'])) {
 
+    // Se reenvía al index
+    header('Location: ../../../index.php?pag=dwes');
+}
 //Si se pulsa el botón de iniciar sesion
 if (isset($_POST['iniciarSesion'])) {
     $entradaOK = true; //Variable que controla el formularo

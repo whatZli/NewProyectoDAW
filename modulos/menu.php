@@ -59,10 +59,10 @@
         </li>
         <li id="mdaw"><a  href="<?php echo $_SERVER['PHP_SELF']."?pag=daw";?>" <?php if(isset($_GET['pag']) && $_GET['pag']==='daw'){echo 'class="menu-active"';}?>>DAW</a>
             <ul class="dropdown-1">
-                <li><a href="proyectoDaw/doc/tema1.pdf" target="_blank">Conceptos (PDF)</a></li>
-                <li><a href="proyectoDaw/doc/tema2.pdf" target="_blank">Documentación (PDF)</a></li>
-                <li><a href="proyectoDaw/doc/tema3.pdf" target="_blank">FTP y SFTP (PDF)</a></li>
-                <li><a href="proyectoDaw/doc/tema4.pdf" target="_blank">GIT (PDF)</a></li>
+                <li><a href="proyectoDAW/doc/tema1.pdf" target="_blank">Conceptos (PDF)</a></li>
+                <li><a href="proyectoDAW/doc/tema2.pdf" target="_blank">Documentación (PDF)</a></li>
+                <li><a href="proyectoDAW/doc/tema3.pdf" target="_blank">FTP y SFTP (PDF)</a></li>
+                <li><a href="proyectoDAW/doc/tema4.pdf" target="_blank">GIT (PDF)</a></li>
             </ul>
         </li>
     </ul>

@@ -44,7 +44,6 @@ body{
     font-size: 1.2em;
 }
 #menu a{
-    background-color:#3B5998;
     display:inline-block;
     margin-right:40px;
     color:white;
@@ -55,7 +54,6 @@ body{
 }
 
 #menu a:hover{
-    color:#F7F7F7;
     z-index:90;
 }
 #logo a {

@@ -32,6 +32,11 @@
             <a class="ejercicio" href="proyectoDIW/ejercicios/pr2/pr2-9-2.html" target="_blank">PR2-9-2 FlexBox II</a>
             <a class="ejercicio" href="proyectoDIW/ejercicios/pr2/pr2-10-1.html" target="_blank">PR2-10-1 Transiciones I</a>
             <a class="ejercicio" href="proyectoDIW/ejercicios/pr2/pr2-10-2.html" target="_blank">PR2-10-2 Transiciones II</a>
+            <a class="ejercicio" href="proyectoDIW/ejercicios/pr2/pr2-10-3.html" target="_blank">PR2-10-3 Transiciones III</a>
+            <a class="ejercicio" href="proyectoDIW/ejercicios/pr2/pr2-10-4.html" target="_blank">PR2-10-4 Transiciones IV</a>
+            <a class="ejercicio" href="proyectoDIW/ejercicios/pr2/pr2-10-5.html" target="_blank">PR2-10-5 Animation I</a>
+            <a class="ejercicio" href="proyectoDIW/ejercicios/pr2/pr2-10-6.html" target="_blank">PR2-10-6 Animation II</a>
+            <a class="ejercicio" href="proyectoDIW/ejercicios/pr2/pr2-10-7.html" target="_blank">PR2-10-7 Animation III</a>
         </div>
         <button type="button" class="collapsible tema diw">Tema 3 (Próximamente)</button>
         <div class="lista"></div>

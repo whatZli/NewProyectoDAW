@@ -1,5 +1,9 @@
 <article id="a1">
+
     <form name="logIn" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+        <button type="submit" name="iniciarSesion" class="seleccionado btn btn-secondary">Iniciar Sesión</button>
+        <button type="submit" name="registro" class="menu btn btn-primary" style="float:right;">Registro</button>
+
         <h1>Formulario de acceso</h1>
         <div class="form-group">
             <label for="loginUsuario">Usuario</label>

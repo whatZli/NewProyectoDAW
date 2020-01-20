@@ -24,7 +24,7 @@ class UsuarioPDO {
         $resConsulta = DBPDO::ejecutaConsulta($consulta, [$codUsuario, $password]); //Ejecutamos la consulta.
         if ($resConsulta->rowCount() == 1) { //Comprobamos si se han obtenido resultados en la consulta.
             $resFetch = $resConsulta->fetchObject();
-            $usuario = new Usuario($resFetch->T01_CodUsuario, $resFetch->T01_DescUsuario, $resFetch->T01_Password, $resFetch->T01_Perfil, $resFetch->T01_FechaHoraUltimaConexion, $resFetch->T01_NumConexiones);
+            $usuario = new Usuario($resFetch->T01_CodUsuario, $resFetch->T01_DescUsuario, $resFetch->T01_Password, $resFetch->T01_Perfil, $resFetch->T01_FechaHoraUltimaConexion, 1);
             
             $actualizaFecha = "UPDATE `t01_usuario` SET `T01_FechaHoraUltimaConexion` = ? WHERE `T01_Usuario`.`T01_CodUsuario`='$resFetch->T01_CodUsuario'"; //Creacion de la consulta.
             
