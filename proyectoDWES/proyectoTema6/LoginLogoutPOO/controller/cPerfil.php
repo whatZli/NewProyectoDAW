@@ -12,11 +12,11 @@ $usuario = $_SESSION['usuarioDAW205POO'];
  
 $aDatosUsuarioVista = array(
     "codigo" => $usuario->getCodUsuario(),
-    "descUsuario" => $usuario->getDescUsuario(),
     "password" => $usuario->getPassword(),
-    "perfil" => $usuario->getPerfil(),
-    "ultimaConexion" => $usuario->getUltimaConexion(),
-    "contadorAccesos" => $usuario->getContadorAccesos()
+    "descUsuario" => $usuario->getDescUsuario(),
+    "contadorAccesos" => $usuario->getNumAccesos(),
+    "ultimaConexion" => $usuario->getFechaHoraUltimaConexion(),
+    "perfil" => $usuario->getPerfil()
 );
 
 $_SESSION['vista'] = $vistas['perfil']; //Se carga en la sesión de vistas, la que queremos

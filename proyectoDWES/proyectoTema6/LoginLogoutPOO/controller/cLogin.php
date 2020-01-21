@@ -18,8 +18,8 @@ if (isset($_POST['registro'])) {
 if (isset($_POST['iniciarSesion'])) {
     $entradaOK = true; //Variable que controla el formularo
     //Comprobación de errores en los campos
-    $aErrores["codUsuario"] = validacionFormularios::comprobarAlfaNumerico($_POST["loginUsuario"], 50, 1, 1);
-    $aErrores["password"] = validacionFormularios::comprobarAlfaNumerico($_POST["loginPassword"], 50, 4, 1);
+    $aErrores["codUsuario"] = validacionFormularios::comprobarAlfaNumerico($_POST["loginUsuario"], 8, 1, 1);
+    $aErrores["password"] = validacionFormularios::comprobarAlfaNumerico($_POST["loginPassword"], 8, 4, 1);
 
     //Recorrer el Array de errores para poner la entradaOK a false en caso de que haya un error
     foreach ($aErrores as $key => $value) {

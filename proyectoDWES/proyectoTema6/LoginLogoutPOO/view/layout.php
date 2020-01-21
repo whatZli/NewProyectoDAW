@@ -15,10 +15,12 @@
             body{
                 box-sizing: border-box;
             }
+            #topBar{
+            }
             #content{
                 width:600px;
                 height: 500px;
-                margin: auto;
+                margin-left: 400px;
                 margin-top: 70px;
                 background: linear-gradient(to right,  hsl(211, 20%, 30%, 85%), hsl(211, 40%, 30%, 45%), hsl(211, 100%, 30% , 20%));
                 padding: 50px;
@@ -74,10 +76,35 @@
             .idioma a{
                 margin: 0 20px 10px 20px;
             }
+            aside{
+                position: fixed;
+                left: 10px;
+                top: 130px;
+            }
+            aside a{
+                display: block;
+                padding: 5px;
+                margin-bottom: 10px;
+                border-radius: 6px;
+            }
+            aside a:hover{
+                background: #007BFF;
+            }
         </style>
     </head>
     <body >
         <div id="topBar">Proyecto LogIn-LogOutPOO</div>
+        <aside>
+            <h4>Información sobre el proyecto</h4>
+            <a href="doc/pdf/CatalogoDeRequisitos.pdf">Catálogo de requisitos</a>
+            <a href="doc/pdf/DiagramaDeClases.pdf">Diagrama de clases</a>
+            <a href="doc/pdf/">No - Árbol de navegación</a>
+            <a href="doc/pdf/">No - Mapa web (Estructura de ficheros)</a>
+            <a href="doc/pdf/">No - Árbol de almacenamiento</a>
+            <a href="doc/pdf/">No - Módelo físico de datos</a>
+            <a href="doc/pdf/">No - Tecnologías utilizadas</a>
+            <a href="doc/">PHP Doc</a>
+        </aside>
         <div id="content">
             <nav >
                 
@@ -91,7 +118,6 @@
         <footer>
             <address>
                 <a href="../../../indexProyectoTema5.html	">&copy2019 Alex Dominguez</a>
-                <a style="position:relative;left:100px;" href="doc/">Documentación</a>
                 <a href="http://daw-usgit.sauces.local/Alexander/proyectoLoginLogoffPoo/tree/master" target="_blank"><img src="core/images/gitlab.png" alt="asd" width="40" style="float:right;"/></a>
             </address>
         </footer>

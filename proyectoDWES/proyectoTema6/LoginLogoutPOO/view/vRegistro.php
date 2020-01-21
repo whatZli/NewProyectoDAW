@@ -4,7 +4,6 @@
         <button type="submit" name="iniciarSesion" class="seleccionado btn btn-secondary">Iniciar Sesión</button>
         <button type="submit" name="registro" class="menu btn btn-primary" style="float:right;">Registro</button>
 
-        <h1>Formulario de Registro</h1>
         <article id="a2">
             <form name="registro" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
                 <div class="form-group">
@@ -44,9 +43,9 @@
                 </div>
                 <div class="form-group"> 
                     <label for="exampleInputPassword2">Repita la contraseña</label>
-                    <input type="password" name="password" style="display: inline-block; padding: 5px 7px; border-radius: 4px;float: right; width: 300px;" id="exampleInputPassword2" placeholder="Repita la contraseña">
+                    <input type="password" name="password2" style="display: inline-block; padding: 5px 7px; border-radius: 4px;float: right; width: 300px;" id="exampleInputPassword2" placeholder="Repita la contraseña">
                     <?php
-                    if (isset($aErrores['password'])) {
+                    if (isset($aErrores['password2'])) {
                         echo '<div class="alert alert-danger" role="alert">';
                         echo 'Introduce una contraseña válida';
                         echo '</div>';

@@ -15,12 +15,12 @@
 
     CREATE TABLE IF NOT EXISTS T01_Usuario(
         T01_CodUsuario varchar(15) PRIMARY KEY,
-        T01_DescUsuario varchar(250) NOT null,
         T01_Password varchar(64) NOT null,
-        T01_Perfil enum('administrador', 'usuario') default 'usuario', -- Valor por defecto usuario
+        T01_DescUsuario varchar(250) NOT null,
+        T01_NumAccesos int DEFAULT '0',
         T01_FechaHoraUltimaConexion timestamp, -- Revisar o cambiar a int--
-        T01_NumConexiones int,
-        T01_ImagenUsuario mediumblob
+        T01_Perfil enum('administrador', 'usuario') default 'usuario', -- Valor por defecto usuario
+        T01_ListaOpinionesUsuario varchar(255)
     );
 
     CREATE TABLE IF NOT EXISTS T02_Departamento(
