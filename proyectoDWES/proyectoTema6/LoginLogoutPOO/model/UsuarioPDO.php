@@ -24,13 +24,11 @@ class UsuarioPDO {
         $resConsulta = DBPDO::ejecutaConsulta($consulta, [$codUsuario, $password]); //Ejecutamos la consulta.
         if ($resConsulta->rowCount() == 1) { //Comprobamos si se han obtenido resultados en la consulta.
             $resFetch = $resConsulta->fetchObject();
-            $usuario = new Usuario($resFetch->T01_CodUsuario, $resFetch->T01_DescUsuario, $resFetch->T01_Password, $resFetch->T01_Perfil, $resFetch->T01_FechaHoraUltimaConexion, 1);
-            
-            $actualizaFecha = "UPDATE `t01_usuario` SET `T01_FechaHoraUltimaConexion` = ? WHERE `T01_Usuario`.`T01_CodUsuario`='$resFetch->T01_CodUsuario'"; //Creacion de la consulta.
-            
-            $resConsulta = DBPDO::ejecutaConsulta($actualizaFecha,"2021-01-19 00:00:00"); //Ejecutamos la consulta.
 
-            
+            $actualizaFecha = "UPDATE `T01_Usuario` SET `T01_FechaHoraUltimaConexion` = ? WHERE `T01_Usuario`.`T01_CodUsuario` = ?"; //Creacion de la consulta.
+            $resActualizaFecha = DBPDO::ejecutaConsulta($actualizaFecha, ["2031-01-17 08:41:38", "alex"]); //Ejecutamos la consulta.
+
+            $usuario = new Usuario($resFetch->T01_CodUsuario, $resFetch->T01_DescUsuario, $resFetch->T01_Password, $resFetch->T01_Perfil, $resFetch->T01_FechaHoraUltimaConexion, 1);
         }
         return $usuario;
     }
