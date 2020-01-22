@@ -98,7 +98,7 @@
             <h4>Información sobre el proyecto</h4>
             <a href="doc/pdf/CatalogoDeRequisitos.pdf">Catálogo de requisitos</a>
             <a href="doc/pdf/DiagramaDeClases.pdf">Diagrama de clases</a>
-            <a href="doc/pdf/">No - Árbol de navegación</a>
+            <a href="doc/pdf/casosDeUso.pdf">Árbol de navegación</a>
             <a href="doc/pdf/">No - Mapa web (Estructura de ficheros)</a>
             <a href="doc/pdf/">No - Árbol de almacenamiento</a>
             <a href="doc/pdf/">No - Módelo físico de datos</a>
@@ -117,7 +117,7 @@
         </div>
         <footer>
             <address>
-                <a href="../../../indexProyectoTema5.html	">&copy2019 Alex Dominguez</a>
+                <a href="../../../">&copy2019 Alex Dominguez</a>
                 <a href="http://daw-usgit.sauces.local/Alexander/proyectoLoginLogoffPoo/tree/master" target="_blank"><img src="core/images/gitlab.png" alt="asd" width="40" style="float:right;"/></a>
             </address>
         </footer>

@@ -54,4 +54,11 @@ class UsuarioPDO {
          }
         return false;
     }
+    
+    public static function modificarUsuario($codUsuario,$descripcion){
+        $consulta = "INSERT INTO `T01_Usuario`(`T01_CodUsuario`, `T01_Password`, `T01_DescUsuario`) VALUES( ? , ? , ? );";
+        DBPDO::ejecutaConsulta($consulta, [$codUsuario, $password, $descripcion]);
+        //Se llama a validar un usuario para que nos devuelva un Usuario
+        return UsuarioPDO::validarUsuario($codUsuario, $password);
+    }
 }

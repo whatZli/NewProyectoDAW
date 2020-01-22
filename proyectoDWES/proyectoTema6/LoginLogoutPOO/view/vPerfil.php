@@ -12,7 +12,7 @@
                 <div class="form-group">
                     <label for="sel1">Perfil</label>
                     <select disabled name="perfil" style="display: inline-block; padding: 5px 7px; border-radius: 4px;float: right; width: 300px;" id="sel1">
-                        <option value="<?php echo $_SESSION['perfilDAW205AppLogInLogOut']; ?>"><?php echo $aDatosUsuarioVista['perfil']; ?></option>
+                        <option value="<?php echo $aDatosUsuarioVista['perfil']; ?>"><?php echo $aDatosUsuarioVista['perfil']; ?></option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -25,7 +25,7 @@
                 </div>
                 
                 <input type="submit" name="volver" class="btn btn-secondary" value="Volver">
-                
+                <input type="submit" name="guardar" class="btn btn-primary" value="Guardar">
             </form>
 </form>
 <br><br>
