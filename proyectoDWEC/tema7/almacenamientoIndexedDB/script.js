@@ -18,21 +18,62 @@ function cargar() {
 
     var borrar = document.getElementById('borrar');
     borrar.addEventListener('click', borrarKeyDB, false);
-    
+
     var borrarT = document.getElementById('borrarT');
     borrarT.addEventListener('click', borrarTodosDB, false);
 
     var indice = document.getElementById('indice');
     indice.addEventListener('click', crearIndiceDB, false);
 
-    crearDB();//Abrir la BD
-    crearDB2();//Abrir la BD
+    var buscari = document.getElementById('buscari');
+    buscari.addEventListener('click', buscarIndiceDB, false);
+
+    var modificar = document.getElementById('modificar');
+    modificar.addEventListener('click', modificarDB, false);
+
+    //crearDB();//Abrir la BD
+    //crearDB2();//Abrir la BD
+    crearIndiceDB();
 }
 
-function crearIndiceDB(){
+function buscarIndiceDB() {
+    var transaccion = bd.transaction(["colchonesIndice"], "readonly");
+    var contenedor = transaccion.objectStore("colchonesIndice");
+    var index = contenedor.index('dimension');
+
+
+    index.openCursor().onsuccess = function (event) {
+        var cursor = event.target.result;
+        console.log(cursor);
+        if (cursor) {
+
+            var tbody = document.getElementsByTagName("tbody")[1];
+            var tr = document.createElement("tr");
+            var td = document.createElement("td")
+            td.appendChild(document.createTextNode(cursor.value.id));
+            tr.appendChild(td);
+            var td = document.createElement("td")
+            td.appendChild(document.createTextNode(cursor.value.marca));
+            tr.appendChild(td);
+            var td = document.createElement("td")
+            td.appendChild(document.createTextNode(cursor.value.dimension));
+            tr.appendChild(td);
+            var td = document.createElement("td")
+            td.appendChild(document.createTextNode(cursor.value.material));
+            tr.appendChild(td);
+            tbody.appendChild(tr);
+            cursor.continue();
+
+        } else {
+            console.log("No tiene más valores");
+        }
+    }
+}
+
+function crearIndiceDB() {
     //Crear la BD
     //Metodo de crear open
-    var abrirBD = window.indexedDB.open("Tienda", 4);//Nombre y versión
+    var abrirBD = window.indexedDB.open("Tienda", 8);//Nombre y versión
     console.log(abrirBD);
 
     //si la operación de open tiene exito crea la BD o la abre si ya existe
@@ -49,15 +90,48 @@ function crearIndiceDB(){
     }
 
     abrirBD.onupgradeneeded = function (event) {
-        //Punto a la bd
+
+        /*
+         * *
+         *   crear indice con una tabla nueva
+         *
+         */
+
+        //punto a la bd
         bd = event.target.result;
-        //Crear un contenedor ObjectStore
-        bd.createObjectStore("ColchonesIndice", {keyPath: "id"});
-        
+        //creamos index tabla ObjectStore
+        var contenedor = bd.createObjectStore("colchonesIndice2", {keyPath: 'id'});
+        contenedor.createIndex('dimension', 'dimension', {unique: false});
+
+        /*
+         * Crear en una tabla existente
+         * 
+         */
+        var existente = event.currentTarget.transaction;
+        var contenedorExistente = existente.objectStore("Colchones1");
+        contenedorExistente.createIndex("marca", "marca", {unique: false});
+
+
     }
 }
 
-function crearDB2(){
+
+function modificarDB() {
+    var transaccion = bd.transaction(["Colchones1"], "readwrite");
+    var contenedor = transaccion.objectStore("Colchones1");
+
+    //Borrar la tabla por key
+    contenedor.get("asd").onsuccess = function (event) {
+        var objeto = event.target.result;
+
+        if (objeto != "undefined") {
+            //objeto.dimension="200"; //Tambíen se pued
+            contenedor.put({id: "1", marca: "1", dimension: "1", material: "1"});
+            console.log(objeto);
+        }
+    };
+}
+function crearDB2() {
     //Crear la BD
     //Metodo de crear open
     var abrirBD = window.indexedDB.open("Tienda", 4);//Nombre y versión
@@ -84,8 +158,8 @@ function crearDB2(){
     }
 }
 
-function borrarTodosDB(){
-    
+function borrarTodosDB() {
+
 }
 
 function borrarKeyDB() {
@@ -95,8 +169,8 @@ function borrarKeyDB() {
     //Borrar la tabla por key
     contenedor.get(2).onsuccess = function (event) {
         var objeto = event.target.result;
-        
-        if(objeto!="undefined"){
+
+        if (objeto != "undefined") {
             contenedor.delete(2);
             console.log(objeto);
         }
@@ -144,7 +218,7 @@ function leerKeyDB() {
         var objeto = event.target.result;
         console.log(objeto);
     };
-    
+
     //Segunda tabla
     var transaccion = bd.transaction(["Colchones1"], "readonly");
     var contenedor = transaccion.objectStore("Colchones1");
@@ -172,7 +246,7 @@ function insertarDB() {
 
     contenedor.add({id: idv, marca: marcav, dimension: dimensionv, material: materialv});
 
-    
+
     //Insertar en segunda tabla
     var transaccion1 = bd.transaction(["Colchones1"], "readwrite");//creamos una transaccion sobre la tabla colchones
 

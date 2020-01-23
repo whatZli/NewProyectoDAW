@@ -1,6 +1,17 @@
 <article id="a1">
-
+    <aside>
+        <h4>Información sobre el proyecto</h4>
+        <a href="doc/pdf/CatalogoDeRequisitos.pdf">Catálogo de requisitos</a>
+        <a href="doc/pdf/DiagramaDeClases.pdf">Diagrama de clases</a>
+        <a href="doc/pdf/casosDeUso.pdf">Árbol de navegación</a>
+        <a href="doc/pdf/">No - Mapa web (Estructura de ficheros)</a>
+        <a href="doc/pdf/">No - Árbol de almacenamiento</a>
+        <a href="doc/pdf/">No - Módelo físico de datos</a>
+        <a href="doc/pdf/">No - Tecnologías utilizadas</a>
+        <a href="doc/">PHP Doc</a>
+    </aside>
     <form name="logIn" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+        
         <button type="submit" name="iniciarSesion" class="menu btn btn-primary">Iniciar Sesión</button>
         <button type="submit" name="registro" class="seleccionado btn btn-secondary" style="float:right;">Registro</button>
 

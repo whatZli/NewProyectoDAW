@@ -37,7 +37,7 @@ $(function () {
         cookie = $.cookie("DWES");//
         suma = parseInt(cookie) + 1;
         console.log(cookie);
-        $.cookie("DWES", suma);
+        $.cookie("DWES", suma, {expires: 7});
     });
     $("#contDwes").append($.cookie("DWES"));//Muestra la cookie en el contador de visitas
 
@@ -45,7 +45,7 @@ $(function () {
         cookie = $.cookie("DWEC");//
         suma = parseInt(cookie) + 1;
         console.log(cookie);
-        $.cookie("DWEC", suma);
+        $.cookie("DWEC", suma, {expires: 7});
     });
     $("#contDwec").append($.cookie("DWEC"));//Muestra la cookie en el contador de visitas
 
@@ -53,7 +53,7 @@ $(function () {
         cookie = $.cookie("DAW");//
         suma = parseInt(cookie) + 1;
         console.log(cookie);
-        $.cookie("DAW", suma);
+        $.cookie("DAW", suma, {expires: 7});
     });
     $("#contDiw").append($.cookie("DIW"));//Muestra la cookie en el contador de visitas
 
@@ -61,7 +61,7 @@ $(function () {
         cookie = $.cookie("DIW");//
         suma = parseInt(cookie) + 1;
         console.log(cookie);
-        $.cookie("DIW", suma);
+        $.cookie("DIW", suma, {expires: 7});
     });
     $("#contDaw").append($.cookie("DAW"));//Muestra la cookie en el contador de visitas
 
