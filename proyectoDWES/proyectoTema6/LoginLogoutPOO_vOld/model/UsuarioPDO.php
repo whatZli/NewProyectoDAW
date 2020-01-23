@@ -56,9 +56,20 @@ class UsuarioPDO {
     }
     
     public static function modificarUsuario($codUsuario,$descripcion){
-        $consulta = "UPDATE `T01_Usuario` SET `T01_DescUsuario` = ? WHERE `T01_CodUsuario` = ?;";
-        DBPDO::ejecutaConsulta($consulta, [$descripcion, $codUsuario]);
-        //Se llama a validar un usuario para que nos devuelva un Usuario
-        return UsuarioPDO::validarUsuario($codUsuario, $password);
+        $usuario=null;
+        
+        $acutalizacion = "UPDATE `T01_Usuario` SET `T01_DescUsuario` = ? WHERE `T01_CodUsuario` = ?;";
+        DBPDO::ejecutaConsulta($acutalizacion, [$descripcion, $codUsuario]); 
+        
+        $consulta = "select * from T01_Usuario where T01_CodUsuario=?"; //Creacion de la consulta.
+        $resConsulta = DBPDO::ejecutaConsulta($consulta, [$codUsuario]); //Ejecutamos la consulta.
+        
+        if ($resConsulta->rowCount() == 1) { //Comprobamos si se han obtenido resultados en la consulta.
+            $resFetch = $resConsulta->fetchObject();
+            $usuario = new Usuario($resFetch->T01_CodUsuario, $resFetch->T01_Password, $resFetch->T01_DescUsuario,$resFetch->T01_NumAccesos, $resFetch->T01_FechaHoraUltimaConexion,$resFetch->T01_Perfil,null );
+        }
+        
+        var_dump($usuario);
+        return $usuario;
     }
 }

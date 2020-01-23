@@ -14,6 +14,7 @@ include_once 'model/DBPDO.php';
  * @param Array $controladores['inicio'] Controlador del inicio
  */
 $controladores = [
+    'main' => 'controller/cMain.php',
     'login' => 'controller/cLogin.php',
     'inicio' => 'controller/cInicio.php',
     'registro' => 'controller/cRegistro.php',
@@ -28,6 +29,7 @@ $controladores = [
  * @param Array $vistas['layout'] Controlador del layout
  */
 $vistas = [
+    'main' => 'view/vMain.php',
     'login' => 'view/vLogin.php',
     'inicio' => 'view/vInicio.php',
     'registro' => 'view/vRegistro.php',
