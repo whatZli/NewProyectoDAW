@@ -5,12 +5,12 @@
         <h2>Desarrollo Web Entorno Servidor</h2>
     </div>
     <div class="contenido-asignaturas">
-        <a class="tema dwes" href="proyectoDaw/doc/tema1.pdf" target="_blank">
+        <a class="tema dwes" href="proyectoDAW/doc/tema1.pdf" target="_blank">
             <div>
                 <span>Tema 1. Conceptos básicos (PDF)</span>
             </div>
         </a>
-        <a class="tema dwes" href="proyectoDaw/doc/tema1.pdf" target="_blank">
+        <a class="tema dwes" href="proyectoDAW/doc/tema1.pdf" target="_blank">
             <div>
                 <span>Tema 2. Instalación y configuración de servicios (PDF)</span>
             </div>

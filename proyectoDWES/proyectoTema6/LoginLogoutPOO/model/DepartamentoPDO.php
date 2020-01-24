@@ -26,17 +26,17 @@ class DepartamentoPDO {
 
 
         $registro = $resConsulta->fetchObject(); //S
+
+        $cont = 0;
         
-        $cont=0;
-        while ($registro = $resConsulta->fetchObject()) {
-            $registros[0][$cont]=$registro;
-            $cont++;
-        }
-
-
-
-
-        return $registros[0];
+//        while ($registro = $resConsulta->fetchObject()) {
+//            $resFetch = $resConsulta->fetchObject();
+//            $departamento = new Departamento($resFetch->T02_codDepartamento,$resFetch->T02_DescDepartamento,$resFetch->T02_FechaBaja,$resFetch->T02_VolumenNegocio);
+//            
+//            $registros[$cont][0] = $departamento;
+//            $cont++;
+//        }
+        //return $registro;
     }
 
 }

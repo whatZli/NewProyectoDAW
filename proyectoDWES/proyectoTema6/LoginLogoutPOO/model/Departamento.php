@@ -11,12 +11,13 @@
 //require_once 'UsuarioPDO.php';
 //Creación de la clase Usuario
 
-class Departamento{
+class Departamento {
+
     private $codDepartamento;
     private $descDepartamento;
     private $volumenDeNegocio;
     private $fechaBajaDepartamento;
-    
+
     function __construct($codDepartamento, $descDepartamento, $volumenDeNegocio, $fechaBajaDepartamento) {
         $this->codDepartamento = $codDepartamento;
         $this->descDepartamento = $descDepartamento;

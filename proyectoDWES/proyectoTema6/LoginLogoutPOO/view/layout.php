@@ -155,7 +155,7 @@
                 
                 <a style="margin-left: 10%; float:left;" href="doc/pdf/tema2.pdf" target="_blank">PHP Documentor</a>
                 <a style="margin-left: 10%; float:left;" href="../../../">&copy2019 Alex Dominguez</a>
-                <a href="http://daw-usgit.sauces.local/Alexander/proyectoLoginLogoffPoo/tree/master" target="_blank"><img style="margin-left: 10%; float:left;"src="core/images/gitlab.png" alt="asd" width="40"/></a>
+                <a href="http://daw-usgit.sauces.local/Alexander/LoginLogoutPDO/tree/master" target="_blank"><img style="margin-left: 10%; float:left;"src="core/images/gitlab.png" alt="asd" target="_blank" width="40"/></a>
                 <a href="#"><img style="margin-left: 10%; float:left;"src="https://icons-for-free.com/iconfiles/png/512/rss+icon-1320168277470601076.png" alt="rss"></a>
             </address>
         </footer>

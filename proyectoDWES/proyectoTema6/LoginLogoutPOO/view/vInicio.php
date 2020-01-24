@@ -13,10 +13,10 @@
         <?php if ($aDatosUsuarioVista['perfil'] == "usuario") { ?>
             <div class="espacioDepartamentos">
                 <?php
-                print_r($aDepartamentos[0]);
+                var_dump($aDepartamentos[0]);
                 ?>
             </div>
-            <?php } else { ?>
+        <?php } else { ?>
             <div class="espacioDepartamentos">
                 Espacio para los usuarios
             </div>
@@ -36,16 +36,16 @@
                     <th>Nº conexiones</th>
                     <td> <?php echo $aDatosUsuarioVista['contadorAccesos'] ?></td>
                 </tr>
-<?php if ($aDatosUsuarioVista['contadorAccesos'] != 1) { ?>
+                <?php if ($aDatosUsuarioVista['contadorAccesos'] != 1) { ?>
                     <tr>
                         <th>Última conexión</th>
                         <td><?php echo $aDatosUsuarioVista['ultimaConexion']; ?></td>
                     </tr>
-<?php } ?>
+                <?php } ?>
             </table>
-<?php if ($aDatosUsuarioVista['perfil'] == "usuario") { ?>
+            <?php if ($aDatosUsuarioVista['perfil'] == "usuario") { ?>
                 <input style="width: 100%; margin-top: 10px;"type="submit" name="gestionDept" class="btn-menu btn btn-secondary" value="Gestión de departamentos">
-                <?php } else { ?>
+            <?php } else { ?>
                 <input style="width: 100%; margin-top: 10px;"type="submit" name="gestionUsu" class="btn-menu btn btn-secondary" value="Gestión de usuarios">
             <?php } ?>
         </div>
