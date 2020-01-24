@@ -5,7 +5,7 @@ include_once 'model/Usuario.php';
 /* Clase UsuarioPDO
  * Clase que realizará las consultas relacionadas con el usuario
  * @category model
- * @autor David García
+ * @autor Alex Dominguez
  * @version 1.0   
  */
 

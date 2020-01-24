@@ -6,6 +6,8 @@ include_once 'core/libreriaValidacionFormularios.php';
 //Incluimos todas las clases del modelo
 include_once 'model/Usuario.php';
 include_once 'model/UsuarioPDO.php';
+include_once 'model/Departamento.php';
+include_once 'model/DepartamentoPDO.php';
 include_once 'model/DBPDO.php';
 
 /* Array $controladores
