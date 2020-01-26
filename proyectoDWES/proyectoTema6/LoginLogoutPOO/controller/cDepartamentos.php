@@ -1,24 +1,31 @@
 <?php
 
 // Si se pulsa el botón para salir
-if (isset($_POST['salir'])) {
-    unset($_SESSION['usuarioDAW205POO']); // Se destruye la sesión
-    session_destroy(); //Se destruye la sesión
+if (isset($_POST['volver'])) {
+    $_SESSION["pagina"] = "inicio"; //Se guarda en la variable de sesión la ventana de registro
     header('Location: index.php'); //Se le redirige al index
     exit;
 }
 
-if (isset($_POST['perfil'])) {
-    $_SESSION["pagina"] = "perfil"; //Se guarda en la variable de sesión la ventana de registro
+if(isset($_GET['bajaCodDept'])){
+    DepartamentoPDO::bajaLogicaDepartamento($_GET['bajaCodDept']);
+}
+if(isset($_GET['altaCodDept'])){
+    DepartamentoPDO::rehabilitaDepartamento($_GET['altaCodDept']);
+}
+if(isset($_GET['borrarCodDept'])){
+    DepartamentoPDO::bajaFisicaDepartamento($_GET['borrarCodDept']);
+}
+if(isset($_GET['visualizarCodDept'])){
+    $_SESSION['deptEnCurso']= DepartamentoPDO::buscaDepartamentosPorCodigo($_GET['visualizarCodDept']);
+    $_SESSION["pagina"] = "deptVisualizar"; //Se guarda en la variable de sesión la ventana de registro
     header('Location: index.php'); //Se le redirige al index
-    require_once $vistas["layout"]; //Se carga la vista correspondiente
     exit;
 }
-
-if (isset($_POST['gestionDept'])) {
-    $_SESSION["pagina"] = "departamentos"; //Se guarda en la variable de sesión la ventana de registro
+if(isset($_GET['modificarCodDept'])){
+    $_SESSION['deptEnCurso']= DepartamentoPDO::buscaDepartamentosPorCodigo($_GET['modificarCodDept']);
+    $_SESSION["pagina"] = "deptModificar"; //Se guarda en la variable de sesión la ventana de registro
     header('Location: index.php'); //Se le redirige al index
-    require_once $vistas["layout"]; //Se carga la vista correspondiente
     exit;
 }
 
@@ -57,6 +64,6 @@ if ($aDatosUsuarioVista["perfil"] == 'administrador') {
 
 
 
-$_SESSION['vista'] = $vistas['inicio']; //Se carga en la sesión de vistas, la que queremos
+$_SESSION['vista'] = $vistas['departamentos']; //Se carga en la sesión de vistas, la que queremos
 require_once $vistas['layout']; //se incluye la vista que contiene la $_SESSION['vista']
     

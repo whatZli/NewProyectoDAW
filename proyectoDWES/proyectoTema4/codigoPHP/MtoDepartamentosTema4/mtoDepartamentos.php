@@ -51,8 +51,8 @@ try {
     $conn = new PDO("mysql:host=" . SERVER . ";dbname=" . DB, USER, PASSWD);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $exc) {
-    echo "Error: $exc->getMessage() <br>";
-    echo "Codigo del error: $exc->getCode() <br>";
+    echo "Error:". $exc->getMessage() ." <br>";
+    echo "Codigo del error: ".$exc->getCode() ."<br>";
 }
 //Si se ha pasado la variable pag se coge y si no se pone a 0
 if (isset($_GET['pag'])) {

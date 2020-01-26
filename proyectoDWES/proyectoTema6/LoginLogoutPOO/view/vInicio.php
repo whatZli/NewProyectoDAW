@@ -9,20 +9,72 @@
 
     <div class="contenedor"><br><br>
 
-        <h4>Hola <?php echo ucfirst($aDatosUsuarioVista['descUsuario']) ?>. </h4>
+        
         <?php if ($aDatosUsuarioVista['perfil'] == "usuario") { ?>
             <div class="espacioDepartamentos">
-                <?php
-                var_dump($aDepartamentos[0]);
-                ?>
+                <table border="1" style="text-align: center;">
+                    <caption>Visualización de los departamentos</caption>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Descripción</th>
+                            <th>Volumen de negocio</th>
+                            <th>Fecha de baja</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        for ($i = 0; isset($aDepartamentosVista[$i]); $i++) {
+                            if ($aDepartamentosVista[$i][3] != null) {
+                                echo '<tr class="baja">';
+                            } else {
+                                echo '<tr class="alta">';
+                            }
+                            echo '<td>' . $aDepartamentosVista[$i][0] . '</td>';
+                            echo '<td>' . $aDepartamentosVista[$i][1] . '</td>';
+                            if ($aDepartamentosVista[$i][2] != null) {
+                                echo '<td>' . $aDepartamentosVista[$i][2] . '</td>';
+                            } else {
+                                echo '<td>-</td>';
+                            }
+
+                            echo '<td>' . $aDepartamentosVista[$i][3] . '</td>';
+                            echo '</tr>';
+                        }
+                        ?>
+                    </tbody>
+                </table>
             </div>
         <?php } else { ?>
-            <div class="espacioDepartamentos">
-                Espacio para los usuarios
+            <div class="espacioUsuarios">
+                <table border="1" style="text-align: center;">
+                    <caption>Visualización de los usuarios</caption>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Descripción</th>
+                            <th>Nº de accesos</th>
+                            <th>Última conexión</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        for ($i = 0; isset($aUsuariosVista[$i]); $i++) {
+                            echo '<tr>';
+                            echo '<td>' . $aUsuariosVista[$i][0] . '</td>';
+                            echo '<td>' . $aUsuariosVista[$i][1] . '</td>';
+                            echo '<td>' . $aUsuariosVista[$i][2] . '</td>';
+                            echo '<td>' . $aUsuariosVista[$i][3] . '</td>';
+                            echo '</tr>';
+                        }
+                        ?>
+                    </tbody>
+                </table>
             </div>
         <?php } ?>
 
         <div class="cuadro">
+            <caption>Hola <?php echo ucfirst($aDatosUsuarioVista['descUsuario']) ?>.</caption>
             <table>
                 <tr>
                     <th>Usuario</th>

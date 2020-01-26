@@ -10,7 +10,10 @@
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="core/css/style.css"  rel="stylesheet"         type="text/css" title="Default style">
+        <link href="core/css/style.css" rel="stylesheet" type="text/css" title="Default style">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css'>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css'><link rel="stylesheet" href="webroot/css/style2.css">
+
         <style>
             *{
                 margin: 0;
@@ -21,7 +24,7 @@
             }
             body{
                 background: linear-gradient(to bottom, #ffffff 0%, #aaa 100%);
-                margin: 0px auto;
+                margin: 10px auto;
                 color: #000;
             }
             .logo{
@@ -33,14 +36,14 @@
                 margin-right: 15px;
                 width: 150px;
                 float: right;
-                
+
             }
             .contenedor{
                 color:black;
                 width: 100%;
             }
             .contenido{
-                margin: 80px auto;
+                margin: 80px auto 30px auto;
                 width: 370px;
                 padding: 10px 20px ;
                 background: rgba(230,230,230,0.7);
@@ -59,17 +62,18 @@
                 border: 0px solid ; 
             }
             .imagenes{
-                width: 950px;
                 margin: auto;
             }
             .imagenes img{
-                width: 300px;
-                margin: 5px;
+                margin: auto;
                 transition:0.15s linear;
                 filter: grayscale(70%);
+                filter: saturate(3);
             }
             .imagenes img:hover{
                 filter: grayscale(0%);
+                
+                filter: saturate(3);
                 transform: scale(1.1);
                 box-shadow: 10px 10px 18px -4px rgba(176,176,176,1);
                 cursor: pointer;
@@ -107,14 +111,27 @@
                 position: relative;
                 transition: 0.3s ease;
             }
-            .espacioDepartamentos{
+            .espacioDepartamentos, .espacioUsuarios{
                 position: relative;
-                
+
+                font-family: Montserrat, sans-serif;
                 width: 70%;
-                height: 30vh;
                 background: linear-gradient(to bottom, #ffffff 0%, #CCC 100%);
                 display: inline-block;
                 margin-bottom: 25px;
+            }
+            .alta{
+                background: rgba(140,240,140,0.4);
+            }
+            .baja{
+                background: rgba(240,140,140,0.4);
+            }
+            table tr td img{
+                width: 30px;
+            }
+            table tr td:nth-child(2){
+                text-align: left;
+                padding-left: 10px;
             }
             .cuadro{
                 width: 25%;
@@ -133,12 +150,12 @@
             footer address a:nth-child(1){
                 float:left;
             }
-            
+
             footer address a img{
                 position: relative;
                 width: 35px;
             }
-
+            
         </style>
     </head>
     <body >
@@ -152,12 +169,15 @@
         <footer>
             <address>
                 <a style="margin-left: 10%; float:left;" href="doc/pdf/tema2.pdf" target="_blank">Herramientas utilizadas</a>
-                
+
                 <a style="margin-left: 10%; float:left;" href="doc/pdf/tema2.pdf" target="_blank">PHP Documentor</a>
                 <a style="margin-left: 10%; float:left;" href="../../../">&copy2019 Alex Dominguez</a>
                 <a href="http://daw-usgit.sauces.local/Alexander/LoginLogoutPDO/tree/master" target="_blank"><img style="margin-left: 10%; float:left;"src="core/images/gitlab.png" alt="asd" target="_blank" width="40"/></a>
                 <a href="#"><img style="margin-left: 10%; float:left;"src="https://icons-for-free.com/iconfiles/png/512/rss+icon-1320168277470601076.png" alt="rss"></a>
             </address>
         </footer>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js'></script><script  src="webroot/js/script.js"></script>
+
     </body>
 </html>

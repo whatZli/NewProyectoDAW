@@ -15,14 +15,14 @@ class Departamento {
 
     private $codDepartamento;
     private $descDepartamento;
-    private $volumenDeNegocio;
     private $fechaBajaDepartamento;
+    private $volumenDeNegocio;
 
-    function __construct($codDepartamento, $descDepartamento, $volumenDeNegocio, $fechaBajaDepartamento) {
+    function __construct($codDepartamento, $descDepartamento, $fechaBajaDepartamento, $volumenDeNegocio) {
         $this->codDepartamento = $codDepartamento;
         $this->descDepartamento = $descDepartamento;
-        $this->volumenDeNegocio = $volumenDeNegocio;
         $this->fechaBajaDepartamento = $fechaBajaDepartamento;
+        $this->volumenDeNegocio = $volumenDeNegocio;
     }
 
     function getCodDepartamento() {

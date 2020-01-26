@@ -1,0 +1,10 @@
+body{
+  background:#ccc;
+}
+.main {
+  font-family:Arial;
+  width:70%;
+  display:block;
+  margin:0 auto 110px auto;
+}
+

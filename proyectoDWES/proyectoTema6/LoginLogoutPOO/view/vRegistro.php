@@ -1,5 +1,4 @@
 <form name="logIn" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
-    <button type="submit" name="registro" class=" btn-menu btn btn-primary" style="float:right;">Registro</button>
     <button type="submit" name="iniciarSesion" class="btn-menu btn btn-secondary">Iniciar Sesión</button>
     
 
