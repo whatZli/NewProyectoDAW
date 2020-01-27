@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mto Departamentos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-3.4.1.js" type="text/javascript"></script>
+        <script src="script.js" type="text/javascript"></script>
+        <style>
+            body{
+                margin: auto;
+                width: 90%;
+                text-align: center;
+                font-size: 1.2rem;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-around;
+            }
+            div{
+                margin-bottom: 20px;
+            }
+            div input{
+                display: block;
+            }
+            .otros input, .buscar input{
+                display: inline-block;
+            }
+            .cont label, .cont input{
+                display: inline-block;
+            }
+            .cont{
+                margin-top: 10px;
+            }
+            .cont input{
+                float: right;
+                width: 60%;
+            }
+            .cont input[type="submit"]{
+                margin-left: auto ;
+                
+                width: 30%;
+                float: none;
+            }
+            .cont label{
+                float: left;
+            }
+            .tabla{}
+        </style>
+    </head>
+    <body>
+        <div class="formulario">
+            <h1>Mantenimiento de departamentos</h1>
+            <div class="buscar">
+<!--                <input type="submit" value="Crear IndexedDB" name="crearDB" id="crearDB">-->
+                <label for="busqueda">Cod departamento</label>
+                <input type="text" name="buscar" placeholder="Buscar" id="busqueda">
+                <input type="submit" value="Buscar" name="buscar" id="buscar">
+            </div>
+            <div class="cont">
+                <h3>Formulario de insercción</h3>
+                <label for="cod">Código</label>
+                <input type="text" name="cod" placeholder="Código del departamento" id="cod"><br>
+                <label for="desc">Descripción</label>
+                <input type="text" name="desc" placeholder="Descripción del departamento" id="desc"><br>
+                <label for="vneg">Volumen de negocio</label>
+                <input type="text" name="vneg" placeholder="Volumen de negocio" id="vneg"><br>
+                <label for="fechaBaja">Fecha baja</label>
+                <input type="date" name="fechaBaja" id="fechaBaja"><br><br>
+                <input type="submit" value="Insertar" name="insertar" id="insertar">
+            </div>
+            <div class="otros">
+                <input type="submit" value="Buscar todos" name="leerT" id="leerT">
+<!--                <input type="submit" value="Modificar" name="modificar">-->
+                <input type="submit" value="Borrar tabla" name="borrarT" id="borrarT">
+                <input type="submit" value="Borrar registros BD" name="borrarR" id="borrarR">
+            </div>
+        </div>
+        <div class="tabla">
+            <h1>Visualizar departamentos</h1>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Descripcion</th>
+                        <th>Valor de negocio</th>
+                        <th>Fecha de baja</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

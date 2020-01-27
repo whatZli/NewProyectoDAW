@@ -115,7 +115,6 @@ function crearIndiceDB() {
     }
 }
 
-
 function modificarDB() {
     var transaccion = bd.transaction(["Colchones1"], "readwrite");
     var contenedor = transaccion.objectStore("Colchones1");
@@ -131,6 +130,7 @@ function modificarDB() {
         }
     };
 }
+
 function crearDB2() {
     //Crear la BD
     //Metodo de crear open
@@ -258,7 +258,6 @@ function insertarDB() {
 
 
 }
-
 
 function crearDB() {
     //Crear la BD
