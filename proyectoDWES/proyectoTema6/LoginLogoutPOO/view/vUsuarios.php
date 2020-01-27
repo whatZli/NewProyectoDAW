@@ -1,8 +1,9 @@
 <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
     <input type="submit" name="volver" style="width: 100px;" class="btn-menu btn btn-secondary" value="Volver">
+
     <div class="contenedor"><br><br>
         <h4>Gestión de departamentos</h4>
-        
+
         <table id="gestDept"border="1" style="text-align: center;">
             <thead>
                 <tr>

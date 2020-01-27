@@ -122,7 +122,7 @@ table tr td{
 table tr:hover td{
     border-top: 1px solid #3B5998;
     border-bottom: 1px solid #3B5998;
-    background-color: #eee;
+    background: rgba(240,240,240,0.6);
 }
 #encuesta tr td:hover{
     color:white;

@@ -27,7 +27,7 @@ class DepartamentoPDO {
     public static function buscaDepartamentosPorCodigo($codDepartamento) {
         $departamento = null;
 
-        $consulta = "SELECT * FROM `T02_Departamento` WHERE `t02_departamento`.`T02_CodDepartamento` = ?;"; //Creacion de la consulta.
+        $consulta = "SELECT * FROM `T02_Departamento` WHERE `T02_Departamento`.`T02_CodDepartamento` = ?;"; //Creacion de la consulta.
         $resConsulta = DBPDO::ejecutaConsulta($consulta, [$codDepartamento]); //Ejecutamos la consulta.
 
         if ($resConsulta->rowCount() == 1) {
@@ -39,22 +39,22 @@ class DepartamentoPDO {
     }
 
     public static function rehabilitaDepartamento($codDepartamento) {
-        $consulta = "UPDATE `t02_departamento` SET `T02_FechaBaja` = ? WHERE `t02_departamento`.`T02_CodDepartamento` = ?;"; //Creacion de la consulta.
+        $consulta = "UPDATE `T02_Departamento` SET `T02_FechaBaja` = ? WHERE `T02_Departamento`.`T02_CodDepartamento` = ?;"; //Creacion de la consulta.
         DBPDO::ejecutaConsulta($consulta, [null, $codDepartamento]); //Ejecutamos la consulta.
     }
 
     public static function bajaLogicaDepartamento($codDepartamento) {
-        $consulta = "UPDATE `t02_departamento` SET `T02_FechaBaja` = ? WHERE `t02_departamento`.`T02_CodDepartamento` = ?;"; //Creacion de la consulta.
+        $consulta = "UPDATE `T02_Departamento` SET `T02_FechaBaja` = ? WHERE `T02_Departamento`.`T02_CodDepartamento` = ?;"; //Creacion de la consulta.
         DBPDO::ejecutaConsulta($consulta, [date("Y-m-d"), $codDepartamento]); //Ejecutamos la consulta.
     }
 
     public static function bajaFisicaDepartamento($codDepartamento) {
-        $consulta = "DELETE FROM `t02_departamento` WHERE `t02_departamento`.`T02_CodDepartamento` = ?;"; //Creacion de la consulta.
+        $consulta = "DELETE FROM `T02_Departamento` WHERE `T02_Departamento`.`T02_CodDepartamento` = ?;"; //Creacion de la consulta.
         DBPDO::ejecutaConsulta($consulta, [$codDepartamento]); //Ejecutamos la consulta.
     }
 
     public static function modificaDepartamento($codDepartamento, $descDepartamento, $vNegocio) {
-        $consulta = "UPDATE `t02_departamento` SET `T02_DescDepartamento` = ?, `T02_VolumenNegocio` = ? WHERE `t02_departamento`.`T02_CodDepartamento` = ?;"; //Creacion de la consulta.
+        $consulta = "UPDATE `T02_Departamento` SET `T02_DescDepartamento` = ?, `T02_VolumenNegocio` = ? WHERE `T02_Departamento`.`T02_CodDepartamento` = ?;"; //Creacion de la consulta.
         DBPDO::ejecutaConsulta($consulta, [$descDepartamento, $vNegocio, $codDepartamento]); //Ejecutamos la consulta.
     }
 
