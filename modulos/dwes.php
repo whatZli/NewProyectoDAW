@@ -71,6 +71,7 @@
         <button type="button" class="collapsible tema dwes">Multicapa y POO</button> 
         <div class="lista">
             <a class="ejercicio" href="proyectoDWES/proyectoTema6/LoginLogoutPOO" target="_blank">LoginLogoutMulticapaPoo</a>
+            <a class="ejercicio" href="proyectoDWES/proyectoTema6/LoginLogoffPooApi" target="_blank">LoginLogoutAPI-REST</a>
         </div>
         <script type="text/javascript" src="core/js/collapsible.js"></script>
     </div>

@@ -1,0 +1,13 @@
+CACHE MANIFEST
+#manifiesto 28/01/2020
+
+CACHE:
+index.html
+450_1000.jpg
+style.css
+script.js
+
+NETWORK:
+
+FALLBACK:
+primera.html alternativa.html
