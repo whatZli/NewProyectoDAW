@@ -82,7 +82,7 @@
             #content{}
             a, a:hover, a:link, a:active{
                 text-decoration: none;
-                color: white;
+                color: black;
             }
             .menu{
                 display:inline-block;

@@ -1,34 +1,65 @@
 <?php
+
 // Si se pulsa el botón para salir
 if (isset($_POST['volver'])) {
     $_SESSION["pagina"] = "inicio"; //Se guarda en la variable de sesión la ventana de registro
     header('Location: index.php'); //Se le redirige al index
     exit;
 }
+/* Método para solicitar los datos a la AEMET */
+//En la URL va el municipio concreto con el código postal y la api_key del usuario
+$curl = curl_init();
 
-<?php
-
-$request = new HttpRequest();
-$request->setUrl('https://opendata.aemet.es/opendata/api/valores/climatologicos/inventarioestaciones/todasestaciones/');
-$request->setMethod(HTTP_METH_GET);
-
-$request->setQueryData(array(
-  'api_key' => 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGV4ZG9taW5ndWV6LmdydXBvYXVkaW9uQGdtYWlsLmNvbSIsImp0aSI6IjU3MjNmMTRiLTY0MDUtNGU3MS1hZmMzLWUzNjliMTY0MGM0YyIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNTUzNzgyOTIxLCJ1c2VySWQiOiI1NzIzZjE0Yi02NDA1LTRlNzEtYWZjMy1lMzY5YjE2NDBjNGMiLCJyb2xlIjoiIn0.kBtvrQTUFv6bkcQ24KaSs5UXxK1-Y8QsuDwuaED3sOA'
+curl_setopt_array($curl, array(
+    CURLOPT_URL => "https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/horaria/49021/?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGV4ZG9taW5ndWV6LmdydXBvYXVkaW9uQGdtYWlsLmNvbSIsImp0aSI6IjBjY2I3MjgzLWJjNjQtNDg3Ny1hZTVjLTY2NDg3ODZjNWE4YSIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNTgwMjM2MDY3LCJ1c2VySWQiOiIwY2NiNzI4My1iYzY0LTQ4NzctYWU1Yy02NjQ4Nzg2YzVhOGEiLCJyb2xlIjoiIn0.tUR8XOE-mvUzG3kTU-yLvzSDc4zV8he5gSCntosMuBU",
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => "",
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 30,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => "GET",
+    CURLOPT_HTTPHEADER => array(
+        "cache-control: no-cache"
+    ),
 ));
 
-$request->setHeaders(array(  
-  'cache-control' => 'no-cache'
-));
+$response = curl_exec($curl);
+$err = curl_error($curl);
 
-try {
-  $response = $request->send();
+curl_close($curl);
 
-  echo $response->getBody();
-} catch (HttpException $ex) {
-  echo $ex;
+if ($err) {//Si ha un error
+    echo "cURL Error #:" . $err;
+} else {//Si no hay ningún error se coje la URL donde se almacenan todos los datos de la localidad
+    $urlGenerica = explode(",", $response);
+    $urlValida = explode('"', $urlGenerica[2]);
+    $urlMunicipio = $urlValida[3];
+
+
+    $cadena = file_get_contents($urlMunicipio);
+
+    $info = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $cadena), true);
+
+    //información correspondiente a la localidad
+    $localidad = ($info[0]["nombre"]);
+
+    //Comprueba todas las horas del fichero hasta que la hora del fichero coincide con la hora actual
+    //Una vez que coincide guarda los datos correspondeientes a esa hora en un array y sale del bucle
+    for ($i = 0; $i < 24; $i++) {
+        if ($info[0]["prediccion"]["dia"][1]["estadoCielo"][$i]["periodo"] === date("H")) {
+            $aDatosActuales = $info[0]["prediccion"]["dia"][1]["estadoCielo"][$i];
+            $i = 25;
+        }
+    }
+
+    //Ejemplo JSON a String
+    //    $json = '{"a":1,"b":2,"c":3,"d":4,"e":5}';
+    //
+    //$json2=(json_decode($json));
+    //print_r($json2->{"c"});
 }
 
-echo $archivoXML;
+
 $_SESSION['vista'] = $vistas['apiRest']; //Se carga en la sesión de vistas, la que queremos
 require_once $vistas['layout']; //se incluye la vista que contiene la $_SESSION['vista']
     
