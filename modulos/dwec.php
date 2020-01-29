@@ -56,6 +56,7 @@
             <a class="ejercicio" href="proyectoDWEC/tema7/almacenamientoWEBSQL/index.html" target="_blank">Almacenamiento webSql</a>
             <a class="ejercicio" href="proyectoDWEC/tema7/almacenamientoIndexedDB/index.html" target="_blank">Almacenamiento IndexedDB</a>
             <a class="ejercicio" href="proyectoDWEC/tema7/mtmoDepartIndexedDB/index.html" target="_blank">Mantenimiento Departamentos IndexedDB</a>
+            <a class="ejercicio" href="proyectoDWEC/tema7/almacenamientoXML/index.html" target="_blank">Transformar XML con JS</a>
         </div>
         <script type="text/javascript" src="core/js/collapsible.js"></script>
     </div>

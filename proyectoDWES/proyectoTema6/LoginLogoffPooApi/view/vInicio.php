@@ -98,8 +98,9 @@
             <?php if ($aDatosUsuarioVista['perfil'] == "usuario") { ?>
                 <input style="width: 100%; margin-top: 10px;"type="submit" name="gestionDept" class="btn-menu btn btn-secondary" value="Gestión de departamentos">
             <?php } else { ?>
-                <input style="width: 100%; margin-top: 10px;"type="submit" name="gestionUsu" class="btn-menu btn btn-secondary" value="Gestión de usuarios">
+                <input style="width: 100%; margin-top: 10px; margin-left: 10px;"type="submit" name="gestionUsu" class="btn-menu btn btn-secondary" value="Gestión de usuarios">
             <?php } ?>
+                <input style="width: 100%; margin-top: 10px;"type="submit" name="apiRest" class="btnmenu btn btn-secondary" value="Api Rest">
         </div>
 
 

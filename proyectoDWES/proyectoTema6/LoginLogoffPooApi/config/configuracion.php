@@ -18,6 +18,7 @@ include_once 'model/DBPDO.php';
 $controladores = [
     'login' => 'controller/cLogin.php',
     'inicio' => 'controller/cInicio.php',
+    'apiRest' => 'controller/cApiRest.php',
     'departamentos' => 'controller/cDepartamentos.php',
     'deptVisualizar' => 'controller/cDeptVisualizar.php',
     'deptModificar' => 'controller/cDeptModificar.php',
@@ -36,6 +37,7 @@ $controladores = [
 $vistas = [
     'login' => 'view/vLogin.php',
     'inicio' => 'view/vInicio.php',
+    'apiRest' => 'view/vApiRest.php',
     'departamentos' => 'view/vDepartamentos.php',
     'deptVisualizar' => 'view/vDeptVisualizar.php',
     'deptModificar' => 'view/vDeptModificar.php',

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<agenda>
+    <contacto>
+        <nombre>Juan</nombre>
+        <apellido>Pérez</apellido>
+        <direccion>Calle 12. Ave. Del Silencio</direccion>
+        <telefonos>
+            <telcasa>11223344</telcasa>
+            <telmovil>22334455</telmovil>
+            <teltrabajo>33445566</teltrabajo>
+        </telefonos>
+    </contacto>
+    <contacto>
+        <nombre>Pedro</nombre>
+        <apellido>López</apellido>
+        <direccion>Calle 13. Ave. Del Silencio</direccion>
+        <telefonos>
+            <telcasa>44332211</telcasa>
+            <telmovil>55443322</telmovil>
+            <teltrabajo>66554433</teltrabajo>
+        </telefonos>
+    </contacto>
+</agenda>

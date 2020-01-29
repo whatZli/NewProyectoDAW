@@ -22,6 +22,13 @@ if (isset($_POST['gestionDept'])) {
     exit;
 }
 
+if (isset($_POST['apiRest'])) {
+    $_SESSION["pagina"] = "apiRest"; //Se guarda en la variable de sesión la ventana de registro
+    header('Location: index.php'); //Se le redirige al index
+    require_once $vistas["layout"]; //Se carga la vista correspondiente
+    exit;
+}
+
 //@param variable $usuario Usuario Variable que va a contener un objeto Usuario
 $usuario = $_SESSION['usuarioDAW205POO'];
 
