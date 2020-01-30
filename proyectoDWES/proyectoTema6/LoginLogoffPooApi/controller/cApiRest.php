@@ -40,18 +40,24 @@ if ($err) {//Si ha un error
 
     $info = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $cadena), true);
 
+    //Fecha de la generación de datos
+    $fechaDatosGenerados=$info[0]["elaborado"];
     //información correspondiente a la localidad
     $localidad = ($info[0]["nombre"]);
 
     //Comprueba todas las horas del fichero hasta que la hora del fichero coincide con la hora actual
     //Una vez que coincide guarda los datos correspondeientes a esa hora en un array y sale del bucle
-    for ($i = 0; $i < 24; $i++) {
-        if ($info[0]["prediccion"]["dia"][1]["estadoCielo"][$i]["periodo"] === date("H")) {
-            $aDatosActuales = $info[0]["prediccion"]["dia"][1]["estadoCielo"][$i];
+    for ($hora = 0; $hora < 24; $hora++) {
+        if ($info[0]["prediccion"]["dia"][1]["estadoCielo"][$hora]["periodo"] === date("H")) {
+            $aDatosActuales = $info[0]["prediccion"]["dia"][0]["estadoCielo"][$hora];
             $i = 25;
+            $temperaturaActual=$info[0]["prediccion"]["dia"][0]["temperatura"][$hora]["value"];
+            $sensacionTermicaActual=$info[0]["prediccion"]["dia"][0]["sensTermica"][$hora]["value"];
+            
+            
         }
     }
-
+    
     //Ejemplo JSON a String
     //    $json = '{"a":1,"b":2,"c":3,"d":4,"e":5}';
     //

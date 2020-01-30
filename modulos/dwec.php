@@ -55,8 +55,9 @@
             <a class="ejercicio" href="proyectoDWEC/tema7/proyectoLoginLogoff/codigoPHP/login.php" target="_blank">Almacenar usuario en SessionStorage</a>
             <a class="ejercicio" href="proyectoDWEC/tema7/almacenamientoWEBSQL/index.html" target="_blank">Almacenamiento webSql</a>
             <a class="ejercicio" href="proyectoDWEC/tema7/almacenamientoIndexedDB/index.html" target="_blank">Almacenamiento IndexedDB</a>
-            <a class="ejercicio" href="proyectoDWEC/tema7/mtmoDepartIndexedDB/index.html" target="_blank">Mantenimiento Departamentos IndexedDB</a>
-            <a class="ejercicio" href="proyectoDWEC/tema7/almacenamientoXML/index.html" target="_blank">Transformar XML con JS</a>
+            <a class="ejercicio" href="proyectoDWEC/tema7/mtmoDepartIndexedDB/index.html" target="_blank">Ejercicio Mto Departamentos IndexedDB</a>
+            <a class="ejercicio" href="proyectoDWEC/tema7/almacenamientoXML/index.html" target="_blank">Ejemplo Transform XML con JS</a>
+            <a class="ejercicio" href="proyectoDWEC/tema7/xml/index.html" target="_blank">Ejercicio XML</a>
         </div>
         <script type="text/javascript" src="core/js/collapsible.js"></script>
     </div>

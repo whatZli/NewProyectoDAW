@@ -169,7 +169,7 @@ a, a:link, a:active{
     width: 500px;
     margin: 10px auto;
     padding: 10px 30px;
-    border-radius: 5px;
+    border-radius: 7px;
     background: rgba(30,30,30,0.7);
     color: #FFF;
     font-family: Montserrat, sans-serif;
@@ -177,12 +177,12 @@ a, a:link, a:active{
 .icon {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 60px;
     opacity: 1;
     display: inline-block;
     width: 12em;
     height: 10em;
-    font-size: 1em; /* control icon size here */
+    font-size: 1.2em; /* control icon size here */
 }
 
 .cloud {

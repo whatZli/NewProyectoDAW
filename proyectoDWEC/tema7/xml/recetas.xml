@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<recetas>
+    <receta n="1">
+        <nombre>Sopa de cebolla</nombre>
+        <comensales >4</comensales>
+
+        <ingredientes>
+            <ingrediente cantidad= "1" unidad="kg."> Cebolla </ingrediente>
+            <ingrediente cantidad= "2" unidad= "l."> Caldo de Carne </ingrediente>
+            <ingrediente cantidad= "100 " unidad="gr."> Mantequilla </ingrediente>
+            <ingrediente cantidad= "1" unidad="cucharada"> Harina </ingrediente>
+            <ingrediente cantidad= "100" unidad= "gr."> Queso Emmental Suizo o Gruyére Rallado </ingrediente>
+            <ingrediente unidad= "en rebanadas"> Pan tostado </ingrediente>
+            <ingrediente cantidad="1" unidad= "hoja"> Laurel </ingrediente>
+        </ingredientes>
+
+        <proceso>
+            <paso nunero="1"> Pelar y partir las cebollas en rodajas finas</paso>
+            <paso numero="2"> Rehogarlas con la mantequilla, sal y pimienta a fuego lento hasta que estén transparentes sin dorarse. </paso>
+            <paso numero="3"> Añadir la harina sin dejar de remover.</paso>
+            <paso numero="4"> Ponerlo en una cazuela con el caldo, el tomillo y el laurel. </paso>
+            <paso numero="5"> Dejar cocer a fuego lento durante unos 15 minutos. </paso>
+            <paso numero="6"> Poner las rebanadas de pan encima, espolvorear el queso y gratinar al horno.  </paso>
+        </proceso>
+    </receta>
+    <receta n="2">
+        <nombre>Tortilla</nombre>
+        <comensales >4</comensales>
+
+        <ingredientes>
+            <ingrediente cantidad= "1" unidad="kg."> Patatas </ingrediente>
+            <ingrediente cantidad= "8" unidad= "l."> Huevos </ingrediente>
+            <ingrediente cantidad= "100 " unidad="gr."> Cebolla </ingrediente>
+            <ingrediente cantidad= "1" unidad="cucharada"> sal </ingrediente>
+        </ingredientes>
+
+        <proceso>
+            <paso nunero="1"> Pelar y partir las cebollas en rodajas finas</paso>
+            <paso numero="2"> Pelar y partir las patatas en rodajas fina </paso>
+            <paso numero="3"> Cocinar las patatas y la cebolla</paso>
+            <paso numero="4"> Batir los huevos </paso>
+            <paso numero="5"> Juntar las patatas, los huevos, la cebolla y la sal </paso>
+            <paso numero="6"> Ponerlo en la sarten y darle la vuelta </paso>
+        </proceso>
+    </receta>
+	
+    <receta n="3">
+        <nombre>Macarrones</nombre>
+        <comensales >4</comensales>
+
+        <ingredientes>
+            <ingrediente cantidad= "0.5" unidad="kg."> Macarrones </ingrediente>
+            <ingrediente cantidad= "1" unidad= "pieza"> Cebolla </ingrediente>
+            <ingrediente cantidad= "100 " unidad="gr."> bacon </ingrediente>
+            <ingrediente cantidad= "300" unidad="ml"> Nata </ingrediente>
+            <ingrediente cantidad= "1" unidad="cucharada"> sal </ingrediente>
+        </ingredientes>
+
+        <proceso>
+            <paso nunero="1"> Hervir los macarrones</paso>
+            <paso numero="2"> Sobrerir la cebolla </paso>
+            <paso numero="3"> Juntar el bacon al sofrito de cebolla </paso>
+            <paso numero="4"> Escurrir los macarrones </paso>
+            <paso numero="5"> Echar la nata al sofrito y cocicnar durante 5min </paso>
+            <paso numero="6"> Echar la salsa a los macarrones </paso>
+        </proceso>
+    </receta>
+
+</recetas>
