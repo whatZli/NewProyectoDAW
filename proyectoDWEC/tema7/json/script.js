@@ -4,8 +4,8 @@ $(document).ready(function () {
 
     var opt = document.createElement('option');
 
-    $.get("recetas.xml", {}, function (xml) {
-        $("recetas", xml).each(function (i, item) {
+    $.get("recetas.json", {}, function (json) {
+        $("recetas", json).each(function (i, item) {
             $("receta", item).each(function (xi, xitem) {
                 var opt = document.createElement('option');
                 var nombre = $(this).find('nombre').text();

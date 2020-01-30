@@ -57,7 +57,8 @@
             <a class="ejercicio" href="proyectoDWEC/tema7/almacenamientoIndexedDB/index.html" target="_blank">Almacenamiento IndexedDB</a>
             <a class="ejercicio" href="proyectoDWEC/tema7/mtmoDepartIndexedDB/index.html" target="_blank">Ejercicio Mto Departamentos IndexedDB</a>
             <a class="ejercicio" href="proyectoDWEC/tema7/almacenamientoXML/index.html" target="_blank">Ejemplo Transform XML con JS</a>
-            <a class="ejercicio" href="proyectoDWEC/tema7/xml/index.html" target="_blank">Ejercicio XML</a>
+            <a class="ejercicio" href="proyectoDWEC/tema7/xml/index.html" target="_blank">Ejercicio XML a JS</a>
+            <a class="ejercicio" href="proyectoDWEC/tema7/json/index.html" target="_blank">Ejercicio JSON a JS</a>
         </div>
         <script type="text/javascript" src="core/js/collapsible.js"></script>
     </div>

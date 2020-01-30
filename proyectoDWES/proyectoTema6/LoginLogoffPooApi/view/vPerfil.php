@@ -26,8 +26,8 @@
                 <input class="form-control" disabled type="text" name="uConexion" id="uConexion" aria-describedby="uConexion" value="<?php echo $aDatosUsuarioVista['ultimaConexion']; ?>">
             </div>
 
-            <input type="submit" name="volver" style="width: 100px;" class="btn btn-secondary" value="Volver">
             <input type="submit" name="guardar" style="width: 100px;" class="btn btn-primary" value="Guardar">
+            <input type="submit" name="volver" style="width: 100px;" class="btn btn-secondary" value="Volver">
             <input type="submit" name="borrar" style="width: 120px;" class="btn btn-warning" value="Borrar cuenta">
         </div>
     </div>

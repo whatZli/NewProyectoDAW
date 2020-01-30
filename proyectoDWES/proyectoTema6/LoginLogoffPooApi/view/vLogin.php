@@ -1,7 +1,4 @@
 <form name="logIn" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
-    <button type="submit" name="registro" class="btn-menu btn btn-secondary" style="float:right;">Registro</button>
-
-
     <div class="contenedor">
         <div class="contenido">
             <div class="titulo">Iniciar sesión</div>
@@ -13,17 +10,14 @@
                 <label for="loginPassword">Contraseña</label>
                 <input type="password" class="form-control" name="loginPassword" id="loginPassword" placeholder="Introduce contraseña">
             </div>
-            <?php
-            if (isset($_POST['iniciarSesion']) && isset($aErrores['errorLogin'])) {
-                echo '<div class="alert alert-danger" role="alert">';
-                echo $aErrores['errorLogin'];
-                echo '</div>';
-            }
-            ?>
+            
             <button type="submit" name="iniciarSesion" class="btn btn-primary">Iniciar Sesión</button>
             <button type="submit" name="volver" class="btn btn-secondary" onclick="self.close()" style="float:right;">Salir de la aplicación</button>
+            <button type="submit" name="registro" class="btn-menu btn btn-secondary" style="float:right; position: absolute; top: 30px; right:5%;">Registro</button>
         </div>
-
+        
+        
+ 
         <!--        <div class="imagenes">
                     <a href="doc/pdf/CatalogoDeRequisitos.pdf" target="_blank"><img src="webroot/images/requisitos.png" alt=""/></a>
                     <a href="doc/pdf/casosDeUso.pdf" target="_blank"><img src="webroot/images/casosDeUso.png" alt=""/></a>
