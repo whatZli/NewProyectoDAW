@@ -3,7 +3,7 @@
     <div class="contenedor"><br><br>
         <h1>Api-Rest Aemet</h1>
         <div class="clima">
-
+            <?php if(isset( $fechaDatosGenerados)){?>
             <div class="fechaDatos">Datos generados: <?php echo $fechaDatosGenerados ?></div>
             <div class="localidad">Localidad: <?php echo $localidad ?></div>
             <div class="periodo">Periodo de prevision: <?php echo $aDatosActuales["periodo"] ?>:00 hs</div>
@@ -310,7 +310,7 @@
                 </select>
             </div>
         </div>
-
+            <?php }?>
 
     </div>
 

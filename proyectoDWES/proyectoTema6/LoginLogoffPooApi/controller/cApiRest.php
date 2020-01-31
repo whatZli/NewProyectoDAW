@@ -30,6 +30,7 @@ curl_close($curl);
 
 if ($err) {//Si ha un error
     echo "cURL Error #:" . $err;
+    echo "Error en la conexión";
 } else {//Si no hay ningún error se coje la URL donde se almacenan todos los datos de la localidad
     $urlGenerica = explode(",", $response);
     $urlValida = explode('"', $urlGenerica[2]);
