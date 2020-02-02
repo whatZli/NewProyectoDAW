@@ -6,12 +6,27 @@ if (isset($_POST['volver'])) {
     header('Location: index.php'); //Se le redirige al index
     exit;
 }
+if (isset($_POST['cambiar'])) {
+    $_SESSION["pagina"] = "apiRest"; //Se guarda en la variable de sesión la ventana de registro
+    if($_POST['predes22']!=null){
+        $_SESSION["cod_pueblo"]=$_POST['predes22'];
+    }
+    header('Location: index.php'); //Se le redirige al index
+    exit;
+}
 /* Método para solicitar los datos a la AEMET */
 //En la URL va el municipio concreto con el código postal y la api_key del usuario
 $curl = curl_init();
 
+    if($_SESSION['cod_pueblo']==="Cambiar" || !isset($_SESSION['cod_pueblo']) || $_SESSION['cod_pueblo']===" "){
+        $url="https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/horaria/49021/?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGV4ZG9taW5ndWV6LmdydXBvYXVkaW9uQGdtYWlsLmNvbSIsImp0aSI6IjBjY2I3MjgzLWJjNjQtNDg3Ny1hZTVjLTY2NDg3ODZjNWE4YSIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNTgwMjM2MDY3LCJ1c2VySWQiOiIwY2NiNzI4My1iYzY0LTQ4NzctYWU1Yy02NjQ4Nzg2YzVhOGEiLCJyb2xlIjoiIn0.tUR8XOE-mvUzG3kTU-yLvzSDc4zV8he5gSCntosMuBU";
+    }else{
+        $id=$_SESSION["cod_pueblo"];
+        $str = ltrim($id, 'id');
+        $url="https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/horaria/".$str."/?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGV4ZG9taW5ndWV6LmdydXBvYXVkaW9uQGdtYWlsLmNvbSIsImp0aSI6IjBjY2I3MjgzLWJjNjQtNDg3Ny1hZTVjLTY2NDg3ODZjNWE4YSIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNTgwMjM2MDY3LCJ1c2VySWQiOiIwY2NiNzI4My1iYzY0LTQ4NzctYWU1Yy02NjQ4Nzg2YzVhOGEiLCJyb2xlIjoiIn0.tUR8XOE-mvUzG3kTU-yLvzSDc4zV8he5gSCntosMuBU";
+    }
 curl_setopt_array($curl, array(
-    CURLOPT_URL => "https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/horaria/49021/?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGV4ZG9taW5ndWV6LmdydXBvYXVkaW9uQGdtYWlsLmNvbSIsImp0aSI6IjBjY2I3MjgzLWJjNjQtNDg3Ny1hZTVjLTY2NDg3ODZjNWE4YSIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNTgwMjM2MDY3LCJ1c2VySWQiOiIwY2NiNzI4My1iYzY0LTQ4NzctYWU1Yy02NjQ4Nzg2YzVhOGEiLCJyb2xlIjoiIn0.tUR8XOE-mvUzG3kTU-yLvzSDc4zV8he5gSCntosMuBU",
+    CURLOPT_URL => $url,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => "",
     CURLOPT_MAXREDIRS => 10,
@@ -22,7 +37,7 @@ curl_setopt_array($curl, array(
         "cache-control: no-cache"
     ),
 ));
-
+ 
 $response = curl_exec($curl);
 $err = curl_error($curl);
 
@@ -49,12 +64,24 @@ if ($err) {//Si ha un error
     //Comprueba todas las horas del fichero hasta que la hora del fichero coincide con la hora actual
     //Una vez que coincide guarda los datos correspondeientes a esa hora en un array y sale del bucle
     for ($hora = 0; $hora < 24; $hora++) {
-        if (isset($info[0]["prediccion"]["dia"][0]["estadoCielo"][$hora]["periodo"])) {
-            if ($info[0]["prediccion"]["dia"][0]["estadoCielo"][$hora]["periodo"] === date("H")) {
-                $aDatosActuales = $info[0]["prediccion"]["dia"][0]["estadoCielo"][$hora];
-                $i = 25;
-                $temperaturaActual = $info[0]["prediccion"]["dia"][0]["temperatura"][$hora]["value"];
-                $sensacionTermicaActual = $info[0]["prediccion"]["dia"][0]["sensTermica"][$hora]["value"];
+        if (isset($info[0]["prediccion"]["dia"][1]["estadoCielo"][$hora]["periodo"])) {
+            if ($info[0]["prediccion"]["dia"][1]["estadoCielo"][$hora]["periodo"] === date("H")) {
+                $aDatosActuales = $info[0]["prediccion"]["dia"][1]["estadoCielo"][$hora];
+                $temperaturaActual = $info[0]["prediccion"]["dia"][1]["temperatura"][$hora]["value"];
+                $sensacionTermicaActual = $info[0]["prediccion"]["dia"][1]["sensTermica"][$hora]["value"];
+                
+                //Los datos de la velocidad y la direccion del viento sólo están en las horas pares. Por eso se comprueba si existe
+                //la variable, y sino existe se le pone la hora anterior
+                if(!isset($info[0]["prediccion"]["dia"][1]["vientoAndRachaMax"][$hora]['direccion'])){
+                    $hora=($hora*1);
+                    $horaAnterior=$hora-1;
+                }else{
+                    $horaAnterior=$hora;
+                }
+                $velocidadViento = $info[0]["prediccion"]["dia"][0]["vientoAndRachaMax"][$horaAnterior]['velocidad']['0'];
+                $direccionViento = $info[0]["prediccion"]["dia"][0]["vientoAndRachaMax"][$horaAnterior]['direccion']['0'];
+                
+                $hora=25;//La hora = a 25 para que salga del bucle for directamente
             }
         }
     }

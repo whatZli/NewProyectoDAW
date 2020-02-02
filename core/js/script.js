@@ -85,11 +85,13 @@ $(function () {
     var posicion=1;
     $.each(items, function(key,value){
         //console.log(value['value']); 
-        $(".container-asignaturas ."+value['name']).css("order",posicion);
+        $(".container-asignaturas ."+value['name']).css("order",posicion);//ordena las asignaturas de abajo por la posicion
+        $("#m"+value['name']).css("order",posicion);//Ordena el menú de arriba por la posicion
         posicion++;
     });
     
-    setTimeout(mostrar_asignaturas,400);
+    
+    setTimeout(mostrar_asignaturas,300);
     function mostrar_asignaturas(){
         $(".container .container-asignaturas").css("visibility","visible");
         $(".container .container-asignaturas").css("opacity","1");

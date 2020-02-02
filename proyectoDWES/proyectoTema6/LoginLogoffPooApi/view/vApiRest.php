@@ -3,62 +3,73 @@
     <div class="contenedor"><br><br>
         <h1>Api-Rest Aemet</h1>
         <div class="clima">
-            <?php if(isset( $fechaDatosGenerados)){?>
-            <div class="fechaDatos">Datos generados: <?php echo $fechaDatosGenerados ?></div>
-            <div class="localidad">Localidad: <?php echo $localidad ?></div>
-            <div class="periodo">Periodo de prevision: <?php echo $aDatosActuales["periodo"] ?>:00 hs</div>
-            <div class="cielo">Cielo: <?php echo $aDatosActuales["descripcion"] ?></div>
-            <div class="cielo">Temperatura: <?php echo $temperaturaActual ?>   ºC</div>
-            <div class="cielo">Sensación termica: <?php echo $sensacionTermicaActual ?>   ºC</div>
+            <?php if (isset($fechaDatosGenerados)) { ?>
+                <div class="fechaDatos">Datos generados: <?php echo $fechaDatosGenerados ?></div>
+                <div class="localidad">Localidad: <?php echo $localidad ?></div>
+                <div class="periodo">Periodo de prevision: <?php echo $aDatosActuales["periodo"] ?>:00 hs</div>
+                <div class="cielo">Cielo: <?php echo $aDatosActuales["descripcion"] ?></div>
+                <div class="cielo">Temperatura: <?php echo $temperaturaActual ?>ºC</div>
+                <div class="cielo">Sensación termica: <?php echo $sensacionTermicaActual ?>ºC</div>
+                <div class="cielo">Viento: <?php echo $velocidadViento ?> Km/h</div>
+                <div class="cielo">Dirección del viento: <?php echo $direccionViento ?></div>
 
-            <div class="dibujo">
-                <?php
-                switch ($aDatosActuales["descripcion"]) {
-                    case "Cubierto":
-                        echo '<div class="icon cloudy">';
-                        echo '<div class="cloud"></div>';
-                        echo '<div class="cloud"></div>';
-                        echo '</div>';
-                        break;
-                    case "Bruma":
-                        echo '<div class="icon cloudy">';
-                        echo '<div class="cloud"></div>';
-                        echo '<div class="cloud"></div>';
-                        echo '</div>';
-                        break;
-                    case "Cubierto con lluvia escasa":
-                        echo '<div class="icon rainy">';
-                        echo '<div class="cloud"></div>';
-                        echo '<div class="rain"></div>';
-                        echo '</div>';
-                        break;
-                    case "Nubes altas":
-                        echo '<div class="icon sun-shower">';
-                        echo '<div class="cloud"></div>';
-                        echo '<div class="sun">';
-                        echo '<div class="rays"></div>';
-                        echo '</div>';
-                        echo '</div>';
-                        break;
-                    case "Poco nuboso":
-                        echo '<div class="icon sun-shower">';
-                        echo '<div class="cloud"></div>';
-                        echo '<div class="sun">';
-                        echo '<div class="rays"></div>';
-                        echo '</div>';
-                        echo '</div>';
-                        break;
-                    case "Despejado":
-                        echo '<div class="icon sunny">';
-                        echo '<div class="sun">';
-                        echo '<div class="rays"></div>';
-                        echo '</div>';
-                        echo '</div>';
-                        break;
-                }
-                ?>
-                <select class="selectpicker" id="predes22" name="predes22" data-live-search="true" tabindex="-98">
-                    <option value="">Seleccione un municipio</option>
+                
+                
+                <div class="dibujo">
+                    <?php
+                    switch ($aDatosActuales["descripcion"]) {
+                        case "Cubierto":
+                            echo '<div class="icon cloudy">';
+                            echo '<div class="cloud"></div>';
+                            echo '<div class="cloud"></div>';
+                            echo '</div>';
+                            break;
+                        case "Muy nuboso":
+                            echo '<div class="icon cloudy">';
+                            echo '<div class="cloud"></div>';
+                            echo '<div class="cloud"></div>';
+                            echo '</div>';
+                            break;
+                        case "Bruma":
+                            echo '<div class="icon cloudy">';
+                            echo '<div class="cloud"></div>';
+                            echo '<div class="cloud"></div>';
+                            echo '</div>';
+                            break;
+                        case "Cubierto con lluvia escasa":
+                            echo '<div class="icon rainy">';
+                            echo '<div class="cloud"></div>';
+                            echo '<div class="rain"></div>';
+                            echo '</div>';
+                            break;
+                        case "Nubes altas":
+                            echo '<div class="icon sun-shower">';
+                            echo '<div class="cloud"></div>';
+                            echo '<div class="sun">';
+                            echo '<div class="rays"></div>';
+                            echo '</div>';
+                            echo '</div>';
+                            break;
+                        case "Poco nuboso":
+                            echo '<div class="icon sun-shower">';
+                            echo '<div class="cloud"></div>';
+                            echo '<div class="sun">';
+                            echo '<div class="rays"></div>';
+                            echo '</div>';
+                            echo '</div>';
+                            break;
+                        case "Despejado":
+                            echo '<div class="icon sunny">';
+                            echo '<div class="sun">';
+                            echo '<div class="rays"></div>';
+                            echo '</div>';
+                            echo '</div>';
+                            break;
+                    }
+                    ?>
+                </div>
+                <select style="display:inline-block;" class="selectpicker" id="predes22" name="predes22" data-live-search="true" tabindex="-98">
+                    <option value="">Seleccione otro municipio</option>
                     <option value="id49002">Abezames</option>
                     <option value="id49003">Alcañices</option>
                     <option value="id49004">Alcubilla de Nogales</option>
@@ -308,9 +319,9 @@
                     <option value="id49273">Viñas</option>
                     <option value="id49275">Zamora</option>
                 </select>
+                <input style="display:inline-block; " type="submit" value="Cambiar" name="cambiar" />
             </div>
-        </div>
-            <?php }?>
+        <?php } ?>
 
     </div>
 
