@@ -30,7 +30,7 @@
             {
               "-cantidad": "100",
               "-unidad": "gr.",
-              "#text": " Queso Emmental Suizo o GruyÃ©re Rallado "
+              "#text": " Queso Elemental Suizo o Gruyöre Rallado "
             },
             {
               "-unidad": "en rebanadas",
@@ -46,16 +46,16 @@
         "proceso": {
           "paso": [
             {
-              "-nunero": "1",
+              "-numero": "1",
               "#text": " Pelar y partir las cebollas en rodajas finas"
             },
             {
               "-numero": "2",
-              "#text": " Rehogarlas con la mantequilla, sal y pimienta a fuego lento hasta que estÃ©n transparentes sin dorarse. "
+              "#text": " Rehogarlas con la mantequilla, sal y pimienta a fuego lento hasta que estén transparentes sin dorarse. "
             },
             {
               "-numero": "3",
-              "#text": " AÃ±adir la harina sin dejar de remover."
+              "#text": " Añadir la harina sin dejar de remover."
             },
             {
               "-numero": "4",
@@ -103,7 +103,7 @@
         "proceso": {
           "paso": [
             {
-              "-nunero": "1",
+              "-numero": "1",
               "#text": " Pelar y partir las cebollas en rodajas finas"
             },
             {
@@ -165,12 +165,12 @@
         "proceso": {
           "paso": [
             {
-              "-nunero": "1",
+              "-numero": "1",
               "#text": " Hervir los macarrones"
             },
             {
               "-numero": "2",
-              "#text": " Sobrerir la cebolla "
+              "#text": " Sofrerir la cebolla "
             },
             {
               "-numero": "3",

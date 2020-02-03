@@ -60,6 +60,8 @@
             <a class="ejercicio" href="proyectoDWEC/tema7/xml/index.html" target="_blank">Ejercicio XML a JS</a>
             <a class="ejercicio" href="proyectoDWEC/tema7/json/index.html" target="_blank">Ejercicio JSON a JS</a>
         </div>
+        <button type="button" class="collapsible tema dwec">Tema 8. </button>
+        <div class="lista"></div>
         <script type="text/javascript" src="core/js/collapsible.js"></script>
     </div>
 </div> 

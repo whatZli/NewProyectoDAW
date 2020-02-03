@@ -1,0 +1,64 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 03-feb-2020, 18:10:56
+    Author     : Alex
+*/
+.article{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    background: rgba(220,220,220,0.7);
+    height: 240px;
+    transition: 0.15s ease;
+    margin-top: 15px;
+    opacity: 0.9;
+}
+.article:hover{
+    cursor:pointer;
+    box-shadow: 12px 13px 36px -13px rgba(0,0,0,0.75);
+    transform: scale(1.001);
+    opacity: 1;
+}
+.article .image{
+    min-width: 400px;
+    
+}
+.article .image img{
+    height: 240px;
+    width: 100%;
+    max-width:400px;
+    max-height: 240px;
+    
+}
+.article .text{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+.article .text .title{
+    margin: 0 10px;
+    font-size: 2rem;
+    width: 100%;
+    text-align: left;
+}
+.article .text .description{
+    width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 150px;
+    width: 100%;
+}
+.article .text .description p{
+    margin: 10px 15px;
+}
+.readMore p{
+    width: 90%;
+    color: #F33;
+    text-align: right;
+    margin-right: 30px;
+    font-size: 20px;
+}
