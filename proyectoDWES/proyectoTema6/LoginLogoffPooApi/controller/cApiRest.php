@@ -18,7 +18,7 @@ if (isset($_POST['cambiar'])) {
 //En la URL va el municipio concreto con el código postal y la api_key del usuario
 $curl = curl_init();
 
-    if($_SESSION['cod_pueblo']==="Cambiar" || !isset($_SESSION['cod_pueblo']) || $_SESSION['cod_pueblo']===" "){
+    if(!isset($_SESSION['cod_pueblo'])){
         $url="https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/horaria/49021/?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGV4ZG9taW5ndWV6LmdydXBvYXVkaW9uQGdtYWlsLmNvbSIsImp0aSI6IjBjY2I3MjgzLWJjNjQtNDg3Ny1hZTVjLTY2NDg3ODZjNWE4YSIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNTgwMjM2MDY3LCJ1c2VySWQiOiIwY2NiNzI4My1iYzY0LTQ4NzctYWU1Yy02NjQ4Nzg2YzVhOGEiLCJyb2xlIjoiIn0.tUR8XOE-mvUzG3kTU-yLvzSDc4zV8he5gSCntosMuBU";
     }else{
         $id=$_SESSION["cod_pueblo"];

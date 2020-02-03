@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+  div{
+  width: 150px;
+  height: 200px;
+  background-color: #16a086;
+  text-align: center;
+  color: rgba(0,0,0,0);
+  transition: width 1s, height 1s 1s, background-color 1s 2s, border-radius 1s 3s, box-shadow 1s 4s, color 1s 5s;
+}
+h3, p{
+  position:relative;
+  top:50px;
+  visibility: hidden;
+}
+p{
+  font-size:13px;
+}
+
+div:hover{
+  width: 350px;
+  height: 350px;
+  background-color: #2d3e50;
+  border-radius: 50%;
+  box-shadow: 0px 4px 1px red;
+  color: white;
+}
+div:hover p, div:hover h3{
+  visibility: visible
+}
+
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div>
+<h3>Voy cambiando</h3>
+<p>Tamaño ancho</p>
+<p>Tamaño alto</p>
+<p>Color de fondo</p>
+<p>Borde</p>
+<p>Padding</p>
+<p>Sombra</p>
+<p>Color</p>
+</div>
+
+
+</body>
+</html>

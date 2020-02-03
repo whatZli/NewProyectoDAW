@@ -24,6 +24,12 @@
                             echo '<div class="cloud"></div>';
                             echo '</div>';
                             break;
+                        case "Niebla":
+                            echo '<div class="icon cloudy">';
+                            echo '<div class="cloud"></div>';
+                            echo '<div class="cloud"></div>';
+                            echo '</div>';
+                            break;
                         case "Muy nuboso":
                             echo '<div class="icon cloudy">';
                             echo '<div class="cloud"></div>';
