@@ -37,15 +37,21 @@
                 </div>
             </div>
             <div class="main">
+                <div class="main">
                 <div class="aside-left"></div>
                 <div class="content">
                     <?php
                     //Se carga la vista que esté seleccionada en la variable de Session
                     require_once $_SESSION['vista'];
                     ?>
-                </div>              
-
-                <div class="aside-right"></div>
+                </div> 
+                <div class="aside-right">
+                    <nav>
+                        <li>Create new article</li>
+                        <a href="<?php echo $_SERVER['PHP_SELF']."?close=true"?>"><li>Log out</li></a>
+                    </nav>
+                </div>
+            </div>
             </div>
         </div>
         <div class="footer">
@@ -53,9 +59,12 @@
             <div class="footer-bottom">
                 <div class="footer-bottom-left">&copy 2020. All Rights Reserved.</div>
                 <div class="footer-bottom-right">
-                    <div class="footer-bottom-right-left">
-                        <a href="<?php echo $_SERVER['PHP_SELF'] . "?pag=administrator"; ?>"><li>Admin page</li></a>
-                        <li>Role user: <?php if(!isset($_SESSION['user'])){echo 'Invited';} ?></li>
+                   <div class="footer-bottom-right-left">
+                        <li>Role user: <?php if (!isset($_SESSION['usuarioDAW2051920'])) {
+                        echo 'Invited';
+                    } {
+                        echo $_SESSION['usuarioDAW2051920']->getTipo_usuario();
+                    } ?></li>
                     </div>
                     <div class="footer-bottom-right-center">
                         <li>PHP Doc</li>

@@ -63,7 +63,7 @@
         <button type="button" class="collapsible tema dwec">Tema 8. Ajax</button>
         <div class="lista">
             <a class="ejercicio" href="proyectoDWEC/tema8/ejemploAjax/index.html" target="_blank">Ejemplo Ajax</a>
-            <a class="ejercicio" href="proyectoDWEC/tema8/ejemploAjax/index.html" target="_blank">Ejercicio Ajax Alumno/profesor</a>
+            <a class="ejercicio" href="proyectoDWEC/tema8/ej1/index.html" target="_blank">Ejercicio Ajax Alumno/profesor</a>
         </div>
         <script type="text/javascript" src="core/js/collapsible.js"></script>
     </div>

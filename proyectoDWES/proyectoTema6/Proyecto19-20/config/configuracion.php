@@ -5,6 +5,9 @@ include_once 'core/libreriaValidacionFormularios.php';
 
 //Incluimos todas las clases del modelo
 include_once 'model/DBPDO.php';
+include_once 'model/Usuario.php';
+include_once 'model/UsuarioPDO.php';
+include_once 'model/Articulo.php';
 
 /* Array $controladores
  * Almacena la ruta a los controladores para facilitar su manejo
@@ -15,6 +18,8 @@ $controladores = [
     'contact' => 'controller/cContact.php',
     'about' => 'controller/cAbout.php',
     'administrator' => 'controller/cAdministrator.php',
+    'inicioR' => 'controller/cInicioR.php',
+    'inicioA' => 'controller/cInicioA.php',
     'error' => 'controller/cError.php',
 ];
 
@@ -28,6 +33,10 @@ $vistas = [
     'contact' => 'view/vContact.php',
     'about' => 'view/vAbout.php',
     'administrator' => 'view/vAdministrator.php',
+    'inicioR' => 'view/vInicioR.php',
+    'inicioA' => 'view/vInicioA.php',
+    'layoutR' => 'view/layoutR.php',
+    'layoutA' => 'view/layoutA.php',
     'layout' => 'view/layout.php',
 ];
 

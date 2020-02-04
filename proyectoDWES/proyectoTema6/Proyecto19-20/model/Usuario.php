@@ -20,124 +20,77 @@ class Usuario {
      * @access private $contadorAccesos
      */
 
-    private $codUsuario;
-    private $password;
-    private $descUsuario;
-    private $numAccesos;
-    private $fechaHoraUltimaConexion;
-    private $perfil;
-
-    /* Constructor del objeto Usuario */
-
-    function __construct($codUsuario, $password, $descUsuario, $numAccesos, $fechaHoraUltimaConexion, $perfil) {
-        $this->codUsuario = $codUsuario;
-        $this->password = $password;
-        $this->descUsuario = $descUsuario;
-        $this->numAccesos = $numAccesos;
-        $this->fechaHoraUltimaConexion = $fechaHoraUltimaConexion;
-        $this->perfil = $perfil;
+    private $cod_usuario;
+    private $tipo_usuario;
+    private $nom_usuario;
+    private $apell_usuario;
+    private $email_usuario;
+    private $pass_usuario;
+    private $img_usuario;
+    
+    function __construct($cod_usuario, $tipo_usuario, $nom_usuario, $apell_usuario, $email_usuario, $pass_usuario, $img_usuario) {
+        $this->cod_usuario = $cod_usuario;
+        $this->tipo_usuario = $tipo_usuario;
+        $this->nom_usuario = $nom_usuario;
+        $this->apell_usuario = $apell_usuario;
+        $this->email_usuario = $email_usuario;
+        $this->pass_usuario = $pass_usuario;
+        $this->img_usuario = $img_usuario;
+    }
+    
+    function getCod_usuario() {
+        return $this->cod_usuario;
     }
 
-    /* Función getCodUsuario()
-     * Devuelve el elemento codUsuario del objeto Usuario
-     * @return Usuario->codUsuario
-     */
-
-    function getCodUsuario() {
-        return $this->codUsuario;
+    function getTipo_usuario() {
+        return $this->tipo_usuario;
     }
 
-    /* Función getPassword()
-     * Devuelve el elemento password del objeto Usuario
-     * @return Usuario->password
-     */
-
-    function getPassword() {
-        return $this->password;
+    function getNom_usuario() {
+        return $this->nom_usuario;
     }
 
-    /* Función getDescUsuario()
-     * Devuelve el elemento descUsuario del objeto Usuario
-     * @return Usuario->descUsuario
-     */
-
-    function getDescUsuario() {
-        return $this->descUsuario;
+    function getApell_usuario() {
+        return $this->apell_usuario;
     }
 
-    /* Función getNumAccesos()
-     * Devuelve el elemento contadorAccesos del objeto Usuario
-     * @return Usuario->contadorAccesos
-     */
-
-    function getNumAccesos() {
-        return $this->numAccesos;
+    function getEmail_usuario() {
+        return $this->email_usuario;
     }
 
-    /* Función getFechaHoraUltimaConexion()
-     * Devuelve el elemento ultimaConexion del objeto Usuario
-     * @return Usuario->ultimaConexion
-     */
-
-    function getFechaHoraUltimaConexion() {
-        return $this->fechaHoraUltimaConexion;
+    function getPass_usuario() {
+        return $this->pass_usuario;
     }
 
-    /* Función getPerfil()
-     * Devuelve el elemento perfil del objeto Usuario
-     * @return Usuario->perfil
-     */
-
-    function getPerfil() {
-        return $this->perfil;
+    function getImg_usuario() {
+        return $this->img_usuario;
     }
 
-    /* Función setCodUsuario()
-     * Modifica el elemento codUsuario del objeto Usuario
-     */
-
-    function setCodUsuario($codUsuario) {
-        $this->codUsuario = $codUsuario;
+    function setCod_usuario($cod_usuario) {
+        $this->cod_usuario = $cod_usuario;
     }
 
-    /* Función setDescUsuario()
-     * Modifica el elemento descUsuario del objeto Usuario
-     */
-
-    function setPassword($password) {
-        $this->password = $password;
+    function setTipo_usuario($tipo_usuario) {
+        $this->tipo_usuario = $tipo_usuario;
     }
 
-    /* Función setPassword()
-     * Modifica el elemento password del objeto Usuario
-     */
-
-    function setDescUsuario($descUsuario) {
-        $this->descUsuario = $descUsuario;
+    function setNom_usuario($nom_usuario) {
+        $this->nom_usuario = $nom_usuario;
     }
 
-    /* Función setPerfil()
-     * Modifica el elemento perfil del objeto Usuario
-     */
-
-    function setNumAccesos($numAccesos) {
-        $this->numAccesos = $numAccesos;
+    function setApell_usuario($apell_usuario) {
+        $this->apell_usuario = $apell_usuario;
     }
 
-    /* Función setUltimaConexion()
-     * Modifica el elemento ultimaConexion del objeto Usuario
-     */
-
-    function setFechaHoraUltimaConexion($fechaHoraUltimaConexion) {
-        $this->fechaHoraUltimaConexion = $fechaHoraUltimaConexion;
+    function setEmail_usuario($email_usuario) {
+        $this->email_usuario = $email_usuario;
     }
 
-    /* Función setContadorAccesos()
-     * Modifica el elemento contadorAccesos del objeto Usuario
-     */
-
-    function setPerfil($perfil) {
-        $this->perfil = $perfil;
+    function setPass_usuario($pass_usuario) {
+        $this->pass_usuario = $pass_usuario;
     }
 
+    function setImg_usuario($img_usuario) {
+        $this->img_usuario = $img_usuario;
+    }
 }

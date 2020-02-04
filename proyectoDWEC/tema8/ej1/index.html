@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">   
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+        
+        <script src="jquery-3.4.1.js"></script>
+        <script src="script.js"></script>
+        
+        <title>Formulario</title>
+        <style> 
+            #profesor,#radioa,#radiob{
+                display:none;            
+            }
+            span{
+                background-color: #F8D7DA;
+                color: #721c24;
+                padding: 5px 30px;
+                border-radius: 5px;
+            }
+            
+        </style> 
+    </head>
+    <body>
+        <!-- Content -->
+        <section>
+            <div class="container">
+                <h1>Formulario final</h1>
+                <div class="form-group">                
+                    <label class="btn btn-primary" id="alumnor"><input type="radio" name = "radio" id="radioa" value="first_checkbox"> Alumno </label>   
+                    <label class="btn btn-light" id="profer"><input type="radio" name = "radio" id="radiob" value="first_checkbox"> Profesor </label>           
+                </div>
+                <div class="container" id="alumno">
+                    <form role="form" id="FormularioA" action="../php/contacto2.php" method="POST">
+                        <div class="form-group">
+                            <label class="control-label" for="Nombre">Nombre</label>
+                            <input type="text" class="form-control" id="Nombrea" name="Nombre" placeholder="Introduzca su nombre" required autofocus />
+                        </div>    
+                        <div class="form-group">
+                            <label class="control-label" for="Nombre">Apellidos</label>
+                            <input type="text" class="form-control" id="Apellidosa" name="Nombre" placeholder="Introduzca sus apellidos"  autofocus />
+                        </div>   
+                        <div class="form-group">
+                            <label class="control-label" for="Nombre">Dni</label>
+                            <input type="text" class="form-control" id="Dnia" name="Nombre" placeholder=""  autofocus />
+                        </div>      
+                        <div class="form-group">
+                            <label class="control-label" for="Motivo">Ciclo</label>
+                            <select id="selectCiclo" name="Motivo" class="form-control">
+                                <option value="vacio">Eliga una opcion</option>
+                                <option value="smr">SMR</option>
+                                <option value="daw">DAW</option>
+                            </select>
+                        </div>    
+                        <div class="form-group">
+                            <label class="control-label" for="Motivo">Curso</label>
+                            <select id="cursoa" name="Motivo" class="form-control" >
+                                <option value="vacio">Eliga una opcion</option>
+                                <option value="curso1">1º Curos</option>
+                                <option value="curso2">2º Curso</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="Empresa">Asignaturas que estas cursando:</label><br>
+                            <div class="form-group" id="hideAsig">
+<!--                                <label><input type="checkbox" id="cbox1" value="first_checkbox"> DWES</label><br>
+                                <label><input type="checkbox" id="cbox1" value="first_checkbox"> DAW</label><br>
+                                <label><input type="checkbox" id="cbox1" value="first_checkbox"> DWEC</label><br>
+                                <label><input type="checkbox" id="cbox1" value="first_checkbox"> DIW</label><br>
+                                <label><input type="checkbox" id="cbox1" value="first_checkbox"> EIE</label><br>-->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="Correo">Dirección de Correo Electrónico</label>
+                            <input type="email" class="form-control" id="Correo" name="Correo" placeholder="Introduzca su correo electrónico" required />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="Mensaje">Mensaje</label>
+                            <textarea rows="5" cols="30" class="form-control" id="Mensaje" name="Mensaje" placeholder="Introduzca su mensaje" required ></textarea>
+                        </div>
+                        <div class="form-group">                
+                            <label><input type="checkbox" id="lpda" value="first_checkbox"> Acepto las condiciones de la LPD </label>             
+                        </div>
+                        <div class="form-group">                
+                            <input type="submit" class="btn btn-primary" id="btna"  value="Registrarse" disabled>
+                            <input type="reset" class="btn btn-default" value="Limpiar">                
+                        </div>
+
+                    </form>
+                </div>
+                <div class="container" id="profesor">
+                    <form role="form" id="FormularioP" action="../php/contacto2.php" method="POST">
+                        <div class="form-group">
+                            <label class="control-label" for="Nombre">Nombre</label>
+                            <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Introduzca su nombre"  autofocus />
+                        </div>    
+                        <div class="form-group">
+                            <label class="control-label" for="Nombre">Apellidos</label>
+                            <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Introduzca sus apellidos"  autofocus />
+                        </div>   
+                        <div class="form-group">
+                            <label class="control-label" for="Nombre">Dni</label>
+                            <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder=""  autofocus />
+                        </div>    
+                        <div class="form-group">
+                            <label class="control-label" for="Motivo">Ciclo a los que impartes</label>
+                        </div>    
+                        <div class = "asignaturas row">
+                            <div class="izq col-5">
+                                <div class="form-group ">
+                                    <label class="control-label" for="Motivo">Ciclo</label>
+                                    <select name="Motivo" class="form-control">
+                                        <option value="Consulta General">Eliga una opcion</option>
+                                        <option value="Consulta General">SMR</option>
+                                        <option value="Realizar Pedido">DAW</option>
+                                    </select>
+                                </div>    
+                                <div class="form-group ">
+                                    <label class="control-label" for="Motivo">Curso</label>
+                                    <select name="Motivo" class="form-control">
+                                        <option value="Consulta General">Eliga una opcion</option>
+                                        <option value="Consulta General">1º Curos</option>
+                                        <option value="Realizar Pedido">2º Curso</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="Motivo">Asignaturas</label>
+                                    <select name="Motivo" id="parañadir" class="form-control">
+                                        <option value="Consulta General">Eliga una opcion</option>
+                                        <option value="Consulta General">DAW</option>
+                                        <option value="Realizar Pedido">DWEC</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <br>
+                                <br>
+                                <br>    
+                                <div class="btn btn-primary"  id="anadir">Añadir</div>
+
+                            </div>
+                            <div class="dercha col-5">
+                                <select name="Motivo" class="form-control" id = "selectanadir" size = "12">
+
+                                </select>
+                            </div></div>
+                        <div class="form-group">
+                            <label class="control-label" for="Correo">Dirección de Correo Electrónico</label>
+                            <input type="email" class="form-control" id="Correo" name="Correo" placeholder="Introduzca su correo electrónico"  />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="Mensaje">Mensaje</label>
+                            <textarea rows="5" cols="30" class="form-control" id="Mensaje" name="Mensaje" placeholder="Introduzca su mensaje"  ></textarea>
+                        </div>
+                        <div class="form-group">                
+                            <label><input type="checkbox" id="lpdp" value="first_checkbox"> Acepto las condiciones de la LPD </label>             
+                        </div>
+                        <div class="form-group">                
+                            <input type="submit" class="btn btn-primary" id="btnp" value="Registrarse" disabled>
+                            <input type="reset" class="btn btn-default" value="Limpiar">                
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

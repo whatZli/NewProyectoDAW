@@ -14,8 +14,9 @@
         tipo_usuario enum('admin', 'registrado') default 'registrado', -- Valor por defecto usuario
         nom_usuario varchar(30) NOT null,
         apell_usuario varchar(60) NOT null,
-        email varchar(50) NOT null,
-        password varchar(90) NOT null
+        email_usuario varchar(50) NOT null,
+        pass_usuario varchar(90) NOT null,
+        imagen_usuario varchar(100) null
     );
 
     CREATE TABLE IF NOT EXISTS Articulos(
@@ -31,7 +32,7 @@
     CREATE USER IF NOT EXISTS 'userDAW2051920'@'%' identified BY 'paso'; 
 
 -- Dar permisos al usuario --
-    GRANT ALL PRIVILEGES ON DAW205DAW2051920.* TO 'userDAW2051920'@'%'; 
+    GRANT ALL PRIVILEGES ON DAW2051920.* TO 'userDAW2051920'@'%'; 
 
 -- Hacer el flush privileges, por si acaso --
     FLUSH PRIVILEGES;

@@ -18,38 +18,14 @@ class UsuarioPDO {
      * @return Usuario $Usuarios
      */
 
-    public static function buscarTodosUsuarios() {
-
-        $consulta = "SELECT * FROM `T01_Usuario`"; //Creacion de la consulta.
-        $resConsulta = DBPDO::ejecutaConsulta($consulta, []); //Ejecutamos la consulta.
-
-        $cont = 0;
-
-        while ($resFetch = $resConsulta->fetchObject()) {
-            $usuario = new Usuario($resFetch->T01_CodUsuario, $resFetch->T01_Password, $resFetch->T01_DescUsuario, $resFetch->T01_NumAccesos, $resFetch->T01_FechaHoraUltimaConexion, $resFetch->T01_Perfil, null);
-            $registros[$cont] = $usuario;
-            $cont++;
-        }
-
-        return $registros;
-    }
-
     public static function validarUsuario($codUsuario, $password) {
         $usuario = null;
-        $consulta = "select * from T01_Usuario where T01_CodUsuario=? and T01_Password=?"; //Creacion de la consulta.
+        $consulta = "select * from Usuarios where cod_usuario=? and pass_usuario=?"; //Creacion de la consulta.
         $resConsulta = DBPDO::ejecutaConsulta($consulta, [$codUsuario, $password]); //Ejecutamos la consulta.
 
         if ($resConsulta->rowCount() == 1) { //Comprobamos si se han obtenido resultados en la consulta.
             $resFetch = $resConsulta->fetchObject();
-
-            //Actualizar la fecha a la actual y el número de accesos
-            $actualizaFecha = "UPDATE `T01_Usuario` SET `T01_NumAccesos` = `T01_NumAccesos` + 1 , `T01_FechaHoraUltimaConexion` = ? WHERE `T01_CodUsuario` = ?"; //Creacion de la consulta.
-            $fechaHoraActual = date("Y-m-d H:i:s");
-            $usuarioActual = $resFetch->T01_CodUsuario;
-            //Ejecutamos la consulta.
-            DBPDO::ejecutaConsulta($actualizaFecha, [$fechaHoraActual, $usuarioActual]);
-
-            $usuario = new Usuario($resFetch->T01_CodUsuario, $resFetch->T01_Password, $resFetch->T01_DescUsuario, $resFetch->T01_NumAccesos + 1, $resFetch->T01_FechaHoraUltimaConexion, $resFetch->T01_Perfil, null);
+            $usuario = new Usuario($resFetch->cod_usuario, $resFetch->tipo_usuario, $resFetch->nom_usuario, $resFetch->apell_usuario, $resFetch->email_usuario, $resFetch->pass_usuario, $resFetch->img_usuario);
         }
         return $usuario;
     }
@@ -93,4 +69,19 @@ class UsuarioPDO {
         return true;
     }
 
+    public static function buscarTodosUsuarios() {
+
+        $consulta = "SELECT * FROM `T01_Usuario`"; //Creacion de la consulta.
+        $resConsulta = DBPDO::ejecutaConsulta($consulta, []); //Ejecutamos la consulta.
+
+        $cont = 0;
+
+        while ($resFetch = $resConsulta->fetchObject()) {
+            $usuario = new Usuario($resFetch->T01_CodUsuario, $resFetch->T01_Password, $resFetch->T01_DescUsuario, $resFetch->T01_NumAccesos, $resFetch->T01_FechaHoraUltimaConexion, $resFetch->T01_Perfil, null);
+            $registros[$cont] = $usuario;
+            $cont++;
+        }
+
+        return $registros;
+    }
 }
