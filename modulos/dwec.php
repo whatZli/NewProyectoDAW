@@ -60,8 +60,11 @@
             <a class="ejercicio" href="proyectoDWEC/tema7/xml/index.html" target="_blank">Ejercicio XML a JS</a>
             <a class="ejercicio" href="proyectoDWEC/tema7/json/index.html" target="_blank">Ejercicio JSON a JS</a>
         </div>
-        <button type="button" class="collapsible tema dwec">Tema 8. </button>
-        <div class="lista"></div>
+        <button type="button" class="collapsible tema dwec">Tema 8. Ajax</button>
+        <div class="lista">
+            <a class="ejercicio" href="proyectoDWEC/tema8/ejemploAjax/index.html" target="_blank">Ejemplo Ajax</a>
+            <a class="ejercicio" href="proyectoDWEC/tema8/ejemploAjax/index.html" target="_blank">Ejercicio Ajax Alumno/profesor</a>
+        </div>
         <script type="text/javascript" src="core/js/collapsible.js"></script>
     </div>
 </div> 

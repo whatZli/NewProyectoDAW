@@ -53,9 +53,9 @@
             <div class="footer-bottom">
                 <div class="footer-bottom-left">&copy 2020. All Rights Reserved.</div>
                 <div class="footer-bottom-right">
-                    <li>Admin</li>
+                    <a href="<?php echo $_SERVER['PHP_SELF']."?pag=administrator";?>"><li>Admin</li></a>
                     <li>PHP Doc</li>
-                    <li>Autor´s Web</li>
+                    <a href="http://daw205.sauces.local/"><li>Autor´s Web</li></a>
                     <li>Tools used</li>
                     <li>Imitated Web</li>
                     <li>RSS</li>

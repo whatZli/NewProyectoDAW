@@ -1,6 +1,6 @@
 <form action="#" id="usrform">
     <fieldset> 
-    <h2>Contact us</h2>
+    <h2>Contact with us</h2>
         <label for="name">Name</label>
         <input type="text" name="name" id="name" value="" placeholder="Your name">
         <label for="email">Email</label>

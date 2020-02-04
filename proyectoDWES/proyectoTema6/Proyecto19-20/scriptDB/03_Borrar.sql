@@ -4,7 +4,7 @@
  */
 
 -- Borrar base de datos con drop--
-DROP DATABASE DAW205DBAplicacionPOO;
+DROP DATABASE DAW2051920;
 
 -- Borrar usuario asociado a esa base de datos
-DROP USER userDAW205DBAplicacionPOO;
+DROP USER userDAW2051920;

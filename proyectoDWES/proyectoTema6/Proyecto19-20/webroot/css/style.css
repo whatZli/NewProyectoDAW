@@ -7,8 +7,9 @@ body{
 li{
     list-style:none;
 }
-a, a:hover, a:active, a:visited{
+a, a:hover, a:active, a:visited, a:link{
     text-decoration: none;
+    color: #DDD;
 }
 ::selection {
     background-color: #3A3140;
