@@ -5,6 +5,8 @@
         <meta name="author" content="Alex Dominguez Dominguez"/>
         <meta name="generator" content="notepad++"/>
         <meta name="robots" content="index, follow">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
         <link rel="shortcut icon" type="image/png" href="../../core/images/favicon.png"/>
         <title>Alex Dominguez</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -18,19 +20,12 @@
 
         <div class="container">
             <div class="main">
-                <div class="aside-left"></div>
-                <div class="content">
+                
                     <?php
                     //Se carga la vista que esté seleccionada en la variable de Session
                     require_once $_SESSION['vista'];
                     ?>
-                </div> 
-                <div class="aside-right">
-                    <nav>
-                        <li>Create new article</li>
-                        <a href="<?php echo $_SERVER['PHP_SELF']."?close=true"?>"><li>Log out</li></a>
-                    </nav>
-                </div>
+                
             </div>
         </div>
         <div class="footer">

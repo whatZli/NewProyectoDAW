@@ -11,19 +11,23 @@
 //require_once 'UsuarioPDO.php';
 //Creación de la clase Usuario
 
-class Departamento {
+class Articulo {
 
     private $cod_articulo;
     private $titulo_articulo;
     private $descripcion_articulo;
     private $imagen_articulo;
+    private $fecha_articulo;
+    private $visitas_articulo;
     private $cod_usuario;
     
-    function __construct($cod_articulo, $titulo_articulo, $descripcion_articulo, $imagen_articulo, $cod_usuario) {
+    function __construct($cod_articulo, $titulo_articulo, $descripcion_articulo, $imagen_articulo, $fecha_articulo, $visitas_articulo, $cod_usuario) {
         $this->cod_articulo = $cod_articulo;
         $this->titulo_articulo = $titulo_articulo;
         $this->descripcion_articulo = $descripcion_articulo;
         $this->imagen_articulo = $imagen_articulo;
+        $this->fecha_articulo = $fecha_articulo;
+        $this->visitas_articulo = $visitas_articulo;
         $this->cod_usuario = $cod_usuario;
     }
 
@@ -41,6 +45,14 @@ class Departamento {
 
     function getImagen_articulo() {
         return $this->imagen_articulo;
+    }
+
+    function getFecha_articulo() {
+        return $this->fecha_articulo;
+    }
+
+    function getVisitas_articulo() {
+        return $this->visitas_articulo;
     }
 
     function getCod_usuario() {
@@ -63,8 +75,15 @@ class Departamento {
         $this->imagen_articulo = $imagen_articulo;
     }
 
+    function setFecha_articulo($fecha_articulo) {
+        $this->fecha_articulo = $fecha_articulo;
+    }
+
+    function setVisitas_articulo($visitas_articulo) {
+        $this->visitas_articulo = $visitas_articulo;
+    }
+
     function setCod_usuario($cod_usuario) {
         $this->cod_usuario = $cod_usuario;
     }
-   
 }

@@ -8,6 +8,7 @@ include_once 'model/DBPDO.php';
 include_once 'model/Usuario.php';
 include_once 'model/UsuarioPDO.php';
 include_once 'model/Articulo.php';
+include_once 'model/ArticuloPDO.php';
 
 /* Array $controladores
  * Almacena la ruta a los controladores para facilitar su manejo
@@ -20,6 +21,7 @@ $controladores = [
     'administrator' => 'controller/cAdministrator.php',
     'inicioR' => 'controller/cInicioR.php',
     'inicioA' => 'controller/cInicioA.php',
+    'newArticle' => 'controller/cNewArticle.php',
     'error' => 'controller/cError.php',
 ];
 
@@ -37,6 +39,7 @@ $vistas = [
     'inicioA' => 'view/vInicioA.php',
     'layoutR' => 'view/layoutR.php',
     'layoutA' => 'view/layoutA.php',
+    'newArticle' => 'view/vNewArticle.php',
     'layout' => 'view/layout.php',
 ];
 

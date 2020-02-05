@@ -1,6 +1,6 @@
 <?php
 
-include_once 'model/Departamento.php';
+include_once 'model/Articulo.php';
 
 /* Clase UsuarioPDO
  * Clase que realizará las consultas relacionadas con el usuario
@@ -9,16 +9,16 @@ include_once 'model/Departamento.php';
  * @version 1.0   
  */
 
-class DepartamentoPDO {
+class ArticuloPDO {
 
-    public static function buscarTodosDepartamentos() {
-        $consulta = "SELECT * FROM `T02_Departamento`"; //Creacion de la consulta.
+    public static function buscarTodosArticulos() {
+        $consulta = "SELECT * FROM `Articulos`"; //Creacion de la consulta.
         $resConsulta = DBPDO::ejecutaConsulta($consulta, []); //Ejecutamos la consulta.
 
         $cont = 0;
         while ($resFetch = $resConsulta->fetchObject()) {
-            $departamento = new Departamento($resFetch->T02_CodDepartamento, $resFetch->T02_DescDepartamento, $resFetch->T02_FechaBaja, $resFetch->T02_VolumenNegocio);
-            $registros[$cont] = $departamento;
+            $articulo = new Articulo($resFetch->cod_articulo, $resFetch->titulo_articulo, $resFetch->descripcion_articulo, $resFetch->imagen_articulo, $resFetch->fecha_articulo, $resFetch->visitas_articulo, $resFetch->cod_usuario);
+            $registros[$cont] = $articulo;
             $cont++;
         }
         return $registros;

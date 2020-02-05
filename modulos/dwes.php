@@ -72,6 +72,7 @@
         <div class="lista">
             <a class="ejercicio" href="proyectoDWES/proyectoTema6/LoginLogoutPOO" target="_blank">LoginLogoutMulticapaPoo</a>
             <a class="ejercicio" href="proyectoDWES/proyectoTema6/LoginLogoffPooApi" target="_blank">LoginLogoutAPI-REST</a>
+            <a class="ejercicio" href="proyectoDWES/proyectoTema6/Proyecto19-20" target="_blank">Proyecto19/20</a>
         </div>
         <script type="text/javascript" src="core/js/collapsible.js"></script>
     </div>

@@ -56,6 +56,7 @@
                     <div class="footer-bottom-right-left">
                         <a href="<?php echo $_SERVER['PHP_SELF'] . "?pag=administrator"; ?>"><li>Admin page</li></a>
                         <li>Role user: <?php if(!isset($_SESSION['user'])){echo 'Invited';} ?></li>
+                        <a href="https://github.com/whatZli/NewProyectoDAW/tree/master/proyectoDWES/proyectoTema6/Proyecto19-20"><li>Git hub project</li></a>
                     </div>
                     <div class="footer-bottom-right-center">
                         <li>PHP Doc</li>

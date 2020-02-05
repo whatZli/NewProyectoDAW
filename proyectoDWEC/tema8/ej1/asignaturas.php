@@ -4,6 +4,6 @@
 
 $array= ["DWES","DWEC","DAW","DIW"];
 
-$post=$_POST['num'];
-
-echo $array[$post];
+//$post=$_POST['num'];
+//Recoger por Post "nombre ciclo" "nombre curso"
+echo json_encode($array);

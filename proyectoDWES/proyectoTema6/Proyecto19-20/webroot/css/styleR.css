@@ -16,9 +16,13 @@ a, a:hover, a:active, a:visited, a:link{
     color: white;
 }
 .container{
-    margin: auto;
+    margin: 30px auto;
 }
 .main{
+    margin: auto;
+    width: 100%;
+    
+    max-width: 700px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
@@ -36,9 +40,74 @@ a, a:hover, a:active, a:visited, a:link{
 }
 
 /*--Contenido--*/
+.content{
+    width:100%;
+}
+fieldset{
+    width: 100%;
+    margin: auto auto 20px;
+}
+fieldset *{
+    display: block;
+}
+fieldset label{
+    margin: 12px 0px 0px;
+}
+fieldset input{
+    width: 90%;
+    padding: 2px 5px 2px;
+    border: 0px;
+    border-bottom: 1px solid #8D183B;
+    transition:0.15s ease;
+}
+fieldset textArea{
+    width: 90%;
+    height: 70px;
+    border:0px;
+    border-bottom: 1px solid #8D183B;
+}
+fieldset input[type="submit"]{
+    margin: 20px 0 0;
+    border: 0;
+    font-size: 1.1rem;
+    padding: 4px;
+}
+fieldset input[type="submit"]:hover{
+    background: rgba(240,200,200,0.5);
+    border-radius: 5px;
+}
 
-
-
+.articulo{
+    display: inline-block;
+    width: 220px;
+    margin: 5px 5px;
+    padding: 5px;
+    background: #DDD;
+}
+.articulo img{
+    width: 220px;
+    position: relative;
+    left: -5px;
+    top: -5px;
+}
+.aside-right{
+    width: 300px;
+    padding: 0 10px;
+    font-size: 18px;
+    background: rgba(240,240,240,0.7);
+}
+.aside-right h2{
+    text-align: right;
+}
+.aside-right li{
+    padding: 10px;
+}
+.aside-right a{
+    color: #000;
+}
+.aside-right a:hover li{
+    background: #CCC;
+}
 /*--Footer--*/
 .footer{
     background: linear-gradient(to bottom, #ffffff 0%,#5a5160 25%, #3a3140 35%);
