@@ -25,12 +25,16 @@ a, a:hover, a:active, a:visited, a:link{
     opacity:0.7;
     width: 100%;
     filter:contrast(80%) brightness(90%);
-    min-height: 450px;
+    min-height: 350px;
     margin: auto;
 }
 .container{
     width: 90%;
     margin: auto;
+}
+.main{
+    position: relative;
+    top: -50px;
 }
 /*--Menú--*/
 nav{
@@ -79,7 +83,8 @@ nav li:hover{
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: 12px;
-}.title h5{
+}
+.title h5{
     margin: 30px auto;
     color: #FFF;
     font-family: Raleway;
@@ -88,7 +93,7 @@ nav li:hover{
 }
 /*--Contenido--*/
 .content{  
-    margin-top: 10vh;}
+    margin-top: 5vh;}
 .content p{
     margin: 20px auto;
     width: 60%;
@@ -104,7 +109,9 @@ nav li:hover{
     padding-right: 8px;
     padding-left: 3px;
 }
-
+.search{
+    text-align: right;
+}
 /*--Imagen + comentario--*/
 .image-comment{
     display: flex;

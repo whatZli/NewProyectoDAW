@@ -25,7 +25,7 @@
         descripcion_articulo varchar(2000) NOT null,
         imagen_articulo varchar(80) NOT null,
         fecha_articulo date,
-        visitas_articulo int default 0,
+        visitas_articulo int default 1,
         cod_usuario varchar(15),
         FOREIGN KEY (cod_usuario) REFERENCES Usuarios(cod_usuario) ON UPDATE CASCADE ON DELETE CASCADE
     );

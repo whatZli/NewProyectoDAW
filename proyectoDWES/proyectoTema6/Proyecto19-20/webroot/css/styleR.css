@@ -17,12 +17,12 @@ a, a:hover, a:active, a:visited, a:link{
 }
 .container{
     margin: 30px auto;
+    width: 80%;
 }
 .main{
     margin: auto;
     width: 100%;
-    
-    max-width: 700px;
+
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
@@ -44,8 +44,9 @@ a, a:hover, a:active, a:visited, a:link{
     width:100%;
 }
 fieldset{
+
     width: 100%;
-    margin: auto auto 20px;
+    margin: auto 0 20px;
 }
 fieldset *{
     display: block;
@@ -79,25 +80,47 @@ fieldset input[type="submit"]:hover{
 
 .articulo{
     display: inline-block;
+    vertical-align: top;
     width: 220px;
-    margin: 5px 5px;
+    margin: 5px 10px;
     padding: 5px;
-    background: #DDD;
+    background: #EEE;
+    transition:0.35s;
+    height: 280px;
+}
+.articulo:hover{
+    box-shadow: 0px 2px 36px -13px rgba(0,0,0,0.35);
 }
 .articulo img{
     width: 220px;
+    height: 140px;
     position: relative;
     left: -5px;
     top: -5px;
 }
+.articulo h2{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 40px;
+}
+.articulo .controlers{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    background: rgba(210,210,220,0.4);
+}
+.articulo a{
+    color: #000;
+}
 .aside-right{
     width: 300px;
+    height: 300px;
     padding: 0 10px;
     font-size: 18px;
     background: rgba(240,240,240,0.7);
 }
 .aside-right h2{
-    text-align: right;
+    text-align: center;
 }
 .aside-right li{
     padding: 10px;
@@ -148,7 +171,16 @@ fieldset input[type="submit"]:hover{
     cursor: pointer;
     color: white;
 }
-
+.error{
+    background: rgba(250,220,220,0.7);
+    color: #FE2712;
+    padding: 10px;
+}
+.correcto{
+    background: rgba(220,250,220,0.7);
+    color: green;
+    padding: 10px;
+}
 @media all and (min-width: 440px) {
     .content p{
         width: 90%;

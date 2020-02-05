@@ -1,20 +1,16 @@
-$('.slider-for').slick({
-   slidesToShow: 1,
-   slidesToScroll: 1,
-   arrows: false,
-   fade: true,
-   asNavFor: '.slider-nav'
- });
- $('.slider-nav').slick({
-   slidesToShow: 3,
-   slidesToScroll: 1,
-   asNavFor: '.slider-for',
-   dots: true,
-   focusOnSelect: true
- });
+function showUser(title) {
+    if (title == "") {
+        document.getElementById("articlesList").innerHTML = "";
+        return;
+    }
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp = new XMLHttpRequest();
 
- $('a[data-slide]').click(function(e) {
-   e.preventDefault();
-   var slideno = $(this).data('slide');
-   $('.slider-nav').slick('slickGoTo', slideno - 1);
- });
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("articlesList").innerHTML = this.responseText;
+        }
+    }
+    xmlhttp.open("GET", "controller/cArticleAjax.php?a=" + title, true);
+    xmlhttp.send();
+}

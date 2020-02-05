@@ -11,7 +11,11 @@ session_start();
 if (isset($_SESSION["usuarioDAW2051920"])) {
     $usuario = $_SESSION["usuarioDAW2051920"];
     if ($usuario->getTipo_usuario() === "registrado") {
-        $controlador = $controladores["inicioR"]; //Se almacena el controlador de inicio en la variable
+        if(isset($_GET['pag'])){
+            $controlador = $controladores[$_GET['pag']]; //Se almacena el controlador de inicio en la variable
+        }else{
+            $controlador = $controladores["inicioR"]; //Se almacena el controlador de inicio en la variable
+        }
         require_once $controlador; //Se incluye el controlador
     } else {
         $controlador = $controladores["inicioA"]; //Se almacena el controlador de inicio en la variable

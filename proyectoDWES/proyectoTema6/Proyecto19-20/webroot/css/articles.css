@@ -7,15 +7,38 @@ and open the template in the editor.
     Created on : 03-feb-2020, 18:10:56
     Author     : Alex
 */
+a .article{
+    color: #000;
+}
+#articlesList{
+    width: 250px;
+    text-align: center;
+    float: right;
+    background: rgba(160,250,160,1);
+    position: absolute;
+    right: 0;
+    z-index: 10;
+}
+#articlesList a{
+    width: 100%;
+    padding: 3px;
+    color: #5A5;
+}
+#articlesList a:hover{
+    background: rgba(222,250,222,1);
+    color: #5A5;
+}
 .article{
+    position: relative;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     background: rgba(220,220,220,0.7);
     height: 240px;
     transition: 0.15s ease;
     margin-top: 15px;
     opacity: 0.9;
+    min-width: 750px;
 }
 .article:hover{
     cursor:pointer;
@@ -23,16 +46,12 @@ and open the template in the editor.
     transform: scale(1.001);
     opacity: 1;
 }
-.article .image{
-    min-width: 400px;
-    
-}
+
 .article .image img{
     height: 240px;
-    width: 100%;
+    width: 400px;
     max-width:400px;
     max-height: 240px;
-    
 }
 .article .text{
     display: flex;
@@ -44,21 +63,60 @@ and open the template in the editor.
     font-size: 2rem;
     width: 100%;
     text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 100px;
 }
 .article .text .description{
     width: 95%;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-height: 150px;
+    max-height: 130px;
     width: 100%;
+    padding: 10px;
 }
 .article .text .description p{
     margin: 10px 15px;
 }
+.readMore{
+    width: 120px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
 .readMore p{
-    width: 90%;
-    color: #F33;
-    text-align: right;
-    margin-right: 30px;
-    font-size: 20px;
+    color: red;
+}
+.readMore p:after{
+    content: "...";
+}
+.errores{
+    background: rgba(240,200,200,0.7);
+    color: red;
+    padding: 10px;
+    margin: 5px;
+}
+/*PARA LA VISTA DE ARTICULO INDIVIDUAL*/
+.article1{}
+.title1{
+    font-size: 26px;
+    margin: 10px auto;
+}
+.article1 .text1 img{
+    width: 500px;margin: 0 10px 5px 0;
+}
+.description1 *{float: left;}
+.text1 {
+    display: inline-block;
+}
+.data{
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: space-around;
+}
+
+@media all and (min-width: 720px) {
+    .article .text .title{
+        font-size: 1.6rem;
+    }
 }

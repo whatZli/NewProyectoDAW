@@ -16,12 +16,14 @@ include_once 'model/ArticuloPDO.php';
 $controladores = [
     'home' => 'controller/cHome.php',
     'articles' => 'controller/cArticles.php',
+    'article' => 'controller/cArticle.php',
     'contact' => 'controller/cContact.php',
     'about' => 'controller/cAbout.php',
     'administrator' => 'controller/cAdministrator.php',
     'inicioR' => 'controller/cInicioR.php',
     'inicioA' => 'controller/cInicioA.php',
     'newArticle' => 'controller/cNewArticle.php',
+    'modifyArticle' => 'controller/cModifyArticle.php',
     'error' => 'controller/cError.php',
 ];
 
@@ -32,6 +34,7 @@ $controladores = [
 $vistas = [
     'home' => 'view/vHome.php',
     'articles' => 'view/vArticles.php',
+    'article' => 'view/vArticle.php',
     'contact' => 'view/vContact.php',
     'about' => 'view/vAbout.php',
     'administrator' => 'view/vAdministrator.php',
@@ -40,6 +43,7 @@ $vistas = [
     'layoutR' => 'view/layoutR.php',
     'layoutA' => 'view/layoutA.php',
     'newArticle' => 'view/vNewArticle.php',
+    'modifyArticle' => 'view/vModifyArticle.php',
     'layout' => 'view/layout.php',
 ];
 

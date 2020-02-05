@@ -12,6 +12,7 @@
         <link href="webroot/css/style.css" rel="stylesheet" type="text/css" title="Default style">
         <link href="webroot/css/about.css" rel="stylesheet" type="text/css" >
         <link href="webroot/css/articles.css" rel="stylesheet" type="text/css" >
+        <script src="webroot/js/script.js" type="text/javascript"></script>
         <style></style>
     </head>
     <body >
