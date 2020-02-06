@@ -39,6 +39,7 @@
                     } {
                         echo $_SESSION['usuarioDAW2051920']->getTipo_usuario();
                     } ?></li>
+                        <li>Name: <?php echo $_SESSION['usuarioDAW2051920']->getNom_usuario(); ?></li>
                     </div>
                     <div class="footer-bottom-right-center">
                         <li>PHP Doc</li>

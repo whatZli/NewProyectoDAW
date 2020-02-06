@@ -12,6 +12,7 @@ include_once 'model/Articulo.php';
 class ArticuloPDO {
 
     public static function buscarTodosArticulos() {
+        $registros=null;
         $consulta = "SELECT * FROM `Articulos`"; //Creacion de la consulta.
         $resConsulta = DBPDO::ejecutaConsulta($consulta, []); //Ejecutamos la consulta.
 
@@ -26,7 +27,7 @@ class ArticuloPDO {
     
     public static function buscarTituloArticulos($titulo) {
         $registros=null;
-        $consulta = "SELECT * FROM `articulos` WHERE `titulo_articulo` LIKE '%$titulo%'"; //Creacion de la consulta.
+        $consulta = "SELECT * FROM `Articulos` WHERE `titulo_articulo` LIKE '%$titulo%'"; //Creacion de la consulta.
         $resConsulta = DBPDO::ejecutaConsulta($consulta, []); //Ejecutamos la consulta.
 
         $cont = 0;
@@ -39,17 +40,17 @@ class ArticuloPDO {
     }
 
     public static function incluirArticulo($titulo, $descripcion, $imagen, $cod_usuario) {
-        $consulta = "INSERT INTO `articulos` (`cod_articulo`, `titulo_articulo`, `descripcion_articulo`, `imagen_articulo`, `fecha_articulo`, `visitas_articulo`, `cod_usuario`) VALUES (NULL, ?, ?, ?, now(), '0', ?);"; //Creacion de la consulta.
+        $consulta = "INSERT INTO `Articulos` (`cod_articulo`, `titulo_articulo`, `descripcion_articulo`, `imagen_articulo`, `fecha_articulo`, `visitas_articulo`, `cod_usuario`) VALUES (NULL, ?, ?, ?, now(), '0', ?);"; //Creacion de la consulta.
         DBPDO::ejecutaConsulta($consulta, [$titulo, $descripcion, $imagen, $cod_usuario]); //Ejecutamos la consulta.
     }
 
     public static function borrarArticulo($codArticulo) {
-        $consulta = "DELETE FROM `articulos` WHERE `articulos`.`cod_articulo` = ?"; //Creacion de la consulta.
+        $consulta = "DELETE FROM `Articulos` WHERE `Articulos`.`cod_articulo` = ?"; //Creacion de la consulta.
         DBPDO::ejecutaConsulta($consulta, [$codArticulo]); //Ejecutamos la consulta.
     }
 
     public static function buscarArticulo($codArticulo) {
-        $consulta = "SELECT * FROM `Articulos` WHERE `articulos`.`cod_articulo` = ?"; //Creacion de la consulta.
+        $consulta = "SELECT * FROM `Articulos` WHERE `Articulos`.`cod_articulo` = ?"; //Creacion de la consulta.
         $resConsulta = DBPDO::ejecutaConsulta($consulta, [$codArticulo]); //Ejecutamos la consulta.
 
         $resFetch = $resConsulta->fetchObject();
@@ -59,12 +60,12 @@ class ArticuloPDO {
     }
 
     public static function modificarArticulo($titulo,$descripcion,$codArticulo) {
-        $consulta = "UPDATE `articulos` SET `titulo_articulo` = ?, `descripcion_articulo` = ? WHERE `articulos`.`cod_articulo` = ?;"; //Creacion de la consulta.
+        $consulta = "UPDATE `Articulos` SET `titulo_articulo` = ?, `descripcion_articulo` = ? WHERE `cod_articulo` = ?;"; //Creacion de la consulta.
         DBPDO::ejecutaConsulta($consulta, [$titulo,$descripcion,$codArticulo]); //Ejecutamos la consulta.
     }
     
     public static function contadorArticulo($codArticulo) {
-        $consulta = "UPDATE `articulos` SET `visitas_articulo` = `visitas_articulo` + 1 WHERE `articulos`.`cod_articulo` = ?;"; //Creacion de la consulta.
+        $consulta = "UPDATE `Articulos` SET `visitas_articulo` = `visitas_articulo` + 1 WHERE `Articulos`.`cod_articulo` = ?;"; //Creacion de la consulta.
         DBPDO::ejecutaConsulta($consulta, [$codArticulo]); //Ejecutamos la consulta.
     }
 

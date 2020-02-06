@@ -1,5 +1,5 @@
 <div class="search">
-    <form action="<?php echo $_SERVER['PHP_SELF']."?pag=articles"?>" name="formSearch" method="POST">
+    <form action="<?php echo $_SERVER['PHP_SELF']."?pag=articles"?>" name="formSearch" method="POST" autocomplete="off">
         <input type="text" name="title" placeholder="Search title of mount" onkeydown="showUser(this.value)"onkeyup="showUser(this.value)">
         <input type="submit" name="search" value="Search">
     </form>

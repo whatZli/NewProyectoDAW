@@ -11,21 +11,21 @@ a .article{
     color: #000;
 }
 #articlesList{
-    width: 250px;
-    text-align: center;
+    width: 245px;
+    text-align: left;
     float: right;
-    background: rgba(160,250,160,1);
+    background: rgba(30,30,30,1);
     position: absolute;
     right: 0;
     z-index: 10;
 }
 #articlesList a{
     width: 100%;
-    padding: 3px;
-    color: #5A5;
+    padding: 10px;
+    color: white;
+    text-align: left;
 }
 #articlesList a:hover{
-    background: rgba(222,250,222,1);
     color: #5A5;
 }
 .article{

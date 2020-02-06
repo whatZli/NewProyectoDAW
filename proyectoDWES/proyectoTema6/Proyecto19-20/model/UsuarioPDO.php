@@ -17,7 +17,21 @@ class UsuarioPDO {
      * @param $password
      * @return Usuario $Usuarios
      */
+    public static function buscarTodosUsuarios() {
+        $registros=null;
+        $consulta = "SELECT * FROM `Usuarios`"; //Creacion de la consulta.
+        $resConsulta = DBPDO::ejecutaConsulta($consulta, []); //Ejecutamos la consulta.
 
+        $cont = 0;
+        while ($resFetch = $resConsulta->fetchObject()) {
+            $usuario = new Usuario($resFetch->cod_usuario, $resFetch->tipo_usuario, $resFetch->nom_usuario, $resFetch->apell_usuario, $resFetch->email_usuario, null,$resFetch->imagen_usuario);
+            $registros[$cont] = $usuario;
+            $cont++;
+        }
+        return $registros;
+    }
+    
+    
     public static function validarUsuario($codUsuario, $password) {
         $usuario = null;
         $consulta = "select * from Usuarios where cod_usuario=? and pass_usuario=?"; //Creacion de la consulta.
@@ -67,21 +81,5 @@ class UsuarioPDO {
         $borrar = "DELETE FROM `T01_Usuario` WHERE `T01_CodUsuario`=?";
         DBPDO::ejecutaConsulta($borrar, [$codUsuario]);
         return true;
-    }
-
-    public static function buscarTodosUsuarios() {
-
-        $consulta = "SELECT * FROM `T01_Usuario`"; //Creacion de la consulta.
-        $resConsulta = DBPDO::ejecutaConsulta($consulta, []); //Ejecutamos la consulta.
-
-        $cont = 0;
-
-        while ($resFetch = $resConsulta->fetchObject()) {
-            $usuario = new Usuario($resFetch->T01_CodUsuario, $resFetch->T01_Password, $resFetch->T01_DescUsuario, $resFetch->T01_NumAccesos, $resFetch->T01_FechaHoraUltimaConexion, $resFetch->T01_Perfil, null);
-            $registros[$cont] = $usuario;
-            $cont++;
-        }
-
-        return $registros;
     }
 }

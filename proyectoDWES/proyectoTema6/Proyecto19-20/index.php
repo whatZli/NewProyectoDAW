@@ -18,7 +18,11 @@ if (isset($_SESSION["usuarioDAW2051920"])) {
         }
         require_once $controlador; //Se incluye el controlador
     } else {
-        $controlador = $controladores["inicioA"]; //Se almacena el controlador de inicio en la variable
+        if(isset($_GET['pag'])){
+            $controlador = $controladores[$_GET['pag']]; //Se almacena el controlador de inicio en la variable
+        }else{
+            $controlador = $controladores["inicioA"]; //Se almacena el controlador de inicio en la variable
+        }
         require_once $controlador; //Se incluye el controlador
     }
 }else if (isset($_GET["pag"])) {

@@ -10,7 +10,7 @@ if (isset($_GET['a'])) {
     }
 
     mysqli_select_db($con, "ajax_demo");
-    $sql = "SELECT * FROM `articulos` WHERE `titulo_articulo` LIKE '%$a%'";
+    $sql = "SELECT * FROM `Articulos` WHERE `titulo_articulo` LIKE '%$a%'";
     $result = mysqli_query($con, $sql);
     while ($row = mysqli_fetch_array($result)) {
         echo "<a href='index.php?pag=article&cod=".$row['cod_articulo']."'>".$row['titulo_articulo']."</a><br>";

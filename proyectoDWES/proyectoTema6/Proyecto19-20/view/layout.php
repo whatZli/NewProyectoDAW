@@ -30,6 +30,7 @@
                     <a href="<?php echo $_SERVER['PHP_SELF'] . "?pag=articles"; ?>"><li>Articles</li></a>
                     <a href="<?php echo $_SERVER['PHP_SELF'] . "?pag=contact"; ?>"><li>Contact</li></a>
                     <a href="<?php echo $_SERVER['PHP_SELF'] . "?pag=about"; ?>"><li>About</li></a>
+                    <a href="<?php echo $_SERVER['PHP_SELF'] . "?pag=rest"; ?>"><li>Rest</li></a>
                 </nav>
                 <div class="title">
                     <h1>Mounts</h1>
