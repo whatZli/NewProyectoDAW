@@ -22,9 +22,10 @@ $controladores = [
     'rest' => 'controller/cRest.php',
     'administrator' => 'controller/cAdministrator.php',
     'inicioR' => 'controller/cInicioR.php',
-    'inicioA' => 'controller/cInicioA.php',
     'newArticle' => 'controller/cNewArticle.php',
     'modifyArticle' => 'controller/cModifyArticle.php',
+    'inicioA' => 'controller/cInicioA.php',
+    'newUser' => 'controller/cNewUser.php',
     'error' => 'controller/cError.php',
 ];
 
@@ -41,12 +42,15 @@ $vistas = [
     'rest' => 'view/vRest.php',
     'administrator' => 'view/vAdministrator.php',
     'inicioR' => 'view/vInicioR.php',
-    'inicioA' => 'view/vInicioA.php',
-    'layoutR' => 'view/layoutR.php',
-    'layoutA' => 'view/layoutA.php',
     'newArticle' => 'view/vNewArticle.php',
     'modifyArticle' => 'view/vModifyArticle.php',
+    
+    'inicioA' => 'view/vInicioA.php',
+    'newUser' => 'view/vNewUser.php',
+    
     'layout' => 'view/layout.php',
+    'layoutR' => 'view/layoutR.php',
+    'layoutA' => 'view/layoutA.php',
 ];
 
 

@@ -14,6 +14,7 @@
         <link href="webroot/css/styleA.css" rel="stylesheet" type="text/css" title="Default style">
         <link href="webroot/css/about.css" rel="stylesheet" type="text/css" >
         <link href="webroot/css/articles.css" rel="stylesheet" type="text/css" >
+        <script src="webroot/js/provincias.js" type="text/javascript"></script>
         <style></style>
     </head>
     <body >
