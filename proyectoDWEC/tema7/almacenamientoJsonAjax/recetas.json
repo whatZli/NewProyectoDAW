@@ -1,0 +1,196 @@
+{
+  "recetas": {
+    "receta": [
+      {
+        "-n": "1",
+        "nombre": "Sopa de cebolla",
+        "comensales": "4",
+        "ingredientes": {
+          "ingrediente": [
+            {
+              "-cantidad": "1",
+              "-unidad": "kg.",
+              "#text": " Cebolla "
+            },
+            {
+              "-cantidad": "2",
+              "-unidad": "l.",
+              "#text": " Caldo de Carne "
+            },
+            {
+              "-cantidad": "100 ",
+              "-unidad": "gr.",
+              "#text": " Mantequilla "
+            },
+            {
+              "-cantidad": "1",
+              "-unidad": "cucharada",
+              "#text": " Harina "
+            },
+            {
+              "-cantidad": "100",
+              "-unidad": "gr.",
+              "#text": " Queso Emmental Suizo o GruyÃ©re Rallado "
+            },
+            {
+              "-unidad": "en rebanadas",
+              "#text": " Pan tostado "
+            },
+            {
+              "-cantidad": "1",
+              "-unidad": "hoja",
+              "#text": " Laurel "
+            }
+          ]
+        },
+        "proceso": {
+          "paso": [
+            {
+              "-nunero": "1",
+              "#text": " Pelar y partir las cebollas en rodajas finas"
+            },
+            {
+              "-numero": "2",
+              "#text": " Rehogarlas con la mantequilla, sal y pimienta a fuego lento hasta que estÃ©n transparentes sin dorarse. "
+            },
+            {
+              "-numero": "3",
+              "#text": " AÃ±adir la harina sin dejar de remover."
+            },
+            {
+              "-numero": "4",
+              "#text": " Ponerlo en una cazuela con el caldo, el tomillo y el laurel. "
+            },
+            {
+              "-numero": "5",
+              "#text": " Dejar cocer a fuego lento durante unos 15 minutos. "
+            },
+            {
+              "-numero": "6",
+              "#text": " Poner las rebanadas de pan encima, espolvorear el queso y gratinar al horno.  "
+            }
+          ]
+        }
+      },
+      {
+        "-n": "2",
+        "nombre": "Tortilla",
+        "comensales": "4",
+        "ingredientes": {
+          "ingrediente": [
+            {
+              "-cantidad": "1",
+              "-unidad": "kg.",
+              "#text": " Patatas "
+            },
+            {
+              "-cantidad": "8",
+              "-unidad": "l.",
+              "#text": " Huevos "
+            },
+            {
+              "-cantidad": "100 ",
+              "-unidad": "gr.",
+              "#text": " Cebolla "
+            },
+            {
+              "-cantidad": "1",
+              "-unidad": "cucharada",
+              "#text": " sal "
+            }
+          ]
+        },
+        "proceso": {
+          "paso": [
+            {
+              "-nunero": "1",
+              "#text": " Pelar y partir las cebollas en rodajas finas"
+            },
+            {
+              "-numero": "2",
+              "#text": " Pelar y partir las patatas en rodajas fina "
+            },
+            {
+              "-numero": "3",
+              "#text": " Cocinar las patatas y la cebolla"
+            },
+            {
+              "-numero": "4",
+              "#text": " Batir los huevos "
+            },
+            {
+              "-numero": "5",
+              "#text": " Juntar las patatas, los huevos, la cebolla y la sal "
+            },
+            {
+              "-numero": "6",
+              "#text": " Ponerlo en la sarten y darle la vuelta "
+            }
+          ]
+        }
+      },
+      {
+        "-n": "3",
+        "nombre": "Macarrones",
+        "comensales": "4",
+        "ingredientes": {
+          "ingrediente": [
+            {
+              "-cantidad": "0.5",
+              "-unidad": "kg.",
+              "#text": " Macarrones "
+            },
+            {
+              "-cantidad": "1",
+              "-unidad": "pieza",
+              "#text": " Cebolla "
+            },
+            {
+              "-cantidad": "100 ",
+              "-unidad": "gr.",
+              "#text": " bacon "
+            },
+            {
+              "-cantidad": "300",
+              "-unidad": "ml",
+              "#text": " Nata "
+            },
+            {
+              "-cantidad": "1",
+              "-unidad": "cucharada",
+              "#text": " sal "
+            }
+          ]
+        },
+        "proceso": {
+          "paso": [
+            {
+              "-nunero": "1",
+              "#text": " Hervir los macarrones"
+            },
+            {
+              "-numero": "2",
+              "#text": " Sobrerir la cebolla "
+            },
+            {
+              "-numero": "3",
+              "#text": " Juntar el bacon al sofrito de cebolla "
+            },
+            {
+              "-numero": "4",
+              "#text": " Escurrir los macarrones "
+            },
+            {
+              "-numero": "5",
+              "#text": " Echar la nata al sofrito y cocicnar durante 5min "
+            },
+            {
+              "-numero": "6",
+              "#text": " Echar la salsa a los macarrones "
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+    "agenda": {
+        "contacto": [
+            {
+                "nombre": "Juan",
+                "apellido": "Pérez",
+                "direccion": "Calle 12. Ave. Del Silencio",
+                "telefonos": {
+                    "telcasa": "11223344",
+                    "telmovil": "22334455",
+                    "teltrabajo": "33445566"
+                }
+            },
+            {
+                "nombre": "Pedro",
+                "apellido": "López",
+                "direccion": "Calle 13. Ave. Del Silencio",
+                "telefonos": {
+                    "telcasa": "44332211",
+                    "telmovil": "55443322",
+                    "teltrabajo": "66554433"
+                }
+            }
+            ,
+            {
+                "nombre": "Pedro",
+                "apellido": "López",
+                "direccion": "Calle 13. Ave. Del Silencio",
+                "telefonos": {
+                    "telcasa": "44332211",
+                    "telmovil": "55443322",
+                    "teltrabajo": "66554433"
+                }
+            }
+        ]
+    }
+}
