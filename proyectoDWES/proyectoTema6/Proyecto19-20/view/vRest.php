@@ -7,6 +7,7 @@
         <input type="text" id="city" name="city" placeholder="303121">
         <input type="submit" name="send" value="Search city">
     </form>
+    <h4>Location: <?php echo $provincia ?></h4>
     <p>Temp máx: <?php echo $maxima ?> ºC</p>
     <p>Temp mín: <?php echo $minima ?> ºC</p>
     <p><?php echo $prevision ?></p>

@@ -20,13 +20,14 @@
     );
 
     CREATE TABLE IF NOT EXISTS Articulos(
-        cod_articulo varchar(10) PRIMARY KEY,
+        cod_articulo varchar(10) NOT NULL AUTO_INCREMENT,
         titulo_articulo varchar(130) NOT null,
         descripcion_articulo varchar(2000) NOT null,
         imagen_articulo varchar(80) NOT null,
         fecha_articulo date,
         visitas_articulo int default 1,
         cod_usuario varchar(15),
+        PRIMARY KEY (cod_articulo),
         FOREIGN KEY (cod_usuario) REFERENCES Usuarios(cod_usuario) ON UPDATE CASCADE ON DELETE CASCADE
     );
 

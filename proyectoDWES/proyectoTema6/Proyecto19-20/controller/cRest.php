@@ -11,6 +11,10 @@ $apiURL = 'http://dataservice.accuweather.com/forecasts/v1/daily/1day/'.$provinc
 $content = file_get_contents($apiURL);
 $jsonObject = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $content), true);
 
+//Esta es la unica manera que tengo de sacar la localidad del tiempo del JSON
+$url=$jsonObject['Headline']['Link'];
+$cadena = explode("/", $url);
+$provincia= ucfirst($cadena[5]);
 
 $fechaEfectiva = $jsonObject['Headline'];
 $minima = $jsonObject['DailyForecasts'][0]['Temperature']['Minimum']['Value'];
