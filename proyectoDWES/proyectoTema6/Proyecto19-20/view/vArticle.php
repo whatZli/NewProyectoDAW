@@ -1,3 +1,6 @@
+<div class="map">
+    <a href="index.php?pag=articles">Go back to articles</a>
+</div>
 <div class="article1">
     <div class="image1">
         

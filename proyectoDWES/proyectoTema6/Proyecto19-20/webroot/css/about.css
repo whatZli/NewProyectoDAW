@@ -1,39 +1,93 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 03-feb-2020, 18:10:56
-    Author     : Alex
-*/
 
-.content .about{
-      margin: auto;
-      text-align: center;
-      max-width: 900px;
-    }
-    .card{
-      text-align: center;
-      display: inline-block;
-      border: 1px solid #CCC;
-      width: 250px;
-      margin: 10px;
-      transition:0.15s linear;
-      vertical-align: top;
-      opacity: 0.7;
-    }
-    .card img{
-      width: 100%;
-    }
-    
-    .card:hover{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      cursor: pointer;
-      border: 1px solid #222;
-      opacity: 1;
-    }
-    .card h5{
-        height: 50px;
-        
-    }
+img {
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.about {
+    position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev{
+    position: relative;
+    left: 50px;
+}
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #000;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+    width: 100%;
+    text-align: center;
+    background-color: #DDD;
+    padding: 2px 16px;
+    color: white;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Six columns side by side */
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}

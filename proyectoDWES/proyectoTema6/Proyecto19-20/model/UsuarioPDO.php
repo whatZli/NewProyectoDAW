@@ -17,21 +17,7 @@ class UsuarioPDO {
      * @param $password
      * @return Usuario $Usuarios
      */
-    public static function buscarTodosUsuarios() {
-        $registros=null;
-        $consulta = "SELECT * FROM `Usuarios`"; //Creacion de la consulta.
-        $resConsulta = DBPDO::ejecutaConsulta($consulta, []); //Ejecutamos la consulta.
 
-        $cont = 0;
-        while ($resFetch = $resConsulta->fetchObject()) {
-            $usuario = new Usuario($resFetch->cod_usuario, $resFetch->tipo_usuario, $resFetch->nom_usuario, $resFetch->apell_usuario, $resFetch->email_usuario, null,$resFetch->imagen_usuario);
-            $registros[$cont] = $usuario;
-            $cont++;
-        }
-        return $registros;
-    }
-    
-    
     public static function validarUsuario($codUsuario, $password) {
         $usuario = null;
         $consulta = "select * from Usuarios where cod_usuario=? and pass_usuario=?"; //Creacion de la consulta.
@@ -39,47 +25,76 @@ class UsuarioPDO {
 
         if ($resConsulta->rowCount() == 1) { //Comprobamos si se han obtenido resultados en la consulta.
             $resFetch = $resConsulta->fetchObject();
-            $usuario = new Usuario($resFetch->cod_usuario, $resFetch->tipo_usuario, $resFetch->nom_usuario, $resFetch->apell_usuario, $resFetch->email_usuario, $resFetch->pass_usuario, $resFetch->img_usuario);
+            $usuario = new Usuario($resFetch->cod_usuario, $resFetch->tipo_usuario, $resFetch->nom_usuario, $resFetch->apell_usuario, $resFetch->email_usuario, $resFetch->pass_usuario, $resFetch->imagen_usuario);
         }
         return $usuario;
     }
 
-    public static function altaUsuario($codUsuario, $password, $descripcion) {
-        $consulta = "INSERT INTO `T01_Usuario`(`T01_CodUsuario`, `T01_Password`, `T01_DescUsuario`) VALUES( ? , ? , ? );";
-        DBPDO::ejecutaConsulta($consulta, [$codUsuario, $password, $descripcion]);
-        //Se llama a validar un usuario para que nos devuelva un Usuario
-        return UsuarioPDO::validarUsuario($codUsuario, $password);
-    }
+    public static function buscarTodosUsuarios() {
+        $registros = null;
+        $consulta = "SELECT * FROM `Usuarios`"; //Creacion de la consulta.
+        $resConsulta = DBPDO::ejecutaConsulta($consulta, []); //Ejecutamos la consulta.
 
-    public static function validarCodNoExiste($codUsuario) {
-        $consulta = "SELECT `T01_CodUsuario` FROM `T01_Usuario` WHERE `T01_CodUsuario` = ?;";
-        $resConsulta = DBPDO::ejecutaConsulta($consulta, [$codUsuario]);
-        if ($resConsulta->rowCount() == 1) {
-            return true;
+        $cont = 0;
+        while ($resFetch = $resConsulta->fetchObject()) {
+            $usuario = new Usuario($resFetch->cod_usuario, $resFetch->tipo_usuario, $resFetch->nom_usuario, $resFetch->apell_usuario, $resFetch->email_usuario, null, $resFetch->imagen_usuario);
+            $registros[$cont] = $usuario;
+            $cont++;
         }
-        return false;
+        return $registros;
     }
 
-    public static function modificarUsuario($codUsuario, $descripcion) {
+    public static function buscarUsuario($codUsuario) {
+        $consulta = "SELECT * FROM `Usuarios` WHERE `Usuarios`.`cod_usuario` = ?"; //Creacion de la consulta.
+        $resConsulta = DBPDO::ejecutaConsulta($consulta, [$codUsuario]); //Ejecutamos la consulta.
+
+        $resFetch = $resConsulta->fetchObject();
+        $usuario = new Usuario($resFetch->cod_usuario, $resFetch->tipo_usuario, $resFetch->nom_usuario, $resFetch->apell_usuario, $resFetch->email_usuario, $resFetch->pass_usuario, $resFetch->imagen_usuario);
+
+        return $usuario;
+    }
+    
+    public static function incluirUsuario($codUser, $typeUser, $name, $lname, $email, $password, $image) {
+        if (UsuarioPDO::validarCodNoExiste($codUser)) {
+            $consulta = "INSERT INTO `Usuarios`(`cod_usuario`, `tipo_usuario`, `nom_usuario`, `apell_usuario`, `email_usuario`, `pass_usuario`, `imagen_usuario`) VALUES( ? , ? , ? ,? ,?, ?, ?);";
+            DBPDO::ejecutaConsulta($consulta, [$codUser, $typeUser, $name, $lname, $email, $password, $image]);
+            //Se llama a validar un usuario para que nos devuelva un Usuario
+            return UsuarioPDO::validarUsuario($codUser, $password);
+        }
+    }
+
+    public static function validarCodNoExiste($codUser) {
+        $consulta = "SELECT `cod_usuario` FROM `Usuarios` WHERE `cod_usuario` = ?;";
+        $resConsulta = DBPDO::ejecutaConsulta($consulta, [$codUser]);
+        if ($resConsulta->rowCount() == 1) {
+            return false;
+        }
+        return true;
+    }
+
+    public static function borrarUsuario($codUser) {
+        $borrar = "DELETE FROM `Usuarios` WHERE `cod_usuario`=?";
+        DBPDO::ejecutaConsulta($borrar, [$codUser]);
+        return true;
+    }
+
+    
+    
+    public static function modificar1Usuario($codUser, $typeUser, $name, $lname, $email) {
         $usuario = null;
 
-        $actualizacion = "UPDATE `T01_Usuario` SET `T01_DescUsuario` = ? WHERE `T01_CodUsuario` = ?;";
-        DBPDO::ejecutaConsulta($actualizacion, [$descripcion, $codUsuario]);
+        $actualizacion = "UPDATE `Usuarios` SET `tipo_usuario` = ?, `nom_usuario` = ?, `apell_usuario` = ?, `email_usuario` = ? WHERE `cod_usuario` = ?";
+        DBPDO::ejecutaConsulta($actualizacion, [$typeUser, $name, $lname, $email, $codUser]);
 
-        $consulta = "select * from T01_Usuario where T01_CodUsuario=?"; //Creacion de la consulta.
-        $resConsulta = DBPDO::ejecutaConsulta($consulta, [$codUsuario]); //Ejecutamos la consulta.
+        $consulta = "SELECT * FROM Usuarios WHERE cod_usuario = ?"; //Creacion de la consulta.
+        $resConsulta = DBPDO::ejecutaConsulta($consulta, [$codUser]); //Ejecutamos la consulta.
 
         if ($resConsulta->rowCount() == 1) { //Comprobamos si se han obtenido resultados en la consulta.
             $resFetch = $resConsulta->fetchObject();
-            $usuario = new Usuario($resFetch->T01_CodUsuario, $resFetch->T01_Password, $resFetch->T01_DescUsuario, $resFetch->T01_NumAccesos, $resFetch->T01_FechaHoraUltimaConexion, $resFetch->T01_Perfil, null);
+            $usuario = new Usuario($resFetch->cod_usuario, $resFetch->tipo_usuario, $resFetch->nom_usuario, $resFetch->apell_usuario, $resFetch->email_usuario, $resFetch->pass_usuario, $resFetch->imagen_usuario);
         }
 
         return $usuario;
     }
 
-    public static function borrarUsuario($codUsuario) {
-        $borrar = "DELETE FROM `T01_Usuario` WHERE `T01_CodUsuario`=?";
-        DBPDO::ejecutaConsulta($borrar, [$codUsuario]);
-        return true;
-    }
 }

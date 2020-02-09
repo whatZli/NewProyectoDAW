@@ -21,12 +21,15 @@ $controladores = [
     'about' => 'controller/cAbout.php',
     'rest' => 'controller/cRest.php',
     'administrator' => 'controller/cAdministrator.php',
+    
     'inicioR' => 'controller/cInicioR.php',
     'newArticle' => 'controller/cNewArticle.php',
     'modifyArticle' => 'controller/cModifyArticle.php',
+    'profile' => 'controller/cProfile.php',
+    
     'inicioA' => 'controller/cInicioA.php',
     'newUser' => 'controller/cNewUser.php',
-    'error' => 'controller/cError.php',
+    'modifyUser' => 'controller/cModifyUser.php',
 ];
 
 /* Array $vistas
@@ -41,16 +44,19 @@ $vistas = [
     'about' => 'view/vAbout.php',
     'rest' => 'view/vRest.php',
     'administrator' => 'view/vAdministrator.php',
+    
     'inicioR' => 'view/vInicioR.php',
     'newArticle' => 'view/vNewArticle.php',
     'modifyArticle' => 'view/vModifyArticle.php',
+    'profile' => 'view/vProfile.php',
     
     'inicioA' => 'view/vInicioA.php',
     'newUser' => 'view/vNewUser.php',
+    'modifyUser' => 'view/vModifyUser.php',
     
-    'layout' => 'view/layout.php',
-    'layoutR' => 'view/layoutR.php',
-    'layoutA' => 'view/layoutA.php',
+    'layout' => 'view/layout.php',//Plantilla para los usuarios no logueados(invitados)
+    'layoutR' => 'view/layoutR.php',//Plantilla para los usuarios registrados
+    'layoutA' => 'view/layoutA.php',//Plantilla para los usuarios administradores
 ];
 
 

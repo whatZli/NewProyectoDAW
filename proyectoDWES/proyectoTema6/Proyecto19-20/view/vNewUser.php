@@ -24,7 +24,7 @@
             
             <label for="image">Image</label>
             <input id="fileToUpload" type="file" name="fileToUpload" accept="image/*">
-            <input type="submit" name="btnNewArticle" value="Create user">
+            <input type="submit" name="btnNewUser" value="Create user">
         </fieldset>
     </form>
 </div> 

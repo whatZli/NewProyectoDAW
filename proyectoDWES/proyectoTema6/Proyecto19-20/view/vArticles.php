@@ -6,7 +6,6 @@
     <div id="articlesList">
         
     </div>
-
 </div>
 <?php if(!isset($aArticulo)){
      echo '<div class="errores">There is no result for your search</div> ';

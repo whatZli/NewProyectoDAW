@@ -7,6 +7,7 @@ and open the template in the editor.
     Created on : 03-feb-2020, 18:10:56
     Author     : Alex
 */
+
 a .article{
     color: #000;
 }
@@ -97,6 +98,14 @@ a .article{
     margin: 5px;
 }
 /*PARA LA VISTA DE ARTICULO INDIVIDUAL*/
+.map{
+    background: rgba(220,220,220,0.3);
+    padding: 3px 20px;
+}
+.map a{
+    color: #000;
+    text-align: left;
+}
 .article1{}
 .title1{
     font-size: 26px;

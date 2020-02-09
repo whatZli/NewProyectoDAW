@@ -4,6 +4,7 @@ if (isset($_GET['cod'])) {
     if (isset($_POST['btnModifyArticle'])) {
 
         $entradaOK = true; //Variable que controla el formularo
+        //
         //Comprobación de errores en los campos
         $aErrores["title"] = validacionFormularios::comprobarAlfaNumerico($_POST["title"], 130, 1, 1);
         $aErrores["description"] = validacionFormularios::comprobarAlfaNumerico($_POST["description"], 2000, 1, 1);

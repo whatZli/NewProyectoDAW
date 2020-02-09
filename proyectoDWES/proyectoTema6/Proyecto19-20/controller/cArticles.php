@@ -4,7 +4,10 @@ if (isset($_POST['search'])) {
     if($_POST['title']===null){
         $_POST['title']="*";
     }
-    $aArticulos = ArticuloPDO::buscarTituloArticulos($_POST['title']);
+    $_SESSION['articuloActual']=$_POST['title'];
+}
+if(isset($_SESSION['articuloActual'])){
+    $aArticulos = ArticuloPDO::buscarTituloArticulos($_SESSION['articuloActual']);
 //var_dump($aArticulos);
 
     for ($i = 0; isset($aArticulos[$i]); $i++) {
@@ -16,6 +19,7 @@ if (isset($_POST['search'])) {
         $aArticulo[$i][5] = $aArticulos[$i]->getVisitas_articulo();
         $aArticulo[$i][6] = $aArticulos[$i]->getCod_usuario();
     }
+    
 } else {
     $aArticulos = ArticuloPDO::buscarTodosArticulos();
 //var_dump($aArticulos);
