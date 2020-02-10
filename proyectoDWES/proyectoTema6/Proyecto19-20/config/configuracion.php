@@ -20,6 +20,7 @@ $controladores = [
     'contact' => 'controller/cContact.php',
     'about' => 'controller/cAbout.php',
     'rest' => 'controller/cRest.php',
+    'ownApi' => 'controller/cOwnApi.php',
     'administrator' => 'controller/cAdministrator.php',
     
     'inicioR' => 'controller/cInicioR.php',
@@ -43,6 +44,7 @@ $vistas = [
     'contact' => 'view/vContact.php',
     'about' => 'view/vAbout.php',
     'rest' => 'view/vRest.php',
+    'ownApi' => 'view/vOwnApi.php',
     'administrator' => 'view/vAdministrator.php',
     
     'inicioR' => 'view/vInicioR.php',

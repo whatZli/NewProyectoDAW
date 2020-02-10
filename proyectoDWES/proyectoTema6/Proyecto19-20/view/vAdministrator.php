@@ -1,7 +1,7 @@
 <div style="float:left;">
-    <h6>Cuenta de administrador:</h6>
+    <h6>Cuenta de administrador<br> de usuarios:</h6>
     <p>admin/paso</p>
-    <h6>Cuenta de editor de artículos:</h6>
+    <h6>Cuenta de editor<br> de artículos:</h6>
     <p>usuario1/paso</p>
 </div>
 

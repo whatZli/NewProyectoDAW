@@ -187,6 +187,20 @@ fieldset input[type="submit"]:hover{
     background: rgba(240,200,200,0.5);
     border-radius: 5px;
 }
+/*----------------Rest------------------*/
+.apis{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: auto;
+    width: 120%;
+    position: relative;
+    left: -100px;
+}
+.api{
+    margin: 0 20px;
+    width: 50%;
+}
 /*--Footer--*/
 .footer{
     background: linear-gradient(to bottom, #ffffff 0%,#5a5160 25%, #3a3140 35%);

@@ -13,6 +13,8 @@
         <link href="webroot/css/about.css" rel="stylesheet" type="text/css" >
         <link href="webroot/css/articles.css" rel="stylesheet" type="text/css" >
         <script src="webroot/js/script.js" type="text/javascript"></script>
+        	
+        <script src="https://www.google.com/recaptcha/api.js?hl=es" async defer></script><!-- Captcha de google-->
         <style></style>
     </head>
     <body >

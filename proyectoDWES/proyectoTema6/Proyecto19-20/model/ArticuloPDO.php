@@ -10,7 +10,28 @@ include_once 'model/Articulo.php';
  */
 
 class ArticuloPDO {
-
+    
+    public static function buscarCodArticulos($codArticulo) {
+        
+        $registros=null;
+        
+        if($codArticulo===0){
+            $consulta = "SELECT * FROM `Articulos`"; //Creacion de la consulta.
+            $resConsulta = DBPDO::ejecutaConsulta($consulta, []); //Ejecutamos la consulta.
+        }else{
+            $consulta = "SELECT * FROM `Articulos` WHERE cod_articulo = ?"; //Creacion de la consulta.
+            $resConsulta = DBPDO::ejecutaConsulta($consulta, [$codArticulo]); //Ejecutamos la consulta.
+        }
+        
+        $cont = 0;
+        while ($resFetch = $resConsulta->fetchObject()) {
+            $articulo = new Articulo($resFetch->cod_articulo, $resFetch->titulo_articulo, $resFetch->descripcion_articulo, $resFetch->imagen_articulo, $resFetch->fecha_articulo, $resFetch->visitas_articulo, $resFetch->cod_usuario);
+            $registros[$cont] = $articulo;
+            $cont++;
+        }
+        return $registros;
+    }
+    
     public static function buscarTodosArticulos() {
         $registros=null;
         $consulta = "SELECT * FROM `Articulos`"; //Creacion de la consulta.
