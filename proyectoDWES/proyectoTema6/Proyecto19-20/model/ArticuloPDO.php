@@ -34,7 +34,7 @@ class ArticuloPDO {
     
     public static function buscarTodosArticulos() {
         $registros=null;
-        $consulta = "SELECT * FROM `Articulos` Limit 2"; //Creacion de la consulta.
+        $consulta = "SELECT * FROM `Articulos`"; //Creacion de la consulta.
         $resConsulta = DBPDO::ejecutaConsulta($consulta, []); //Ejecutamos la consulta.
 
         $cont = 0;

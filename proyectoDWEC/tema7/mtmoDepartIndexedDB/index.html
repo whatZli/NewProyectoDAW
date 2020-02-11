@@ -9,12 +9,19 @@
         <style>
             body{
                 margin: auto;
-                width: 90%;
+                width: 80%;
                 text-align: center;
                 font-size: 1.2rem;
                 display: flex;
                 flex-flow: row nowrap;
-                justify-content: space-between;
+                justify-content: space-around;
+            }
+            .formulario, .tabla, .formularioMod{
+                text-align: center;
+                margin: 0 auto;
+                width: 100%;
+                max-width: 450px;
+                vertical-align: top;
             }
             div{
                 margin-bottom: 20px;
@@ -37,7 +44,7 @@
             }
             .cont input[type="submit"]{
                 margin-left: auto ;
-                
+
                 width: 30%;
                 float: none;
             }
@@ -45,31 +52,33 @@
                 float: left;
             }
             .tabla{}
-            .formularioMod{
+            td{
+                max-width: 150px;
+                overflow: hidden;
+            }
+            .formularioMod, .tabla{
                 display: none;
+            }
+            input[type="submit"]{
+                cursor: pointer;
             }
             @media (max-width: 1000px){
                 body{
-                margin: auto;
-                width: 50%;
-                text-align: center;
-                font-size: 1.2rem;
-                display: flex;
-                flex-flow: column nowrap;
-                justify-content: space-between;
-            }
+                    margin: auto;
+                    width: 50%;
+                    text-align: center;
+                    font-size: 1.2rem;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: space-between;
+                }
             }
         </style>
     </head>
     <body>
         <div class="formulario">
             <h1>Mantenimiento de departamentos</h1>
-            <div class="buscar">
-<!--                <input type="submit" value="Crear IndexedDB" name="crearDB" id="crearDB">-->
-                <label for="busqueda">Cod departamento</label>
-                <input type="text" name="buscar" placeholder="Buscar" id="busqueda">
-                <input type="submit" value="Buscar" name="buscar" id="buscar">
-            </div>
+
             <div class="cont">
                 <h3>Formulario de insercción</h3>
                 <label for="cod">Código</label>
@@ -83,13 +92,19 @@
                 <input type="submit" value="Insertar" name="insertar" id="insertar">
             </div>
             <div class="otros">
-                <input type="submit" value="Buscar todos" name="leerT" id="leerT">
-                <input type="submit" value="Borrar tabla" name="borrarT" id="borrarT">
+                <input type="submit" value="Ver departamentos" name="leerT" id="leerT">
+                <input type="submit" value="Ocultar departamentos" name="borrarT" id="borrarT">
                 <input type="submit" value="Borrar registros BD" name="borrarR" id="borrarR">
             </div>
         </div>
         <div class="tabla">
             <h2>Visualizar departamentos</h2>
+            <div class="buscar">
+                <!--                <input type="submit" value="Crear IndexedDB" name="crearDB" id="crearDB">-->
+                <label for="busqueda">Cod departamento</label>
+                <input type="text" name="buscar" placeholder="Buscar" id="busqueda">
+                <input type="submit" value="Buscar" name="buscar" id="buscar">
+            </div>
             <table border="1">
                 <thead>
                     <tr>
@@ -106,7 +121,7 @@
             </table>
         </div>
         <div class="formularioMod">
-            
+
             <div class="cont">
                 <h3>Formulario de modificación</h3>
                 <label for="cod">Código</label>

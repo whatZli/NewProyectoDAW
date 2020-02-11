@@ -64,13 +64,11 @@
                     </div>
                     <div class="footer-bottom-right-center">
                         <li>PHP Doc</li>
-                        <li>Doc user invited</li>
-                        <li>Doc user registred</li>
-                        <li>Doc user admin</li>
+                        <a href="doc/documentacion.pdf" target="_blank"><li>Documentación<br> sobre la <br>aplicación</li></a>
                     </div>
                     <div class="footer-bottom-right-right">
                         <a target="_blank" href="http://daw205.sauces.local/"><li>Autor´s Web</li></a>
-                        <li>Tools used</li>
+                        <a href="doc/tema2.pdf" target="_blank"><li>Tools used</li></a>
                         <a target="_blank" href="https://dribbble.com/shots/2973869-Stories/attachments/619158"><li>Imitated Web</li></a>
                         <li>RSS</li>
                     </div>

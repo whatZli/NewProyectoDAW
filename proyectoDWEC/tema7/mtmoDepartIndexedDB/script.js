@@ -19,7 +19,9 @@ function cargar() {
 
     var buscarR = document.getElementById('buscar');
     buscarR.addEventListener('click', buscarCodigo, false);
-    
+
+    var actualizarR = document.getElementById('actualizar');
+    actualizarR.addEventListener('click', actualizarDepartamento, false);
 
     crearDB();
 }
@@ -55,10 +57,27 @@ function buscarCodigo() {
                 td.appendChild(document.createTextNode(cursor.value.fechaBaja));
                 tr.appendChild(td);
                 tbody.appendChild(tr);
-                
-                document.getElementById("cod").value=cursor.value.codigo;
-                document.getElementById("desc").value=cursor.value.descripcion;
-                document.getElementById("vneg").value=cursor.value.vNegocio;
+                var boton = document.createElement("button");
+                boton.appendChild(document.createTextNode("Modificar"));
+                boton.setAttribute("value", "Modificar");
+                boton.setAttribute("class", "modificar");
+                boton.setAttribute("codigo", cursor.value.codigo);
+                tr.appendChild(boton);
+                tbody.appendChild(tr);
+                var boton2 = document.createElement("button");
+                boton2.appendChild(document.createTextNode("Borrar"));
+                boton2.setAttribute("value", "Borrar");
+                boton2.setAttribute("class", "borrar");
+                boton2.setAttribute("codigo", cursor.value.codigo);
+                tr.appendChild(boton2);
+                tbody.appendChild(tr);
+
+                $(".modificar").click(function () {
+                    modificarRegistro(this);
+                });
+                $(".borrar").click(function () {
+                    borrarRegistro(this);
+                });
             }
 
             cursor.continue();
@@ -87,8 +106,60 @@ function borrarRegistros() {
     }
 }
 
+function borrarRegistro(codigo) {
+    var codigoDepartamento = codigo.getAttribute("codigo");
+    console.log(codigoDepartamento);
+
+    var transaccion = bd.transaction(["Departamento"], "readwrite");
+    var contenedor = transaccion.objectStore("Departamento");
+
+    contenedor.openCursor().onsuccess = function (event) {
+        var cursor = event.target.result;
+
+        if (cursor) {
+
+            if (cursor.value.codigo === codigoDepartamento) {
+                console.log("Se ha borrado el codigo del departamento");
+
+                cursor.delete();
+            }
+
+            cursor.continue();
+
+        } else {
+            console.log("Se han leido todos los registros");
+        }
+    };
+    leerTodosDB();
+
+}
+
+function actualizarDepartamento() {
+    var transaccion = bd.transaction(["Departamento"], "readwrite");
+    var contenedor = transaccion.objectStore("Departamento");
+
+    var codigo = $("#cod2").val();
+    var desc2 = $("#desc2").val();
+    var vNeg2 = $("#vneg2").val();
+    var fechaBaja2 = $("#fechaBaja2").val();
+
+    //Borrar la tabla por key
+    contenedor.get("asd").onsuccess = function (event) {
+        var objeto = event.target.result;
+
+        if (objeto != "undefined") {
+            //objeto.dimension="200"; //Tambíen se pued
+            contenedor.put({codigo: codigo, descripcion: desc2, vNegocio: vNeg2, fechaBaja: fechaBaja2});
+            console.log(objeto);
+        }
+    };
+    $(".tabla").css("display", "block");
+    $(".formularioMod").css("display", "none");
+    leerTodosDB();
+}
+
 function borrarTabla() {
-    $("tbody tr").remove();
+    $(".tabla").css("display", "none");
 }
 
 function leerTodosDB() {
@@ -119,29 +190,68 @@ function leerTodosDB() {
             tbody.appendChild(tr);
             var boton = document.createElement("button");
             boton.appendChild(document.createTextNode("Modificar"));
-            boton.setAttribute("value","Modificar");
-            boton.setAttribute("id","modificar");
-            boton.setAttribute("data-codigo",cursor.value.codigo);
+            boton.setAttribute("value", "Modificar");
+            boton.setAttribute("class", "modificar");
+            boton.setAttribute("codigo", cursor.value.codigo);
             tr.appendChild(boton);
             tbody.appendChild(tr);
             var boton2 = document.createElement("button");
             boton2.appendChild(document.createTextNode("Borrar"));
-            boton2.setAttribute("value","Borrar");
-            boton2.setAttribute("id","borrar");
-            boton2.setAttribute("data-codigo",cursor.value.codigo);
+            boton2.setAttribute("value", "Borrar");
+            boton2.setAttribute("class", "borrar");
+            boton2.setAttribute("codigo", cursor.value.codigo);
             tr.appendChild(boton2);
             tbody.appendChild(tr);
-            
+
+            $(".modificar").click(function () {
+                modificarRegistro(this);
+            });
+            $(".borrar").click(function () {
+                borrarRegistro(this);
+            });
+
             cursor.continue();
-            
-            var modificarR = document.getElementById('modificar');
-            modificarR.addEventListener('click', modificarRegistro, false);
-            
-            
+
+        } else {
+            console.log("Se han leido todos los registros");
+        }
+        $(".tabla").css("display", "block");
+    };
+
+}
+
+function modificarRegistro(botonPulsado) {
+    console.log(botonPulsado);
+    codigo = botonPulsado.getAttribute("codigo");
+
+    var transaccion = bd.transaction(["Departamento"], "readonly");
+    var contenedor = transaccion.objectStore("Departamento");
+
+    contenedor.openCursor().onsuccess = function (event) {
+        var cursor = event.target.result;
+
+        if (cursor) {
+
+            if (cursor.value.codigo === codigo) {
+                console.log("Se ha encontrado el codigo del departamento");
+
+
+                $("#cod2").val(cursor.value.codigo);
+                $("#cod2").attr("disabled", true);
+                $("#desc2").val(cursor.value.descripcion);
+                $("#vneg2").val(cursor.value.vNegocio);
+                $("#fechaBaja2").val(cursor.value.fechaBaja);
+            }
+
+            cursor.continue();
+
         } else {
             console.log("Se han leido todos los registros");
         }
     };
+    $(".tabla").css("display", "none");
+    $(".formularioMod").css("display", "block");
+
 }
 
 function insertarDB() {
@@ -149,13 +259,13 @@ function insertarDB() {
     var descv = document.getElementById("desc").value;
     var vnegv = document.getElementById("vneg").value;
     var fechaBaja = document.getElementById("fechaBaja").value;
-    
+
     console.log(fechaBaja);
-    if(fechaBaja===''){
+    if (fechaBaja === '') {
         console.log("go");
-        fechaBaja="-";
+        fechaBaja = "-";
     }
-    
+
     var transaccion = bd.transaction(["Departamento"], "readwrite");//creamos una transaccion sobre la tabla colchones
 
     //metemos lo que nos da en un objeto contenedor
@@ -167,21 +277,14 @@ function insertarDB() {
     leerTodosDB();
     limpiarCampos();
 }
-function modificarRegistro(){
-    console.log();
-    $(".formularioMod").css("display","block");
-    $("#cod2").val(this.attr());
-    $("#desc2").val();
-    $("#vneg2").val();
-    $("#fechaBaja2").val();
-}
-function modificarCampos(){
-    
+
+function modificarCampos() {
+
     var codv = document.getElementById("cod").value;
     var descv = document.getElementById("desc").value;
     var vnegv = document.getElementById("vneg").value;
     var fechaBaja = document.getElementById("fechaBaja").value;
-    
+
     var transaccion = bd.transaction(["Departamento"], "readwrite");
     var contenedor = transaccion.objectStore("Colchones1");
 
@@ -195,13 +298,14 @@ function modificarCampos(){
             console.log(objeto);
         }
     };
-};
+}
+;
 
-function limpiarCampos(){
-    document.getElementById("cod").value="";
-    document.getElementById("desc").value="";
-    document.getElementById("vneg").value="";
-    document.getElementById("fechaBaja").value="";
+function limpiarCampos() {
+    document.getElementById("cod").value = "";
+    document.getElementById("desc").value = "";
+    document.getElementById("vneg").value = "";
+    document.getElementById("fechaBaja").value = "";
 }
 
 function crearDB() {
