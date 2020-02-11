@@ -22,7 +22,7 @@
         <p>Le pasamos el código de un artículo y nos devuelve todos los datos referidos a él.</p>
         <form method="post" name="formCity" action="<?php echo $_SERVER['PHP_SELF'] . "?pag=rest" ?>">
             <label for="article">Cod article</label>
-            <input type="text" id="article" name="article" placeholder="35">
+            <input type="text" id="article" name="article" placeholder="8">
             <input type="submit" name="send2" value="Buscar articulo">
         </form>
         <?php if(isset($titulo)){?>
@@ -53,7 +53,7 @@ array{
     }
 }</pre>
         <h4>Ejemplos de uso</h4>
-        <p>Pasando el código de un artículo: <a href="index.php?pag=ownApi&codArticle=35" target="_blank" style="color:blue;">Buscar artículo</a></p>
+        <p>Pasando el código de un artículo: <a href="index.php?pag=ownApi&codArticle=8" target="_blank" style="color:blue;">Buscar artículo</a></p>
         <p>Pasando el código 0: <a href="index.php?pag=ownApi&codArticle=0" target="_blank" style="color:blue;">Buscar todos los artículos</a></p>
     </div>
 </div>

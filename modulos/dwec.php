@@ -52,7 +52,7 @@
         <button type="button" class="collapsible tema dwec">Tema 7. Almacenamiento</button>
         <div class="lista">
             <a class="ejercicio" href="proyectoDWEC/tema7/almacenamiento/index.html" target="_blank">Almacenamiento Cookies</a>
-            <a class="ejercicio" href="proyectoDWEC/tema7/proyectoLoginLogoff/codigoPHP/login.php" target="_blank">Almacenar usuario en SessionStorage</a>
+            <a class="ejercicio" href="proyectoDWEC/tema7/proyectoLoginLogoff/codigoPHP/login.php" target="_blank">Almacenar usuario en LocalStorage(cambiado)</a>
             <a class="ejercicio" href="proyectoDWEC/tema7/almacenamientoWEBSQL/index.html" target="_blank">Almacenamiento webSql</a>
             <a class="ejercicio" href="proyectoDWEC/tema7/almacenamientoIndexedDB/index.html" target="_blank">Almacenamiento IndexedDB</a>
             <a class="ejercicio" href="proyectoDWEC/tema7/mtmoDepartIndexedDB/index.html" target="_blank">Ejercicio Mto Departamentos IndexedDB</a>
@@ -64,7 +64,8 @@
         <div class="lista">
             <a class="ejercicio" href="proyectoDWEC/tema8/ejemploAjax/index.html" target="_blank">Ejemplo Ajax</a>
             <a class="ejercicio" href="proyectoDWEC/tema8/ej1/index.html" target="_blank">Ejercicio Ajax Alumno/profesor</a>
+            <a class="ejercicio" href="http://daw205.sauces.local/proyectoDWES/proyectoTema6/Proyecto19-20/index.php?pag=articles" target="_blank">Ejercicio Campo de sugerencias</a>
         </div>
         <script type="text/javascript" src="core/js/collapsible.js"></script>
     </div>
-</div> 
+</div>

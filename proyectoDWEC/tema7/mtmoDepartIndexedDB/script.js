@@ -19,6 +19,7 @@ function cargar() {
 
     var buscarR = document.getElementById('buscar');
     buscarR.addEventListener('click', buscarCodigo, false);
+    
 
     crearDB();
 }
@@ -116,8 +117,27 @@ function leerTodosDB() {
             td.appendChild(document.createTextNode(cursor.value.fechaBaja));
             tr.appendChild(td);
             tbody.appendChild(tr);
+            var boton = document.createElement("button");
+            boton.appendChild(document.createTextNode("Modificar"));
+            boton.setAttribute("value","Modificar");
+            boton.setAttribute("id","modificar");
+            boton.setAttribute("data-codigo",cursor.value.codigo);
+            tr.appendChild(boton);
+            tbody.appendChild(tr);
+            var boton2 = document.createElement("button");
+            boton2.appendChild(document.createTextNode("Borrar"));
+            boton2.setAttribute("value","Borrar");
+            boton2.setAttribute("id","borrar");
+            boton2.setAttribute("data-codigo",cursor.value.codigo);
+            tr.appendChild(boton2);
+            tbody.appendChild(tr);
+            
             cursor.continue();
-
+            
+            var modificarR = document.getElementById('modificar');
+            modificarR.addEventListener('click', modificarRegistro, false);
+            
+            
         } else {
             console.log("Se han leido todos los registros");
         }
@@ -145,12 +165,49 @@ function insertarDB() {
     contenedor.add({codigo: codv, descripcion: descv, vNegocio: vnegv, fechaBaja: fechaBaja});
 
     leerTodosDB();
+    limpiarCampos();
+}
+function modificarRegistro(){
+    console.log();
+    $(".formularioMod").css("display","block");
+    $("#cod2").val(this.attr());
+    $("#desc2").val();
+    $("#vneg2").val();
+    $("#fechaBaja2").val();
+}
+function modificarCampos(){
+    
+    var codv = document.getElementById("cod").value;
+    var descv = document.getElementById("desc").value;
+    var vnegv = document.getElementById("vneg").value;
+    var fechaBaja = document.getElementById("fechaBaja").value;
+    
+    var transaccion = bd.transaction(["Departamento"], "readwrite");
+    var contenedor = transaccion.objectStore("Colchones1");
+
+    //Borrar la tabla por key
+    contenedor.get("asd").onsuccess = function (event) {
+        var objeto = event.target.result;
+
+        if (objeto != "undefined") {
+            //objeto.dimension="200"; //Tambíen se pued
+            contenedor.put({codigo: codv, descripcion: descv, vNegocio: vnegv});
+            console.log(objeto);
+        }
+    };
+};
+
+function limpiarCampos(){
+    document.getElementById("cod").value="";
+    document.getElementById("desc").value="";
+    document.getElementById("vneg").value="";
+    document.getElementById("fechaBaja").value="";
 }
 
 function crearDB() {
     //Crear la BD
     //Metodo de crear open
-    var abrirBD = window.indexedDB.open("Departamentos", 2);//Nombre y versión
+    var abrirBD = window.indexedDB.open("Departamentos", 3);//Nombre y versión
     console.log(abrirBD);
 
     //si la operación de open tiene exito crea la BD o la abre si ya existe
@@ -170,19 +227,10 @@ function crearDB() {
         //Punto a la bd
         bd = event.target.result;
         //Crear un contenedor ObjectStore
-        bd.createObjectStore("Departamento", {autoIncrement: true});
+        bd.createObjectStore("Departamento", {keyPath: "codigo"});
     }
 
 }
-
-
-
-
-
-
-
-
-
 
 window.addEventListener('load', cargar, false);
 

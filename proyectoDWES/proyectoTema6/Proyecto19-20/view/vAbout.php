@@ -16,12 +16,12 @@
             <img src="doc/clases.JPG" style="width:100%">
         </div>
 
-<!--        <div class="mySlides">
+        <div class="mySlides">
             <div class="numbertext">4 / 6</div>
-            <img src="doc/mfd.JPG" style="width:100%">
+            <img src="doc/estructuraDirectorios.PNG" style="width:100%">
         </div>
 
-        <div class="mySlides">
+<!--        <div class="mySlides">
             <div class="numbertext">5 / 6</div>
             <img src="doc/mfd.JPG" style="width:100%">
         </div>
@@ -48,10 +48,10 @@
             <div class="column">
                 <img class="demo cursor" src="doc/clases.JPG" style="width:100%" onclick="currentSlide(3)" alt="Diagrama de clases">
             </div>
-<!--            <div class="column">
-                <img class="demo cursor" src="img_lights.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-            </div>
             <div class="column">
+                <img class="demo cursor" src="doc/estructuraDirectorios.PNG" style="width:100%" onclick="currentSlide(4)" alt="Estructura de directorios">
+            </div>
+<!--            <div class="column">
                 <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
             </div>    
             <div class="column">

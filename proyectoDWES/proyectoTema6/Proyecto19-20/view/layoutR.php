@@ -48,9 +48,9 @@
                         <li>Doc user admin</li>
                     </div>
                     <div class="footer-bottom-right-right">
-                        <a href="http://daw205.sauces.local/"><li>Autor´s Web</li></a>
+                        <a target="_blank" href="http://daw205.sauces.local/"><li>Autor´s Web</li></a>
                         <li>Tools used</li>
-                        <a href="https://dribbble.com/shots/2973869-Stories/attachments/619158"><li>Imitated Web</li></a>
+                        <a target="_blank" href="https://dribbble.com/shots/2973869-Stories/attachments/619158"><li>Imitated Web</li></a>
                         <li>RSS</li>
                     </div>
                 </div>

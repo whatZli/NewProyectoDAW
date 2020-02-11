@@ -83,7 +83,7 @@ a .article{
     margin: 10px 15px;
 }
 .readMore{
-    width: 120px;
+    width: 170px;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -127,8 +127,35 @@ a .article{
     justify-content: space-around;
 }
 
+/*-----Paginación-----------*/
+.pagination {
+    width: 40%;
+    height: 40px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #d9b3ff;
+  color: black;
+}
+
+.pagination a:hover:not(.active) {background-color: #e6ccff;}
+
 @media all and (min-width: 720px) {
     .article .text .title{
         font-size: 1.6rem;
+    }
+    .description{
+        width: 140px;
     }
 }

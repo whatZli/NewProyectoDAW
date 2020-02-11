@@ -2,7 +2,6 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    min-height: 100vh;
 }
 li{
     list-style:none;
@@ -31,6 +30,7 @@ a, a:hover, a:active, a:visited, a:link{
 .container{
     width: 90%;
     margin: auto;
+    min-height: 74.5vh;
 }
 .main{
     position: relative;
@@ -244,7 +244,7 @@ fieldset input[type="submit"]:hover{
 
 @media all and (min-width: 440px) {
     .content p{
-        width: 90%;
+        width: 70%;
     }
     .image-comment{
         width: 90%;
@@ -252,7 +252,7 @@ fieldset input[type="submit"]:hover{
 }
 @media all and (min-width: 720px) {
     .content p{
-        width: 80%;
+        width: 60%;
     }
     .image-comment{
         width: 90%;

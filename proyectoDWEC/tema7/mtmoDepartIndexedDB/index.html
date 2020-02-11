@@ -14,7 +14,7 @@
                 font-size: 1.2rem;
                 display: flex;
                 flex-flow: row nowrap;
-                justify-content: space-around;
+                justify-content: space-between;
             }
             div{
                 margin-bottom: 20px;
@@ -45,6 +45,20 @@
                 float: left;
             }
             .tabla{}
+            .formularioMod{
+                display: none;
+            }
+            @media (max-width: 1000px){
+                body{
+                margin: auto;
+                width: 50%;
+                text-align: center;
+                font-size: 1.2rem;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-between;
+            }
+            }
         </style>
     </head>
     <body>
@@ -70,13 +84,12 @@
             </div>
             <div class="otros">
                 <input type="submit" value="Buscar todos" name="leerT" id="leerT">
-<!--                <input type="submit" value="Modificar" name="modificar">-->
                 <input type="submit" value="Borrar tabla" name="borrarT" id="borrarT">
                 <input type="submit" value="Borrar registros BD" name="borrarR" id="borrarR">
             </div>
         </div>
         <div class="tabla">
-            <h1>Visualizar departamentos</h1>
+            <h2>Visualizar departamentos</h2>
             <table border="1">
                 <thead>
                     <tr>
@@ -84,12 +97,28 @@
                         <th>Descripcion</th>
                         <th>Valor de negocio</th>
                         <th>Fecha de baja</th>
+                        <th style="colspan:'2'">Operaciones</th>
                     </tr>
                 </thead>
                 <tbody>
 
                 </tbody>
             </table>
+        </div>
+        <div class="formularioMod">
+            
+            <div class="cont">
+                <h3>Formulario de modificación</h3>
+                <label for="cod">Código</label>
+                <input type="text" name="cod" placeholder="Código del departamento" id="cod2"><br>
+                <label for="desc">Descripción</label>
+                <input type="text" name="desc" placeholder="Descripción del departamento" id="desc2"><br>
+                <label for="vneg">Volumen de negocio</label>
+                <input type="text" name="vneg" placeholder="Volumen de negocio" id="vneg2"><br>
+                <label for="fechaBaja">Fecha baja</label>
+                <input type="date" name="fechaBaja" id="fechaBaja2"><br><br>
+                <input type="submit" value="Actualizar" name="actualizar" id="actualizar">
+            </div>
         </div>
     </body>
 </html>

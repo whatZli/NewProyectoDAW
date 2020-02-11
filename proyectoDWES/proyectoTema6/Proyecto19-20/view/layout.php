@@ -60,7 +60,7 @@
                     <div class="footer-bottom-right-left">
                         <a href="<?php echo $_SERVER['PHP_SELF'] . "?pag=administrator"; ?>"><li>Admin page</li></a>
                         <li>Role user: <?php if(!isset($_SESSION['user'])){echo 'Invited';} ?></li>
-                        <a href="https://github.com/whatZli/NewProyectoDAW/tree/master/proyectoDWES/proyectoTema6/Proyecto19-20"><li>Git hub project</li></a>
+                        <a target="_blank" href="https://github.com/whatZli/NewProyectoDAW/tree/master/proyectoDWES/proyectoTema6/Proyecto19-20"><li>Git hub project</li></a>
                     </div>
                     <div class="footer-bottom-right-center">
                         <li>PHP Doc</li>
@@ -69,9 +69,9 @@
                         <li>Doc user admin</li>
                     </div>
                     <div class="footer-bottom-right-right">
-                        <a href="http://daw205.sauces.local/"><li>Autor´s Web</li></a>
+                        <a target="_blank" href="http://daw205.sauces.local/"><li>Autor´s Web</li></a>
                         <li>Tools used</li>
-                        <a href="https://dribbble.com/shots/2973869-Stories/attachments/619158"><li>Imitated Web</li></a>
+                        <a target="_blank" href="https://dribbble.com/shots/2973869-Stories/attachments/619158"><li>Imitated Web</li></a>
                         <li>RSS</li>
                     </div>
                 </div>
