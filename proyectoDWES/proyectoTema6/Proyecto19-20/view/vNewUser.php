@@ -20,7 +20,9 @@
             <input type="password" name="password" id="password" value="" placeholder="">
             
             <label for="provincia">Cod location</label>
-            <input type="number" min="999" max="99999" name="provincia" id="provincia" value="" placeholder="Your cod location" onblur="provincias(this)">
+            <input type="number" min="999" max="99999" name="provincia" id="provincia" value="" placeholder="Your cod location" onblur="provincias(this)" style="width: 150px; display: inline-block;">
+            
+            <div id="locateList" style="display:inline-block"></div>
             
             <label for="image">Image</label>
             <input id="fileToUpload" type="file" name="fileToUpload" accept="image/*">

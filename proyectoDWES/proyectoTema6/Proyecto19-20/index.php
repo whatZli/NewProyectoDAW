@@ -7,7 +7,6 @@ include_once 'config/configuracionBD.php';
 //Iniciamos y recuperamos las sesiones
 session_start();
 
-//Si el usuario ha iniciado sesión pero no ha accedido a ninguna ventana, será mandado a la ventana de inicio
 if (isset($_SESSION["usuarioDAW2051920"])) {
     $usuario = $_SESSION["usuarioDAW2051920"];
     if ($usuario->getTipo_usuario() === "registrado") {

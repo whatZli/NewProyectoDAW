@@ -42,15 +42,15 @@ if (!isset($aArticulo)) {
 //?>
 <div class="pagination">
     <?php
-//    echo '<a href="#">&laquo;</a>';
-//    for ($i = 1; $i <= $numeroPaginas/3+1; $i++) {
-//        if ($pagina === $i) {
-//            echo '<a class="active" href="#">' . $i . '</a>';
-//        } else {
-//            echo '<a href="#">' . $i . '</a>';
-//        }
-//    }
-//    echo '<a href="#">&raquo;</a>';
-//    ?>
+    echo '<a href="#">&laquo;</a>';
+    for ($i = 1; $i <= $numeroArticulos/3; $i++) {
+        if ($pagina == $i) {
+            echo '<a class="active" href="'.$_SERVER['PHP_SELF']."?pag=articles&pagina=".$i.'">' . $i . '</a>';
+        } else {
+            echo '<a href="'.$_SERVER['PHP_SELF']."?pag=articles&pagina=".$i.'">' . $i . '</a>';
+        }
+    }
+    echo '<a href="#">&raquo;</a>';
+    ?>
 </div>
 

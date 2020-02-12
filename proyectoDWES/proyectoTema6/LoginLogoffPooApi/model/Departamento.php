@@ -1,15 +1,21 @@
 <?php
 
-/* Clase Departamento
- * Clase que se utilizará para representar un objeto Usuario
- * @category model
- * @autor Alex Dominguez
- * @version 1.0   
+/**
+ * Class Departamento
+ *
+ * Clase que contiene los metodos para crear consultar y modificar cualquier atributo de un departamento
+ *
+ * PHP version 7.0
+ *
+ * @category Departamento
+ * @package  Departamento
+ * @source Departamento.php
+ * @since Versión 1.1 Añadidos getters y setters
+ * @copyright 12-02-2020
+ * @author Versión 1.1 Alex Dominguez Dominguez
+ * @version Versión 1.1 Añadidos getters y setters
+ 
  */
-
-//Requiere el fichero UsuarioPDO Donde se almacenan las consultas a la BD
-//require_once 'UsuarioPDO.php';
-//Creación de la clase Usuario
 
 class Departamento {
 

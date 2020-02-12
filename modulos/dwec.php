@@ -55,7 +55,7 @@
             <a class="ejercicio" href="proyectoDWEC/tema7/proyectoLoginLogoff/codigoPHP/login.php" target="_blank">Almacenar usuario en LocalStorage(cambiado)</a>
             <a class="ejercicio" href="proyectoDWEC/tema7/almacenamientoWEBSQL/index.html" target="_blank">Almacenamiento webSql</a>
             <a class="ejercicio" href="proyectoDWEC/tema7/almacenamientoIndexedDB/index.html" target="_blank">Almacenamiento IndexedDB</a>
-            <a class="ejercicio" href="proyectoDWEC/tema7/mtmoDepartIndexedDB/index.html" target="_blank">Ejercicio Mto Departamentos IndexedDB</a>
+            <a class="ejercicio" href="proyectoDWEC/tema7/mtmoDepartIndexedDB/index.html" target="_blank">Ejercicio Mto Departamentos IndexedDB (12/02/2020)</a>
             <a class="ejercicio" href="proyectoDWEC/tema7/almacenamientoXML/index.html" target="_blank">Ejemplo Transform XML con JS</a>
             <a class="ejercicio" href="proyectoDWEC/tema7/xml/index.html" target="_blank">Ejercicio XML a JS</a>
             <a class="ejercicio" href="proyectoDWEC/tema7/json/index.html" target="_blank">Ejercicio JSON a JS</a>
@@ -63,8 +63,9 @@
         <button type="button" class="collapsible tema dwec">Tema 8. Ajax</button>
         <div class="lista">
             <a class="ejercicio" href="proyectoDWEC/tema8/ejemploAjax/index.html" target="_blank">Ejemplo Ajax</a>
-            <a class="ejercicio" href="proyectoDWEC/tema8/ej1/index.html" target="_blank">Ejercicio Ajax Alumno/profesor</a>
+            <a class="ejercicio" href="proyectoDWEC/tema8/ej1/index.html" target="_blank">Ejercicio Ajax Alumno/profesor (Sin acabar)</a>
             <a class="ejercicio" href="http://daw205.sauces.local/proyectoDWES/proyectoTema6/Proyecto19-20/index.php?pag=articles" target="_blank">Ejercicio Campo de sugerencias</a>
+            <a class="ejercicio" href="http://daw205.sauces.local/proyectoDWES/proyectoTema6/Proyecto19-20/index.php?pag=administrator" target="_blank">Ejercicio Provincias (es necesario iniciar sesión con admin y crear o modificar un usuario)</a>
         </div>
         <script type="text/javascript" src="core/js/collapsible.js"></script>
     </div>

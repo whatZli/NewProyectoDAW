@@ -32,9 +32,18 @@ class ArticuloPDO {
         return $registros;
     }
     
+    public static function numArticulos(){
+        $num=0;
+            $consulta = "SELECT count(*) as 'numero' FROM `Articulos`"; //Creacion de la consulta.
+            $resConsulta = DBPDO::ejecutaConsulta($consulta, []); //Ejecutamos la consulta.
+            $resFetch=$resConsulta->fetchObject();
+            $num=$resFetch->numero;
+        return $num;
+    }
+    
     public static function buscarTodosArticulos() {
         $registros=null;
-        $consulta = "SELECT * FROM `Articulos`"; //Creacion de la consulta.
+        $consulta = "SELECT * FROM `Articulos` LIMIT 3"; //Creacion de la consulta.
         $resConsulta = DBPDO::ejecutaConsulta($consulta, []); //Ejecutamos la consulta.
 
         $cont = 0;
@@ -48,7 +57,7 @@ class ArticuloPDO {
     
     public static function buscarTituloArticulos($titulo) {
         $registros=null;
-        $consulta = "SELECT * FROM `Articulos` WHERE `titulo_articulo` LIKE '%$titulo%'"; //Creacion de la consulta.
+        $consulta = "SELECT * FROM `Articulos` WHERE `titulo_articulo` LIKE '%$titulo%' LIMIT 3"; //Creacion de la consulta.
         $resConsulta = DBPDO::ejecutaConsulta($consulta, []); //Ejecutamos la consulta.
 
         $cont = 0;

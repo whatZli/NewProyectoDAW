@@ -6,7 +6,9 @@ if (isset($_POST['search'])) {
     }
     $_SESSION['articuloActual']=$_POST['title'];
 }
-if($_SESSION['articuloActual']!=null){
+
+if(isset($_SESSION['articuloActual']) ){
+    
     $aArticulos = ArticuloPDO::buscarTituloArticulos($_SESSION['articuloActual']);
 //var_dump($aArticulos);
 
@@ -18,6 +20,15 @@ if($_SESSION['articuloActual']!=null){
         $aArticulo[$i][4] = $aArticulos[$i]->getFecha_articulo();
         $aArticulo[$i][5] = $aArticulos[$i]->getVisitas_articulo();
         $aArticulo[$i][6] = $aArticulos[$i]->getCod_usuario();
+    }
+    
+    $numeroArticulos=ArticuloPDO::numArticulos();
+    echo $numeroArticulos;
+    if(isset($_GET['pagina'])){
+        $pagina=$_GET['pagina'];
+    }else{
+        $pagina=1;
+        
     }
     
 } else {
@@ -34,11 +45,13 @@ if($_SESSION['articuloActual']!=null){
         $aArticulo[$i][6] = $aArticulos[$i]->getCod_usuario();
     }
     
-    $numeroPaginas=sizeof($aArticulo)+1;//Número de páginas total que existen
+    $numeroArticulos=ArticuloPDO::numArticulos();
+    echo $numeroArticulos;
     if(isset($_GET['pagina'])){
         $pagina=$_GET['pagina'];
     }else{
         $pagina=1;
+        
     }
 }
 
