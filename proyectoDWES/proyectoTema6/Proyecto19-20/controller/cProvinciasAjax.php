@@ -12,10 +12,11 @@ if (isset($_GET['cod'])) {
     $result = mysqli_query($con, $sql);
     
     while ($row = mysqli_fetch_array($result)) {
-        echo '<input type="text" disabled value="'.$row['Provincia'].'"></input>';
-//        echo "<a href='index.php?pag=article&cod=".$row['cod_articulo']."'>".$row['titulo_articulo']."</a><br>";
+        '<input type="text" disabled value="'.$row['Provincia'].'"></input>';
+
     }
     
+    echo json_encode($row);
     mysqli_close($con);
 }
 

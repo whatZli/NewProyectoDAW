@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-3.4.1.js" type="text/javascript"></script>
+        <script src="script.js"></script>
+        <style>
+            div{
+                display:none;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Matricula de asignaturas</h1>
+        <button id="conectar">Conectar AJAX - IndexDB</button>
+        <button id="mostrar">Mostrar</button>
+        <button id="insertar">Insertar</button>
+        <table>
+            <thead><td>ID</td><td>Nombre</td><td>Modificar</td><td>Borrar</td>
+            <tbody></tbody>
+        </table>
+
+        <div id = "forminsert">
+           
+                <p>Id <input type = "text" id="id" ></p>
+                <p>Nombre <input type = "text" id="nombre" ></p>
+                <button id="binsert">Insertar</button>
+            
+        </div>
+        <div id = "formmod">
+            
+                <p>Id <input disabled type = "text" id="idm" ></p>
+                <p>Nombre <input type = "text" id="nombrem" ></p>
+                <button id="bmod">Modificar</button>
+            
+        </div>
+    </body>
+</html>
