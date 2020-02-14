@@ -22,6 +22,20 @@
         echo '</div>';
     }
     ?>
+    <div class="pagination">
+    <?php
+    echo '<a href="#">&laquo;</a>';
+    for ($i = 1; $i <= $numeroArticulos/3; $i++) {
+        if ($pagina == $i) {
+            echo '<a class="active" href="'.$_SERVER['PHP_SELF']."?pagina=".$i.'">' . $i . '</a>';
+        } else {
+            echo '<a href="'.$_SERVER['PHP_SELF']."?pagina=".$i.'">' . $i . '</a>';
+        }
+    }
+    echo '<a href="#">&raquo;</a>';
+    ?>
+</div>
+
 </div> 
 <div class="aside-right">
     <div class="perfil">

@@ -10,8 +10,15 @@ if (isset($_GET['drop'])) {
         ArticuloPDO::borrarArticulo($_GET['drop']);
         header('Location: index.php');
 } else {
-
-        $aArticulos = ArticuloPDO::buscarTodosArticulos();
+    $numeroArticulos = ArticuloPDO::numArticulos();
+    echo $numeroArticulos;
+    if (isset($_GET['pagina'])) {
+        $pagina = $_GET['pagina'];
+    } else {
+        $pagina = 0;
+    }
+    
+        $aArticulos = ArticuloPDO::buscarTodosArticulos($pagina);
 //var_dump($aArticulos);
 
         for ($i = 0; isset($aArticulos[$i]); $i++) {

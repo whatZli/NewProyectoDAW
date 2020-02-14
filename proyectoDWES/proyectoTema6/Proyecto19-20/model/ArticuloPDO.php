@@ -41,9 +41,12 @@ class ArticuloPDO {
         return $num;
     }
     
-    public static function buscarTodosArticulos() {
+    public static function buscarTodosArticulos($pagina) {
+        if($pagina!=0){
+            $pagina=$pagina*4-4;
+        }
         $registros=null;
-        $consulta = "SELECT * FROM `Articulos` LIMIT 3"; //Creacion de la consulta.
+        $consulta = "SELECT * FROM `Articulos` LIMIT $pagina,4"; //Creacion de la consulta.
         $resConsulta = DBPDO::ejecutaConsulta($consulta, []); //Ejecutamos la consulta.
 
         $cont = 0;
@@ -55,9 +58,13 @@ class ArticuloPDO {
         return $registros;
     }
     
-    public static function buscarTituloArticulos($titulo) {
+    public static function buscarTituloArticulos($titulo,$pagina) {
+        
+        if($pagina!=0){
+            $pagina=$pagina*3-3;
+        }
         $registros=null;
-        $consulta = "SELECT * FROM `Articulos` WHERE `titulo_articulo` LIKE '%$titulo%' LIMIT 3"; //Creacion de la consulta.
+        $consulta = "SELECT * FROM `Articulos` WHERE `titulo_articulo` LIKE '%$titulo%' LIMIT $pagina,3"; //Creacion de la consulta.
         $resConsulta = DBPDO::ejecutaConsulta($consulta, []); //Ejecutamos la consulta.
 
         $cont = 0;
