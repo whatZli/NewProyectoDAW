@@ -11,12 +11,11 @@ if (isset($_GET['cod'])) {
     $sql = "SELECT * FROM `Provincias` WHERE `Id_Provincia` LIKE '$cod'";
     $result = mysqli_query($con, $sql);
     
+    
     while ($row = mysqli_fetch_array($result)) {
-        '<input type="text" disabled value="'.$row['Provincia'].'"></input>';
-
+        echo '<input type="text" disabled value="'.$row['Provincia'].'"></input>';
     }
     
-    echo json_encode($row);
     mysqli_close($con);
 }
 
