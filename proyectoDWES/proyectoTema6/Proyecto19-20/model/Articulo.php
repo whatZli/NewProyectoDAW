@@ -1,15 +1,15 @@
 <?php
 
-/* Clase Departamento
- * Clase que se utilizará para representar un objeto Usuario
+/* Clase Articulo
+ * Clase que se utilizará para representar un objeto Articulo
  * @category model
  * @autor Alex Dominguez
  * @version 1.0   
  */
 
-//Requiere el fichero UsuarioPDO Donde se almacenan las consultas a la BD
-//require_once 'UsuarioPDO.php';
-//Creación de la clase Usuario
+//Requiere el fichero ArticuloPDO Donde se almacenan las consultas a la BD
+//require_once 'ArticuloPDO.php';
+//Creación de la clase Articulo
 
 class Articulo {
 

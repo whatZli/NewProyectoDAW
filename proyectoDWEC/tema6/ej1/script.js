@@ -5,7 +5,12 @@ $(function () {
 
 //Empezar
 $(function () {
-
+    
+    $("#anadir").click(eAñadirAsignatura());
+    $("#selectCurso").change(listarAsignaturas());
+    $("#selectCiclo").change(listarAsignaturas());
+    
+    
     /* Eventos que al salir de un campo input valide la entrada de tipo texto */
     /* Validar nombre y apellidos */
     $("#Nombrea").blur(function () {
@@ -109,16 +114,72 @@ $(function () {
  * 3. Sino es correcto vacía el div
  * */
 function mostrarAsignaturas() {
+    var asignaturasDAW2 = ["DWES", "DWEC", "DAW", "DIW"];
+    var asignaturasDAW1 = ["PROG", "LSMG", "BBDD", "SSOO"];
+    var asignaturasSMR1 = ["SSOO", "REDES", "OFIMATICA", "APLICACIONES WEB"];
+    var asignaturasSMR2 = ["SEGURIDAD INFORMÁTICAS", "REDES", "SSOO", "APLICACIONES WEB"];
     if ($("#cursoa").val() === 'curso2' && $("#selectCiclo").val() === 'daw') {
-        var asignaturas = ["DWES", "DWEC", "DAW", "DIW"];
-        jQuery.each(asignaturas, function (index, value) {
+        $("#hideAsig").empty();
+        jQuery.each(asignaturasDAW2, function (index, value) {
             $("#hideAsig").append("<label><input type='checkbox'> " + value + "</label><br>");
             $(":checkbox").attr("id", "cbox" + index);
             $(":checkbox").attr("value", "checkbox" + index);
         });
-    } else {
+    }else if ($("#cursoa").val() === 'curso1' && $("#selectCiclo").val() === 'daw') {
+        $("#hideAsig").empty();
+        jQuery.each(asignaturasDAW1, function (index, value) {
+            $("#hideAsig").append("<label><input type='checkbox'> " + value + "</label><br>");
+            $(":checkbox").attr("id", "cbox" + index);
+            $(":checkbox").attr("value", "checkbox" + index);
+        });
+    }else if ($("#cursoa").val() === 'curso2' && $("#selectCiclo").val() === 'smr') {
+        $("#hideAsig").empty();
+        jQuery.each(asignaturasSMR2, function (index, value) {
+            $("#hideAsig").append("<label><input type='checkbox'> " + value + "</label><br>");
+            $(":checkbox").attr("id", "cbox" + index);
+            $(":checkbox").attr("value", "checkbox" + index);
+        });
+    } else if ($("#cursoa").val() === 'curso1' && $("#selectCiclo").val() === 'smr') {
+        $("#hideAsig").empty();
+        jQuery.each(asignaturasSMR1, function (index, value) {
+            $("#hideAsig").append("<label><input type='checkbox'> " + value + "</label><br>");
+            $(":checkbox").attr("id", "cbox" + index);
+            $(":checkbox").attr("value", "checkbox" + index);
+        });
+    }else {
         /* Empty vacía el contenido del div*/
         $("#hideAsig").empty();
+    }
+}
+
+function listarAsignaturas(){
+    var asignaturasDAW2 = ["DWES", "DWEC", "DAW", "DIW"];
+    var asignaturasDAW1 = ["PROG", "LSMG", "BBDD", "SSOO"];
+    var asignaturasSMR1 = ["SSOO", "REDES", "OFIMATICA", "APLICACIONES WEB"];
+    var asignaturasSMR2 = ["SEGURIDAD INFORMÁTICAS", "REDES", "SSOO", "APLICACIONES WEB"];
+    
+    console.log($("#selectCurso"));
+    
+    if ($("#selectCurso").val() === 'curso2' && $("#selectCiclo").val() === 'daw') {
+        $("#hideAsig").empty();
+        jQuery.each(asignaturasDAW2, function (index, value) {
+            $("#asignarAsig").append("<option> " + value + "</option>");
+            console.log(value);
+        });
+    }
+}
+
+function eAñadirAsignatura() { //PARA PROFESOR
+    console.log("añadir");
+    if($('#asignaturasP').children().length !== 0){
+            console.log(jQuery.type($('#asignaturasP').children().children(":selected")));
+        $("#asignaturasProf").append($('#asignaturasP').children().children(":selected").clone());
+    }
+}
+
+function eBorrarAsignatura(){        //nuevo                                                                //RECUERDA PONER LA MALDITA ALMMHOADILLA
+    if($("#asignaturasProf").children().length !== 0){
+        $("#asignaturasProf").children(":selected").remove();
     }
 }
 

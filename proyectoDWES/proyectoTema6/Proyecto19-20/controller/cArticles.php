@@ -14,7 +14,7 @@ if (isset($_SESSION['articuloActual'])) {
     if (isset($_GET['pagina'])) {
         $pagina = $_GET['pagina'];
     } else {
-        $pagina = 0;
+        $pagina = 1;
     }
 
     $aArticulos = ArticuloPDO::buscarTituloArticulos($_SESSION['articuloActual'],$pagina*1);
@@ -39,7 +39,7 @@ if (isset($_SESSION['articuloActual'])) {
     if (isset($_GET['pagina'])) {
         $pagina = $_GET['pagina'];
     } else {
-        $pagina = 0;
+        $pagina = 1;
     }
     
     $aArticulos = ArticuloPDO::buscarTodosArticulos($pagina*1);

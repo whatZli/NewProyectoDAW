@@ -2,30 +2,30 @@
 
     <div class="container">
         <div class="mySlides">
-            <div class="numbertext">1 / 3</div>
+            <div class="numbertext">1 / 5</div>
             <img src="doc/er.JPG" style="width:100%">
         </div>
 
         <div class="mySlides">
-            <div class="numbertext">2 / 3</div>
+            <div class="numbertext">2 / 5</div>
             <img src="doc/mfd.JPG" style="width:100%">
         </div>
 
         <div class="mySlides">
-            <div class="numbertext">3 / 3</div>
+            <div class="numbertext">3 / 5</div>
             <img src="doc/clases.JPG" style="width:100%">
         </div>
 
         <div class="mySlides">
-            <div class="numbertext">4 / 6</div>
+            <div class="numbertext">4 / 5</div>
             <img src="doc/estructuraDirectorios.PNG" style="width:100%">
         </div>
 
-<!--        <div class="mySlides">
-            <div class="numbertext">5 / 6</div>
-            <img src="doc/mfd.JPG" style="width:100%">
+        <div class="mySlides">
+            <div class="numbertext">5 / 5</div>
+            <img src="doc/sesion.PNG" style="width:100%">
         </div>
-
+<!--
         <div class="mySlides">
             <div class="numbertext">6 / 6</div>
             <img src="doc/mfd.JPG" style="width:100%">
@@ -51,10 +51,10 @@
             <div class="column">
                 <img class="demo cursor" src="doc/estructuraDirectorios.PNG" style="width:100%" onclick="currentSlide(4)" alt="Estructura de directorios">
             </div>
-<!--            <div class="column">
-                <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-            </div>    
             <div class="column">
+                <img class="demo cursor" src="doc/sesion.PNG" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+            </div>    
+<!--            <div class="column">
                 <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
             </div>-->
         </div>

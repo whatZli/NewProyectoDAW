@@ -43,6 +43,7 @@ if (!isset($aArticulo)) {
 <div class="pagination">
     <?php
     echo '<a href="'.$_SERVER['PHP_SELF']."?pag=articles&pagina=1".'">&laquo;</a>';
+    $i=1;
     for ($i = 1; $i <= $numeroArticulos/3; $i++) {
         if ($pagina == $i) {
             echo '<a class="active" href="'.$_SERVER['PHP_SELF']."?pag=articles&pagina=".$i.'">' . $i . '</a>';
@@ -50,7 +51,7 @@ if (!isset($aArticulo)) {
             echo '<a href="'.$_SERVER['PHP_SELF']."?pag=articles&pagina=".$i.'">' . $i . '</a>';
         }
     }
-    echo '<a href="#">&raquo;</a>';
+    echo '<a href="'.$_SERVER['PHP_SELF']."?pag=articles&pagina=".($i-1).'">&raquo;</a>';
     ?>
 </div>
 

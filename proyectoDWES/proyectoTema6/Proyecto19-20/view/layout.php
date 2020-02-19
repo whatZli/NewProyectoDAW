@@ -5,6 +5,7 @@
         <meta name="author" content="Alex Dominguez Dominguez"/>
         <meta name="generator" content="notepad++"/>
         <meta name="robots" content="index, follow">
+
         <link rel="shortcut icon" type="image/png" href="../../core/images/favicon.png"/>
         <title>Alex Dominguez</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -12,7 +13,11 @@
         <link href="webroot/css/style.css" rel="stylesheet" type="text/css" title="Default style">
         <link href="webroot/css/about.css" rel="stylesheet" type="text/css" >
         <link href="webroot/css/articles.css" rel="stylesheet" type="text/css" >
+
+        <script src="webroot/js/jquery-3.4.1.js" type="text/javascript"></script>
         <script src="webroot/js/script.js" type="text/javascript"></script>
+        <script src="webroot/js/validateContactForm.js" type="text/javascript"></script>
+        
         	
         <script src="https://www.google.com/recaptcha/api.js?hl=es" async defer></script><!-- Captcha de google-->
         <style></style>

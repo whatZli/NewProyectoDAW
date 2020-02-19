@@ -24,6 +24,9 @@
                 padding: 5px 30px;
                 border-radius: 5px;
             }
+            #alumnor, #profer, #anadir{
+                cursor: pointer;
+            }
             
         </style> 
     </head>
@@ -115,26 +118,24 @@
                             <div class="izq col-5">
                                 <div class="form-group ">
                                     <label class="control-label" for="Motivo">Ciclo</label>
-                                    <select name="Motivo" class="form-control">
+                                    <select id="selectCiclo" name="Motivo" class="form-control">
                                         <option value="Consulta General">Eliga una opcion</option>
-                                        <option value="Consulta General">SMR</option>
-                                        <option value="Realizar Pedido">DAW</option>
+                                        <option value="smr">SMR</option>
+                                        <option value="daw">DAW</option>
                                     </select>
                                 </div>    
                                 <div class="form-group ">
                                     <label class="control-label" for="Motivo">Curso</label>
-                                    <select name="Motivo" class="form-control">
+                                    <select id="selectCurso" name="Motivo" class="form-control">
                                         <option value="Consulta General">Eliga una opcion</option>
-                                        <option value="Consulta General">1º Curos</option>
-                                        <option value="Realizar Pedido">2º Curso</option>
+                                        <option value="curso1">1º Curos</option>
+                                        <option value="curso2">2º Curso</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="Motivo">Asignaturas</label>
                                     <select name="Motivo" id="parañadir" class="form-control">
                                         <option value="Consulta General">Eliga una opcion</option>
-                                        <option value="Consulta General">DAW</option>
-                                        <option value="Realizar Pedido">DWEC</option>
                                     </select>
                                 </div>
                             </div>
@@ -143,7 +144,7 @@
                                 <br>
                                 <br>    
                                 <div class="btn btn-primary"  id="anadir">Añadir</div>
-
+                                <div class="btn btn-warning"  id="borrar">Borrar</div>
                             </div>
                             <div class="dercha col-5">
                                 <select name="Motivo" class="form-control" id = "selectanadir" size = "12">

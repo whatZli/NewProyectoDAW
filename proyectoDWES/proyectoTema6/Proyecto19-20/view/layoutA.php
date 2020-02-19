@@ -9,12 +9,15 @@
 
         <link rel="shortcut icon" type="image/png" href="../../core/images/favicon.png"/>
         <title>Alex Dominguez</title>
+        
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href="webroot/css/styleA.css" rel="stylesheet" type="text/css" title="Default style">
         <link href="webroot/css/about.css" rel="stylesheet" type="text/css" >
         <link href="webroot/css/articles.css" rel="stylesheet" type="text/css" >
+        
         <script src="webroot/js/provincias.js" type="text/javascript"></script>
+        
         <style></style>
     </head>
     <body >
@@ -45,7 +48,9 @@
                     </div>
                     <div class="footer-bottom-right-center">
                         <li>PHP Doc</li>
-                       <a href="doc/documentacion.pdf" target="_blank"><li>Documentación<br> sobre la <br>aplicación</li></a>
+                        <li>Doc user invited</li>
+                        <li>Doc user registred</li>
+                        <li>Doc user admin</li>
                     </div>
                     <div class="footer-bottom-right-right">
                         <a target="_blank" href="http://daw205.sauces.local/"><li>Autor´s Web</li></a>

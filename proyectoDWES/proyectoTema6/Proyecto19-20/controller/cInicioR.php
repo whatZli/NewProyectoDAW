@@ -15,7 +15,7 @@ if (isset($_GET['drop'])) {
     if (isset($_GET['pagina'])) {
         $pagina = $_GET['pagina'];
     } else {
-        $pagina = 0;
+        $pagina = 1;
     }
     
         $aArticulos = ArticuloPDO::buscarTodosArticulos($pagina);
